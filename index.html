@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auburn Hills Bhakti Vriksha</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #E8D4A2 0%, #D4C5A0 50%, #C4B598 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(58, 47, 31, 0.3);
+            overflow: hidden;
+            border: 3px solid rgba(139, 119, 82, 0.2);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #8B7752 0%, #6B5D42 100%);
+            padding: 50px 40px;
+            text-align: center;
+            color: #E8D4A2;
+            border-bottom: 4px solid #3A2F1F;
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            font-weight: 900;
+            color: #E8D4A2;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3em;
+            opacity: 0.95;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        
+        .tabs {
+            display: flex;
+            background: rgba(232, 212, 162, 0.3);
+            border-bottom: 3px solid rgba(139, 119, 82, 0.3);
+            overflow-x: auto;
+        }
+        
+        .tab {
+            flex: 1;
+            padding: 20px 30px;
+            border: none;
+            background: transparent;
+            color: #5A4D37;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-right: 1px solid rgba(139, 119, 82, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+        
+        .tab:last-child {
+            border-right: none;
+        }
+        
+        .tab:hover {
+            background: rgba(232, 212, 162, 0.5);
+            color: #3A2F1F;
+        }
+        
+        .tab.active {
+            background: linear-gradient(135deg, #8B7752 0%, #6B5D42 100%);
+            color: #E8D4A2;
+            font-weight: 700;
+            box-shadow: inset 0 -4px 0 #3A2F1F;
+        }
+        
+        .controls {
+            padding: 25px 40px;
+            background: rgba(232, 212, 162, 0.2);
+            border-bottom: 2px solid rgba(139, 119, 82, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .sort-label {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: #3A2F1F;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .sort-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .sort-btn {
+            padding: 12px 28px;
+            border: 2px solid #8B7752;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: white;
+            color: #5A4D37;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .sort-btn:hover {
+            background: rgba(232, 212, 162, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(139, 119, 82, 0.3);
+        }
+        
+        .sort-btn.active {
+            background: linear-gradient(135deg, #8B7752 0%, #6B5D42 100%);
+            color: #E8D4A2;
+            border-color: #3A2F1F;
+            box-shadow: 0 5px 15px rgba(58, 47, 31, 0.4);
+        }
+        
+        .content {
+            padding: 40px;
+            background: white;
+        }
+        
+        .transcript-card {
+            background: white;
+            border: 3px solid rgba(139, 119, 82, 0.2);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(58, 47, 31, 0.1);
+        }
+        
+        .transcript-card:hover {
+            border-color: #8B7752;
+            box-shadow: 0 8px 24px rgba(139, 119, 82, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(139, 119, 82, 0.15);
+        }
+        
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            color: #3A2F1F;
+            font-weight: 700;
+        }
+        
+        .card-meta {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .badge-date {
+            background: rgba(232, 212, 162, 0.4);
+            color: #5A4D37;
+            border: 2px solid rgba(139, 119, 82, 0.3);
+        }
+        
+        .badge-verse {
+            background: rgba(139, 119, 82, 0.2);
+            color: #3A2F1F;
+            border: 2px solid rgba(139, 119, 82, 0.4);
+        }
+        
+        .badge-speaker {
+            background: rgba(196, 30, 58, 0.1);
+            color: #8b0000;
+            border: 2px solid rgba(196, 30, 58, 0.3);
+        }
+        
+        .transcript-text {
+            line-height: 1.9;
+            color: #5A4D37;
+            font-size: 1.15em;
+            white-space: pre-wrap;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 80px;
+            color: #8B7752;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 80px;
+            color: #8B7752;
+        }
+        
+        .empty-state h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 15px;
+            color: #5A4D37;
+            font-size: 2em;
+        }
+        
+        .empty-state p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+        }
+        
+        @media (max-width: 968px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            .tabs {
+                flex-wrap: wrap;
+            }
+            
+            .tab {
+                flex: 1 1 45%;
+            }
+            
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .sort-buttons {
+                justify-content: center;
+            }
+            
+            .card-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .tab {
+                flex: 1 1 100%;
+            }
+            
+            .sort-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .sort-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🕉️ Auburn Hills Bhakti Vriksha</h1>
+            <p class="subtitle">Sacred Transcripts & Teachings</p>
+        </header>
+        
+        <div class="tabs">
+            <button class="tab active" data-section="bg-evening">BG Evening Class</button>
+            <button class="tab" data-section="sb-morning">SB Morning Class</button>
+            <button class="tab" data-section="sankirtan">Sankirtan</button>
+            <button class="tab" data-section="bhajans">Bhajans</button>
+            <button class="tab" data-section="tulasi-care">Tulasi Care</button>
+        </div>
+        
+        <div class="controls">
+            <span class="sort-label">Sort By:</span>
+            <div class="sort-buttons">
+                <button class="sort-btn active" id="sortDate">📅 Date</button>
+                <button class="sort-btn" id="sortVerse">📖 Verse</button>
+            </div>
+        </div>
+        
+        <div class="content" id="content">
+            <div class="loading">Loading transcripts...</div>
+        </div>
+    </div>
+
+    <script>
+        let currentData = [];
+        let currentSort = 'date';
+        let currentSection = 'bg-evening';
+        
+        const tabs = document.querySelectorAll('.tab');
+        const sortDateBtn = document.getElementById('sortDate');
+        const sortVerseBtn = document.getElementById('sortVerse');
+        const content = document.getElementById('content');
+        
+        // Load data for selected section
+        async function loadSection(section) {
+            currentSection = section;
+            content.innerHTML = '<div class="loading">Loading transcripts...</div>';
+            
+            try {
+                const response = await fetch(`data/${section}.json`);
+                if (!response.ok) throw new Error('File not found');
+                
+                currentData = await response.json();
+                renderTranscripts();
+            } catch (error) {
+                content.innerHTML = `
+                    <div class="empty-state">
+                        <h3>No transcripts yet</h3>
+                        <p>Upload ${section}.json to the data/ folder to get started</p>
+                    </div>
+                `;
+            }
+        }
+        
+        // Render transcripts
+        function renderTranscripts() {
+            if (currentData.length === 0) {
+                content.innerHTML = '<div class="empty-state"><h3>No transcripts found</h3></div>';
+                return;
+            }
+            
+            // Sort data
+            const sorted = [...currentData].sort((a, b) => {
+                if (currentSort === 'date') {
+                    return new Date(b.date) - new Date(a.date);
+                } else {
+                    return (a.verse || '').localeCompare(b.verse || '');
+                }
+            });
+            
+            // Render cards
+            content.innerHTML = sorted.map(item => `
+                <div class="transcript-card">
+                    <div class="card-header">
+                        <div class="card-title">${item.title || 'Untitled'}</div>
+                        <div class="card-meta">
+                            ${item.date ? `<span class="badge badge-date">📅 ${formatDate(item.date)}</span>` : ''}
+                            ${item.verse ? `<span class="badge badge-verse">📖 ${item.verse}</span>` : ''}
+                            ${item.speaker ? `<span class="badge badge-speaker">🎤 ${item.speaker}</span>` : ''}
+                        </div>
+                    </div>
+                    <div class="transcript-text">${item.transcript || 'No transcript available'}</div>
+                </div>
+            `).join('');
+        }
+        
+        // Format date
+        function formatDate(dateStr) {
+            const date = new Date(dateStr);
+            return date.toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+        }
+        
+        // Tab event listeners
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                loadSection(tab.dataset.section);
+            });
+        });
+        
+        // Sort event listeners
+        sortDateBtn.addEventListener('click', () => {
+            currentSort = 'date';
+            sortDateBtn.classList.add('active');
+            sortVerseBtn.classList.remove('active');
+            renderTranscripts();
+        });
+        
+        sortVerseBtn.addEventListener('click', () => {
+            currentSort = 'verse';
+            sortVerseBtn.classList.add('active');
+            sortDateBtn.classList.remove('active');
+            renderTranscripts();
+        });
+        
+        // Initial load
+        loadSection('bg-evening');
+    </script>
+</body>
+</html>
