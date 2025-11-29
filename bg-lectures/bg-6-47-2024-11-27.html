@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhakti Supremacy: Why Pure Devotion Surpasses All Other Paths | Auburn Hills Bhakti Vriksha</title>
+    <meta name="description" content="Krishna declares that among all types of yogis - karma yogis, jnana yogis, and ashtanga yogis - the bhakta who worships Him with love and faith (shrad">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #E8D4A2 0%, #D4C5A0 50%, #C4B598 100%);
+            min-height: 100vh;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #8B7752 0%, #6B5D42 100%);
+            padding: 30px 20px;
+            text-align: center;
+            color: #E8D4A2;
+            border-bottom: 4px solid #3A2F1F;
+        }
+        
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8em, 4vw, 2.5em);
+            font-weight: 900;
+            margin-bottom: 5px;
+        }
+        
+        header a {
+            color: #E8D4A2;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        header a:hover { opacity: 0.8; }
+        
+        .breadcrumbs {
+            background: rgba(232, 212, 162, 0.3);
+            padding: 15px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+        }
+        
+        .breadcrumbs a {
+            color: #5A4D37;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .breadcrumbs a:hover { color: #3A2F1F; }
+        
+        .breadcrumbs span { margin: 0 8px; color: #8B7752; }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .lecture-header {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 3px solid rgba(139, 119, 82, 0.2);
+            box-shadow: 0 4px 12px rgba(58, 47, 31, 0.1);
+        }
+        
+        .lecture-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8em, 4vw, 2.8em);
+            color: #3A2F1F;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        .lecture-meta {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .badge-date {
+            background: rgba(232, 212, 162, 0.4);
+            color: #5A4D37;
+            border: 2px solid rgba(139, 119, 82, 0.3);
+        }
+        
+        .badge-verse {
+            background: rgba(139, 119, 82, 0.2);
+            color: #3A2F1F;
+            border: 2px solid rgba(139, 119, 82, 0.4);
+        }
+        
+        .badge-speaker {
+            background: rgba(196, 30, 58, 0.1);
+            color: #8b0000;
+            border: 2px solid rgba(196, 30, 58, 0.3);
+        }
+        
+        .lecture-tabs {
+            display: flex;
+            background: rgba(232, 212, 162, 0.3);
+            border-radius: 12px 12px 0 0;
+            overflow-x: auto;
+            border: 3px solid rgba(139, 119, 82, 0.2);
+            border-bottom: none;
+        }
+        
+        .tab-btn {
+            flex: 1;
+            padding: 18px 24px;
+            border: none;
+            background: transparent;
+            color: #5A4D37;
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(0.85em, 2vw, 1em);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            border-right: 1px solid rgba(139, 119, 82, 0.2);
+        }
+        
+        .tab-btn:last-child { border-right: none; }
+        
+        .tab-btn:hover {
+            background: rgba(232, 212, 162, 0.5);
+            color: #3A2F1F;
+        }
+        
+        .tab-btn.active {
+            background: white;
+            color: #3A2F1F;
+            font-weight: 700;
+        }
+        
+        .tab-content {
+            display: none;
+            background: white;
+            padding: 40px;
+            border-radius: 0 0 12px 12px;
+            border: 3px solid rgba(139, 119, 82, 0.2);
+            border-top: none;
+            min-height: 400px;
+        }
+        
+        .tab-content.active { display: block; }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .section-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            color: #3A2F1F;
+            margin: 30px 0 20px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(139, 119, 82, 0.2);
+        }
+        
+        .content-text {
+            font-size: 1.15em;
+            line-height: 1.8;
+            color: #5A4D37;
+            margin-bottom: 20px;
+        }
+        
+        .theme-card {
+            background: rgba(232, 212, 162, 0.2);
+            border: 2px solid rgba(139, 119, 82, 0.3);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .theme-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4em;
+            color: #3A2F1F;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .flashcard-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .flashcard {
+            perspective: 1000px;
+            height: 250px;
+            cursor: pointer;
+        }
+        
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flashcard-front, .flashcard-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            border: 3px solid rgba(139, 119, 82, 0.3);
+        }
+        
+        .flashcard-front {
+            background: linear-gradient(135deg, #8B7752 0%, #6B5D42 100%);
+            color: #E8D4A2;
+            font-weight: 700;
+        }
+        
+        .flashcard-back {
+            background: white;
+            color: #3A2F1F;
+            transform: rotateY(180deg);
+            line-height: 1.6;
+        }
+        
+        .quiz-question {
+            background: rgba(232, 212, 162, 0.2);
+            border: 2px solid rgba(139, 119, 82, 0.3);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+        
+        .quiz-options {
+            display: grid;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        .quiz-option {
+            padding: 15px 20px;
+            border: 2px solid rgba(139, 119, 82, 0.3);
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.1em;
+        }
+        
+        .quiz-option:hover {
+            background: rgba(232, 212, 162, 0.3);
+            border-color: #8B7752;
+        }
+        
+        .quiz-option.selected {
+            background: #8B7752;
+            color: #E8D4A2;
+            border-color: #3A2F1F;
+        }
+        
+        .transcript-text {
+            font-size: 1.15em;
+            line-height: 1.9;
+            color: #5A4D37;
+            white-space: pre-wrap;
+        }
+        
+        @media (max-width: 768px) {
+            .lecture-header { padding: 25px; }
+            .tab-content { padding: 25px; }
+            .tab-btn { padding: 14px 16px; font-size: 0.85em; }
+            .flashcard-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="../index.html">🕉️ Auburn Hills Bhakti Vriksha</a></h1>
+    </header>
+    <div class="breadcrumbs">
+        <a href="../index.html">Home</a>
+        <span>›</span>
+        <a href="../bg-lectures.html">Bhagavad Gita Lectures</a>
+        <span>›</span>
+        <span>Bhakti Supremacy: Why Pure Devotion Surpasses All Other Paths</span>
+    </div>
+    
+    <div class="container">
+        <div class="lecture-header">
+            <h1 class="lecture-title">Bhakti Supremacy: Why Pure Devotion Surpasses All Other Paths</h1>
+            <div class="lecture-meta">
+                <span class="badge badge-date">📅 November 26, 2024</span>
+                <span class="badge badge-verse">📖 BG 6.47</span>
+                <span class="badge badge-speaker">🎤 Jai Sacinandana Kṛṣṇa Dāsa</span>
+            </div>
+        </div>
+        
+        <div class="lecture-tabs">
+            <button class="tab-btn active" data-tab="overview">Overview</button>
+            <button class="tab-btn" data-tab="notes">Study Notes</button>
+            <button class="tab-btn" data-tab="flashcards">Flashcards</button>
+            <button class="tab-btn" data-tab="quiz">Quiz</button>
+            <button class="tab-btn" data-tab="transcript">Transcript</button>
+        </div>
+        
+        <div class="tab-content active" id="overview">
+            
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/JDWeD-BzCiM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        
+        
+        <h2 class="section-heading">Key Takeaway</h2>
+        <p class="content-text">Krishna declares that among all types of yogis - karma yogis, jnana yogis, and ashtanga yogis - the bhakta who worships Him with love and faith (shraddha) is the yuktatama (highest yogi).</p>
+        
+        
+        
+        <h2 class="section-heading">Main Theme</h2>
+        <p class="content-text">The Supreme Position of Bhakti Yoga</p>
+        
+        
+        
+        <h2 class="section-heading">Summary</h2>
+        <p class="content-text">Among all yogis, the devotee who worships Krishna with faith and love is the highest.</p>
+        
+    
+        </div>
+        
+        <div class="tab-content" id="notes">
+            <h2 class="section-heading">Key Concepts</h2>
+            <div class="theme-card">
+                <h3 class="theme-title">The Hierarchy Among Yogis - Yuktatama Principle</h3>
+                <p class="content-text">Krishna uses the specific term 'yuktatama' (most perfectly situated) rather than just 'yukta' to establish a clear gradation among yogis. This indicates there are different levels - yukta, yuktatara, and yuktatama. The bhakta who worships Krishna with shraddha (faith and love) occupies the highest position.</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">Just as someone might say 'I cleared a Google interview' to an AI expert, expecting appreciation, when we tell Bhagavatam about our spiritual achievements in karma or jnana, the response reveals the relative insignificance compared to pure devotion.</li></ul>
+                
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Futility of Spiritual Practices Without Krishna Consciousness</h3>
+                <p class="content-text">The Bhagavatam systematically critiques various spiritual achievements without devotion. Even nishkama karma (desireless action) and niranjanam jnana (pure knowledge) do not shine without devotion to Krishna.</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">Someone achieving naishkarmya might expect recognition, but Bhagavatam responds with 'api' - even this doesn't shine without Krishna consciousness.</li></ul>
+                
+            </div><h2 class="section-heading">📚 Sanskrit Terms</h2>
+            <div class="theme-card">
+                <h3 class="theme-title">Yuktatama (युक्ततम)</h3>
+                <p class="content-text">Most perfectly situated among yogis</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Shraddha (श्रद्धा)</h3>
+                <p class="content-text">Faith combined with love and devotion</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Bhajana (भजन)</h3>
+                <p class="content-text">Loving devotional service</p>
+            </div><h2 class="section-heading">Practical Applications</h2><ul><li class="content-text">Develop appreciation for the supremacy of bhakti</li></ul><h2 class="section-heading">Notable Quotes</h2><blockquote class="content-text">"When a person has become eager to connect with the Lord, that eagerness substitutes for every other sadhana that exists"</blockquote><blockquote class="content-text">"Without devotion, karma, jnana, ashtanga yoga cannot sustain itself - this is the shastra sammatam of Bhagavatam"</blockquote><blockquote class="content-text">"You must understand the heart of Krishna. If you don't understand that point, then heart will not be rejoicing"</blockquote>
+        </div>
+        
+        <div class="tab-content" id="flashcards">
+            
+        <p class="content-text">Click on a card to flip it!</p>
+        <div class="flashcard-container">
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Yuktatama (युक्ततम)</div>
+                    <div class="flashcard-back">Most perfectly situated among yogis</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Shraddha (श्रद्धा)</div>
+                    <div class="flashcard-back">Faith combined with love and devotion</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Bhajana (भजन)</div>
+                    <div class="flashcard-back">Loving devotional service</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Why is bhakti considered supreme over jnana and karma yoga?</div>
+                    <div class="flashcard-back">Because even perfect performance of duties or achievement of transcendental knowledge without devotion to Krishna cannot provide lasting spiritual benefit. The Bhagavatam confirms that even if someone practicing bhakti falls down due to immaturity, there is no loss, whereas perfect performance without devotion yields no ultimate gain.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">The Hierarchy Among Yogis - Yuktatama Principle</div>
+                    <div class="flashcard-back">Krishna uses the specific term 'yuktatama' (most perfectly situated) rather than just 'yukta' to establish a clear gradation among yogis. This indicates there are different levels - yukta, yuktatara, ...</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Futility of Spiritual Practices Without Krishna Consciousness</div>
+                    <div class="flashcard-back">The Bhagavatam systematically critiques various spiritual achievements without devotion. Even nishkama karma (desireless action) and niranjanam jnana (pure knowledge) do not shine without devotion to ...</div>
+                </div>
+            </div>
+            
+        </div>
+    
+        </div>
+        
+        <div class="tab-content" id="quiz">
+            
+        <div id="quizContainer">
+            <p class="content-text">Test your knowledge! Results will be saved locally.</p>
+            
+            <div class="quiz-question">
+                <p class="content-text"><strong>Question 1:</strong> What does the term 'yuktatama' specifically mean?</p>
+                <div class="quiz-options">
+                    
+                    <div class="quiz-option" onclick="selectOption(0, 0, 0)">Most perfectly situated among yogis</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(0, 1, 0)">A type of yoga practice</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(0, 2, 0)">The meditation process</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(0, 3, 0)">Union with Brahman</div>
+                    
+                </div>
+                <div id="explanation-0" style="display:none; margin-top:15px;">
+                    <p class="content-text"><strong>Explanation:</strong> Yuktatama is the superlative form meaning 'most perfectly situated,' specifically referring to the devotee who worships Krishna with love and faith as the highest among all yogis.</p>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <p class="content-text"><strong>Question 2:</strong> According to Srimad Bhagavatam, what happens to someone who practices immature devotion (apakva bhajana) but falls down?</p>
+                <div class="quiz-options">
+                    
+                    <div class="quiz-option" onclick="selectOption(1, 0, 1)">They lose all spiritual progress</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(1, 1, 1)">There is no loss whatsoever</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(1, 2, 1)">They must start over completely</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(1, 3, 1)">They fall into lower species</div>
+                    
+                </div>
+                <div id="explanation-1" style="display:none; margin-top:15px;">
+                    <p class="content-text"><strong>Explanation:</strong> The Bhagavatam states that even if someone takes shelter of Krishna's lotus feet with sentiment rather than mature knowledge and subsequently falls down, there is absolutely no loss. This demonstrates the unique position of bhakti.</p>
+                </div>
+            </div>
+            
+        </div>
+    
+        </div>
+        
+        <div class="tab-content" id="transcript">
+            <div class="transcript-text">Today we are concluding Chapter 6 of Bhagavad Gita with verse 47, which is perhaps one of the most important verses in the entire Gita...
+
+[Full transcript would go here with proper formatting, paragraphs, etc.]</div>
+        </div>
+    </div>
+    
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+        
+        // Tab switching
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tab = btn.dataset.tab;
+                
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                btn.classList.add('active');
+                document.getElementById(tab).classList.add('active');
+            });
+        });
+        
+        // Quiz functionality
+        let quizScore = 0;
+        let quizTotal = 2;
+        
+        function selectOption(questionIndex, optionIndex, correctIndex) {
+            const options = document.querySelectorAll(`.quiz-question:nth-child(${questionIndex + 2}) .quiz-option`);
+            options.forEach(opt => opt.classList.remove('selected'));
+            options[optionIndex].classList.add('selected');
+            
+            document.getElementById(`explanation-${questionIndex}`).style.display = 'block';
+            
+            if (optionIndex === correctIndex) {
+                quizScore++;
+                options[optionIndex].style.background = '#4CAF50';
+                options[optionIndex].style.color = 'white';
+            } else {
+                options[optionIndex].style.background = '#f44336';
+                options[optionIndex].style.color = 'white';
+                options[correctIndex].style.background = '#4CAF50';
+                options[correctIndex].style.color = 'white';
+            }
+            
+            // Save to localStorage
+            saveQuizResult('bg-6-47-2024-11-27', quizScore, quizTotal);
+        }
+        
+        function saveQuizResult(lectureId, score, total) {
+            const results = JSON.parse(localStorage.getItem('quizResults') || '[]');
+            results.push({
+                lectureId,
+                score,
+                total,
+                date: new Date().toISOString()
+            });
+            localStorage.setItem('quizResults', JSON.stringify(results));
+        }
+    </script>
+</body>
+</html>

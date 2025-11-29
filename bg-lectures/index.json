@@ -1,0 +1,27 @@
+{
+  "section": "bg-lectures",
+  "title": "Bhagavad Gita Lectures",
+  "count": 1,
+  "lectures": [
+    {
+      "id": "bg-6-47-2024-11-27",
+      "title": "Bhakti Supremacy: Why Pure Devotion Surpasses All Other Paths",
+      "date": "2024-11-27",
+      "primary_verse": "BG 6.47",
+      "takeaway": "Krishna declares that among all types of yogis - karma yogis, jnana yogis, and ashtanga yogis - the bhakta who worships Him with love and faith (shraddha) is the yuktatama (highest yogi).",
+      "summary_short": "Among all yogis, the devotee who worships Krishna with faith and love is the highest.",
+      "featured": true,
+      "media": {
+        "video": {
+          "youtube_id": "JDWeD-BzCiM",
+          "youtube_url": "https://youtube.com/watch?v=JDWeD-BzCiM",
+          "title": "BG 6.47: Bhakti Supremacy",
+          "duration": "PT1H21M2S",
+          "published_date": "2024-11-27",
+          "view_count": 70
+        }
+      },
+      "section": "bg-lectures"
+    }
+  ]
+}
