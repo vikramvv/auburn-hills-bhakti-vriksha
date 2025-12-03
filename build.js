@@ -69,7 +69,21 @@ async function loadAllLectures() {
                 
                 // Add metadata
                 data.section = section;
-                data.id = data.id || file.replace('.json', '');
+                
+                // Extract date from stream_metadata if missing
+                if (!data.date && data.stream_metadata?.published_date) {
+                    data.date = data.stream_metadata.published_date.split('T')[0];
+                }
+                
+                // Generate proper ID from JSON content
+                data.id = generateIdFromJson(data) || data.id || file.replace('.json', '');
+                
+                // Extract video ID from stream_metadata if missing
+                if (!data.media?.video?.youtube_id && data.stream_metadata?.video_id) {
+                    data.media = data.media || {};
+                    data.media.video = data.media.video || {};
+                    data.media.video.youtube_id = data.stream_metadata.video_id;
+                }
                 
                 lectures.push(data);
             } catch (error) {
@@ -79,6 +93,45 @@ async function loadAllLectures() {
     }
     
     return lectures;
+}
+
+// Generate standardized ID from JSON content
+function generateIdFromJson(json) {
+    // Get date
+    let date = json.date || 
+               (json.stream_metadata?.published_date || '').split('T')[0];
+    
+    if (!date) {
+        date = 'undated';
+    }
+    
+    // Get verse identifier
+    let verse = '';
+    if (json.primary_verse) {
+        // "BG 9.34" → "bg-9-34"
+        // "SB 1.2.6" → "sb-1-2-6"
+        // "CC Adi 1.1" → "cc-adi-1-1"
+        verse = json.primary_verse
+            .toLowerCase()
+            .replace(/\s+/g, '-')
+            .replace(/\./g, '-');
+    }
+    
+    // Fallback: use first few words of title
+    if (!verse && json.title) {
+        verse = json.title
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/^-+|-+$/g, '')  // Remove leading/trailing dashes
+            .substring(0, 40);
+    }
+    
+    // If still no verse, use existing ID
+    if (!verse) {
+        return json.id || null;
+    }
+    
+    return `${date}-${verse}`;
 }
 
 // Generate section index.json file
