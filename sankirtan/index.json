@@ -1,6 +1,37 @@
 {
   "section": "sankirtan",
   "title": "Sankirtan",
-  "count": 0,
-  "lectures": []
+  "count": 3,
+  "lectures": [
+    {
+      "id": "2023-11-23-sb-7-9-44",
+      "title": "Book Distribution: Unlocking Krishna's Mercy & Advancing Rapidly",
+      "date": "2023-11-23",
+      "primary_verse": "SB 7.9.44",
+      "takeaway": "Distributing Srila Prabhupada's books is the most pleasing service to Krishna, offering unparalleled spiritual advancement and protecting one from material contamination, while fulfilling the highest welfare activity.",
+      "summary_short": "Jai Sacinandana Krishna Das emphasizes the transformative power of book distribution, revealing it as the most direct and potent method for spiritual advancement. He inspires devotees to overcome excuses and embrace this essential service for personal and global spiritual upliftment, citing Prahlad Maharaj's compassion.",
+      "featured": false,
+      "section": "sankirtan"
+    },
+    {
+      "id": "undated-cc-adi-1-4",
+      "title": "Divine Strategy: Mastering Book Distribution for Krishna Bhakti",
+      "date": null,
+      "primary_verse": "CC Adi 1.4",
+      "takeaway": "This lecture illuminates how engaging in book distribution, following Prabhupada's methods, is not only the highest form of devotional service but also a direct path to experiencing transcendental ecstasy, pleasing Krishna, and offering unparalleled mercy to fallen souls.",
+      "summary_short": "Learn practical, Prabhupada-approved techniques for effective book distribution, from opening conversations to closing sales. Discover how this essential service brings profound spiritual benefits, pleases Krishna, and elevates both the distributor and the recipient to higher consciousness.",
+      "featured": false,
+      "section": "sankirtan"
+    },
+    {
+      "id": "undated-sb-1-1-15",
+      "title": "Pure Devotees' Mercy: The Path to Krishna Consciousness",
+      "date": null,
+      "primary_verse": "SB 1.1.15",
+      "takeaway": "Pure devotees, by their mercy and instructions received through disciplic succession, can instantly purify souls and guide them back to Krishna, surpassing the purifying power of sacred places.",
+      "summary_short": "This lecture emphasizes the unparalleled purifying power of pure devotees, who transmit Krishna's message through disciplic succession. It highlights the importance of taking shelter of their instructions, reading Prabhupada's books, and daily devotional practices to overcome material illusion and awaken Krishna consciousness.",
+      "featured": false,
+      "section": "sankirtan"
+    }
+  ]
 }
