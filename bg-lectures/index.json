@@ -1,8 +1,31 @@
 {
   "section": "bg-lectures",
   "title": "Bhagavad Gita Lectures",
-  "count": 2,
+  "count": 17,
   "lectures": [
+    {
+      "id": "2025-12-03-cc-adi-1-4",
+      "title": "CC Adi 1.4 • Bhakti's Highest Mercy: The Art of Sankirtana",
+      "date": "2025-12-03",
+      "primary_verse": "CC Adi 1.4",
+      "takeaway": "This lecture underscores that book distribution, performed with faith and desire to please Krishna, is the topmost devotional service, offering unparalleled mercy and direct experience of spiritual ecstasy, requiring strategic yet sincere effort from the distributor.",
+      "summary_short": "Jai Sacinandana Krishna Dasa highlights book distribution as the ultimate act of mercy for Kali Yuga, granting the highest devotional mellow. He shares Prabhupada's techniques: flatter, persist, and rely on the books' potency, emphasizing distributors' self-realization and need for Goswami's mercy.",
+      "featured": false,
+      "media": {
+        "video": {
+          "youtube_id": "aaF4rQso0pQ"
+        }
+      },
+      "stream_metadata": {
+        "video_id": "aaF4rQso0pQ",
+        "title": "nov 22 book distribution1",
+        "duration": "PT2H33M41S",
+        "published_date": "2025-12-03",
+        "view_count": 0,
+        "channel_title": "Bhakti Yoga - Auburn Hills"
+      },
+      "section": "bg-lectures"
+    },
     {
       "id": "2025-11-29-bg-2-7",
       "title": "Krishna's Supreme Secret: Jnana, Karma, Bhakti Yoga",
@@ -22,6 +45,328 @@
         "duration": "PT1H27M34S",
         "published_date": "2025-11-29",
         "view_count": 35,
+        "channel_title": "Bhakti Yoga - Auburn Hills"
+      },
+      "section": "bg-lectures"
+    },
+    {
+      "id": "2025-11-23-sb-1-2-7",
+      "title": "Bhakti's Power: Unlock True Knowledge & Detachment (SB 1.2.7)",
+      "date": "2025-11-23",
+      "primary_verse": "SB 1.2.7",
+      "takeaway": "Pure devotional service to Krishna spontaneously generates genuine knowledge and detachment from material illusion, establishing Bhakti as the most direct path to spiritual perfection.",
+      "summary_short": "This lecture delves into Srimad Bhagavatam 1.2.7, illustrating how Bhakti Yoga directly leads to causeless knowledge (jnana) and detachment (vairagya). It highlights Bhakti as the mother of these essential spiritual qualities and the supreme method for pleasing Krishna, overcoming material identification.",
+      "featured": false,
+      "media": {
+        "video": {
+          "youtube_id": "JDWeD-BzCiM"
+        }
+      },
+      "stream_metadata": {
+        "video_id": "JDWeD-BzCiM",
+        "title": "Bhakti Yoga - Auburn Hills is live!",
+        "duration": "PT1H21M2S",
+        "published_date": "2025-11-23",
+        "view_count": 70,
+        "channel_title": "Bhakti Yoga - Auburn Hills"
+      },
+      "section": "bg-lectures"
+    },
+    {
+      "id": "2025-11-22-bg-2-13",
+      "title": "Om Tat Sat: Connect to Krishna through Pure Devotion",
+      "date": "2025-11-22",
+      "primary_verse": "BG 2.13",
+      "takeaway": "The lecture emphasizes that understanding the profound meaning of Om (connecting Jiva to Krishna through Radharani's mercy), performing activities with the 'tat' consciousness of liberation, and cultivating appreciation for devotees and dharma are fundamental for spiritual advancement.",
+      "summary_short": "This lecture delves into the esoteric meaning of `Om Tat Sat`, particularly `Omkara` as the sound form of the Lord. It explains how `Om` represents Krishna, Radharani, and the jiva, facilitating connection to the Supreme. It stresses the importance of appreciation, dharma, and consistent `tapasya` for genuine spiritual progress.",
+      "featured": false,
+      "media": {
+        "video": {
+          "youtube_id": "7EiklTfPFQw"
+        }
+      },
+      "stream_metadata": {
+        "video_id": "7EiklTfPFQw",
+        "title": "Bhakti Yoga - Auburn Hills is live!",
+        "duration": "PT1H48M10S",
+        "published_date": "2025-11-22",
+        "view_count": 113,
+        "channel_title": "Bhakti Yoga - Auburn Hills"
+      },
+      "section": "bg-lectures"
+    },
+    {
+      "id": "2025-11-16-sb-1-2-6",
+      "title": "Pure Devotion: The Supreme Path to Soul's Happiness",
+      "date": "2025-11-16",
+      "primary_verse": "SB 1.2.6",
+      "takeaway": "The ultimate human endeavor is to engage in unmotivated and uninterrupted devotional service to the transcendent Lord, which alone can completely satisfy the soul.",
+      "summary_short": "Jai Sacinandana Kṛṣṇa Dāsa explains SB 1.2.6, revealing that true fulfillment comes from pure devotional service to Krishna. This service, characterized by being unmotivated (ahaituki) and uninterrupted (apratihata), is the supreme occupation that brings complete satisfaction to the soul, transcending all material desires.",
+      "featured": false,
+      "media": {
+        "video": {
+          "youtube_id": "CpSh1tqISSI"
+        }
+      },
+      "stream_metadata": {
+        "video_id": "CpSh1tqISSI",
+        "title": "Bhakti Yoga - Auburn Hills is live!",
+        "duration": "PT1H35S",
+        "published_date": "2025-11-16",
+        "view_count": 20,
+        "channel_title": "Bhakti Yoga - Auburn Hills"
+      },
+      "section": "bg-lectures"
+    },
+    {
+      "id": "2025-11-09-sb-1-2-6",
+      "title": "Unlocking True Joy: The Path of Pure Bhakti (SB 1.2.6)",
+      "date": "2025-11-09",
+      "primary_verse": "SB 1.2.6",
+      "takeaway": "The most sublime occupation for humanity is unmotivated and uninterrupted loving devotional service to the transcendent Lord, Adhokshaja, which alone completely satisfies the soul.",
+      "summary_short": "This lecture unpacks Srimad Bhagavatam 1.2.6, revealing that true dharma is unmotivated, unbroken devotional service to the transcendent Lord, Adhokshaja. This supreme path alone brings complete satisfaction to the soul, surpassing all other forms of religious or material activities.",
+      "featured": false,
+      "media": {
+        "video": {
+          "youtube_id": "Tl985-wNe8Y"
+        }
+      },
+      "stream_metadata": {
+        "video_id": "Tl985-wNe8Y",
+        "title": "Bhakti Yoga - Auburn Hills is live!",
+        "duration": "PT57M45S",
+        "published_date": "2025-11-09",
+        "view_count": 26,
+        "channel_title": "Bhakti Yoga - Auburn Hills"
+      },
+      "section": "bg-lectures"
+    },
+    {
+      "id": "2025-11-02-sb-1-2-5",
+      "title": "Inquiring About Krishna: The Path to Self-Satisfaction",
+      "date": "2025-11-02",
+      "primary_verse": "SB 1.2.5",
+      "takeaway": "The most auspicious and purifying act is to inquire about Krishna, as this brings ultimate satisfaction to the self and promotes the welfare of all beings.",
+      "summary_short": "This lecture highlights the profound significance of honest inquiry into Krishna, as described in Srimad Bhagavatam 1.2.5. Such questions, focused on the Supreme Lord, are not only beneficial for the questioner but also for the entire world, leading to ultimate self-satisfaction.",
+      "featured": false,
+      "media": {
+        "video": {
+          "youtube_id": "v74cBM3VP9c"
+        }
+      },
+      "stream_metadata": {
+        "video_id": "v74cBM3VP9c",
+        "title": "Bhakti Yoga - Auburn Hills is live!",
+        "duration": "PT1H4M36S",
+        "published_date": "2025-11-02",
+        "view_count": 223,
+        "channel_title": "Bhakti Yoga - Auburn Hills"
+      },
+      "section": "bg-lectures"
+    },
+    {
+      "id": "2025-11-01-cc-antya-20-21-humility-dependence-the-p",
+      "title": "CC Antya 20.21 • Humility & Dependence: The Path to Krishna Consciousness",
+      "date": "2025-11-01",
+      "primary_verse": null,
+      "takeaway": "True spiritual advancement lies in recognizing our dependence on Krishna, spiritual master, and devotees, cultivating deep humility to overcome pride and sustain Krishna consciousness.",
+      "summary_short": "This lecture by Jai Sacinandana Kṛṣṇa Dāsa emphasizes humility and dependence on Krishna and devotees as the cornerstone of spiritual life. It contrasts the material world's emphasis on independence with the freedom found in sincere dependence, drawing lessons from Nalakuvera and Manigriva's liberation.",
+      "featured": false,
+      "media": {
+        "video": {
+          "youtube_id": "9WpSYPf2mng"
+        }
+      },
+      "stream_metadata": {
+        "video_id": "9WpSYPf2mng",
+        "title": "Bhakti Yoga - Auburn Hills is live!",
+        "duration": "PT2H12M8S",
+        "published_date": "2025-11-01",
+        "view_count": 50,
+        "channel_title": "Bhakti Yoga - Auburn Hills"
+      },
+      "section": "bg-lectures"
+    },
+    {
+      "id": "2025-10-26-bg-13-9",
+      "title": "Conquer Death: The Ultimate Problem & Krishna's Solution",
+      "date": "2025-10-26",
+      "primary_verse": "BG 13.9",
+      "takeaway": "Krishna consciousness, rooted in scriptures like Srimad Bhagavatam, provides the ultimate solution to the perpetual struggle of material existence by enabling a firm decision to surrender to Krishna and transcend birth, death, old age, and disease.",
+      "summary_short": "This lecture explains that material existence is a 'death sentence,' where everyone struggles to exist. The real problems are birth, death, old age, and disease, not mundane issues. By seriously taking up Krishna consciousness and making a firm decision to surrender, one can conquer death and return to the spiritual world, as taught by scriptures like Srimad Bhagavatam.",
+      "featured": false,
+      "media": {
+        "video": {
+          "youtube_id": "G5C7JiG89ok"
+        }
+      },
+      "stream_metadata": {
+        "video_id": "G5C7JiG89ok",
+        "title": "Bhakti Yoga - Auburn Hills is live!",
+        "duration": "PT44M58S",
+        "published_date": "2025-10-26",
+        "view_count": 32,
+        "channel_title": "Bhakti Yoga - Auburn Hills"
+      },
+      "section": "bg-lectures"
+    },
+    {
+      "id": "2025-10-24-bg-18-77",
+      "title": "Krishna's Sweet Speech: Why Devotees Get Lost",
+      "date": "2025-10-24",
+      "primary_verse": "BG 18.77",
+      "takeaway": "Krishna's words are so divinely sweet and attractive that devotees become absorbed in His beauty and presence, sometimes even forgetting the philosophical content of the verses, because the source itself is Bhagavan.",
+      "summary_short": "This lecture segment explores the unparalleled sweetness and attractiveness of Krishna's speech. It highlights how devotees, like Sanjaya, become so absorbed in Krishna's beautiful form and divine words that they are entranced, experiencing a profound spiritual connection beyond mere philosophical understanding.",
+      "featured": false,
+      "media": {
+        "video": {
+          "youtube_id": "dZyInrsA7V4"
+        }
+      },
+      "stream_metadata": {
+        "video_id": "dZyInrsA7V4",
+        "title": "Bhakti Yoga - Auburn Hills is live!",
+        "duration": "PT1H14M40S",
+        "published_date": "2025-10-24",
+        "view_count": 40,
+        "channel_title": "Bhakti Yoga - Auburn Hills"
+      },
+      "section": "bg-lectures"
+    },
+    {
+      "id": "2025-10-19-sb-10-9-19",
+      "title": "Krishna's Sweet Defeat: The Power of Devotee Love",
+      "date": "2025-10-19",
+      "primary_verse": "SB 10.9.19",
+      "takeaway": "Krishna, the controller of the entire universe, willingly becomes controlled by His pure devotee's love and intense effort, demonstrating the unparalleled power and intimate nature of devotional service.",
+      "summary_short": "This lecture explores the profound Damodar Leela, revealing how Krishna, the Supreme Controller, willingly allows Himself to be bound by Mother Yashoda's pure love. It highlights the unique power of devotional service, the importance of steadfast bhakti, and the devotee's aspiration for eternal service over liberation.",
+      "featured": false,
+      "media": {
+        "video": {
+          "youtube_id": "qPx6kMEipiU"
+        }
+      },
+      "stream_metadata": {
+        "video_id": "qPx6kMEipiU",
+        "title": "Bhakti Yoga - Auburn Hills is live!",
+        "duration": "PT1H30S",
+        "published_date": "2025-10-19",
+        "view_count": 161,
+        "channel_title": "Bhakti Yoga - Auburn Hills"
+      },
+      "section": "bg-lectures"
+    },
+    {
+      "id": "2025-10-18-bg-17-16",
+      "title": "Make Your Diwali Krishna-Conscious: The Art of True Celebration",
+      "date": "2025-10-18",
+      "primary_verse": "BG 17.16",
+      "takeaway": "True spiritual progress involves purifying our consciousness by consistently placing Krishna at the center of our lives, embracing devotion in all activities, and understanding that genuine love means serving and being conquered by the Lord's mercy.",
+      "summary_short": "This lecture explores the deeper meaning of spiritual festivals like Diwali, urging devotees to move beyond materialistic celebrations and make Krishna the central focus. It discusses controlling the mind and senses through devotion, contrasting material and spiritual love, and illustrating Krishna's desire to be bound by the love of His devotees through the Damodara-lila.",
+      "featured": false,
+      "media": {
+        "video": {
+          "youtube_id": "x0xeJB2f1Co"
+        }
+      },
+      "stream_metadata": {
+        "video_id": "x0xeJB2f1Co",
+        "title": "Bhakti Yoga - Auburn Hills is live!",
+        "duration": "PT2H12M3S",
+        "published_date": "2025-10-18",
+        "view_count": 57,
+        "channel_title": "Bhakti Yoga - Auburn Hills"
+      },
+      "section": "bg-lectures"
+    },
+    {
+      "id": "2025-10-17-sb-10",
+      "title": "Unlocking Krishna's Heart: The Secret of Damodara Leela",
+      "date": "2025-10-17",
+      "primary_verse": "SB 10",
+      "takeaway": "Krishna's highest display of personhood is found in His Vrindavan pastimes, particularly Damodara Leela, where He willingly becomes dependent on His devotee's love, accessible through simple, sincere bhakti.",
+      "summary_short": "This lecture delves into the profound Damodara Leela, revealing Krishna's ultimate personal nature and dependence on His devotees' love. It emphasizes the supremacy of simple, heartfelt bhakti over other spiritual paths, guiding us to transcend material attachments and enter spiritual reality.",
+      "featured": false,
+      "media": {
+        "video": {
+          "youtube_id": "0pMnem11e5Q"
+        }
+      },
+      "stream_metadata": {
+        "video_id": "0pMnem11e5Q",
+        "title": "Bhakti Yoga - Auburn Hills is live!",
+        "duration": "PT1H52M44S",
+        "published_date": "2025-10-17",
+        "view_count": 41,
+        "channel_title": "Bhakti Yoga - Auburn Hills"
+      },
+      "section": "bg-lectures"
+    },
+    {
+      "id": "2025-10-12-the-holy-name-absolute-truth-made-access",
+      "title": "The Holy Name: Absolute Truth Made Accessible",
+      "date": "2025-10-12",
+      "primary_verse": null,
+      "takeaway": "The Holy Name of Krishna offers complete protection, bliss, and knowledge, being non-different from the Absolute Truth itself, and devotees should enthusiastically dive into its ocean.",
+      "summary_short": "This lecture emphasizes that the Absolute Truth, whom everyone seeks, is fully present in the Holy Name. Chanting Hare Krishna provides all experiences, bliss, and knowledge, urging devotees to dive deep into its power.",
+      "featured": false,
+      "media": {
+        "video": {
+          "youtube_id": "D3JYBmREuBs"
+        }
+      },
+      "stream_metadata": {
+        "video_id": "D3JYBmREuBs",
+        "title": "Bhakti Yoga - Auburn Hills is live!",
+        "duration": "PT39M24S",
+        "published_date": "2025-10-12",
+        "view_count": 18,
+        "channel_title": "Bhakti Yoga - Auburn Hills"
+      },
+      "section": "bg-lectures"
+    },
+    {
+      "id": "2025-10-12-sb-1-2-3",
+      "title": "Surrender to Krishna: The Ultimate Path to Freedom",
+      "date": "2025-10-12",
+      "primary_verse": "SB 1.2.3",
+      "takeaway": "Krishna's supreme instruction in BG 18.66 is to abandon all other forms of religious duty and surrender completely to Him alone, as this is the only path to be freed from all sinful reactions and material entanglements.",
+      "summary_short": "This lecture explores the life and teachings of Narottam Das Thakur, the profound wisdom of Srimad Bhagavatam as a spiritual lamp in a dark world, and the ultimate instruction of Bhagavad Gita 18.66: complete surrender to Krishna. It emphasizes cultivating focused intelligence and realizing Krishna as the sole protector, leading to true freedom.",
+      "featured": false,
+      "media": {
+        "video": {
+          "youtube_id": "Iqtu1j4cVfM"
+        }
+      },
+      "stream_metadata": {
+        "video_id": "Iqtu1j4cVfM",
+        "title": "Bhakti Yoga - Auburn Hills is live!",
+        "duration": "PT1H18M55S",
+        "published_date": "2025-10-12",
+        "view_count": 48,
+        "channel_title": "Bhakti Yoga - Auburn Hills"
+      },
+      "section": "bg-lectures"
+    },
+    {
+      "id": "2025-10-11-bg-17-15",
+      "title": "Divine Speech: The Path to Inner Peace (BG 17.15)",
+      "date": "2025-10-11",
+      "primary_verse": "BG 17.15",
+      "takeaway": "Krishna reveals that the austerity of speech (vāṅ-mayaṁ tapa) involves speaking words that are truthful, pleasing, beneficial, and non-agitating, coupled with regular study of Vedic texts, which is crucial for spiritual advancement and inner peace.",
+      "summary_short": "Jai Sacinandana Kṛṣṇa Dāsa elucidates Bhagavad Gita 17.15, focusing on the penance of speech. He explains how disciplined communication—truthful, pleasing, beneficial, and non-agitating words—combined with scriptural study, is a profound spiritual practice. The lecture also touches on accepting suffering as Krishna's mercy and the transformative power of the Hare Krishna mantra.",
+      "featured": false,
+      "media": {
+        "video": {
+          "youtube_id": "sv1MVfKmGtQ"
+        }
+      },
+      "stream_metadata": {
+        "video_id": "sv1MVfKmGtQ",
+        "title": "Bhakti Yoga - Auburn Hills is live!",
+        "duration": "PT2H14M20S",
+        "published_date": "2025-10-11",
+        "view_count": 360,
         "channel_title": "Bhakti Yoga - Auburn Hills"
       },
       "section": "bg-lectures"

@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conquer Death: The Ultimate Problem & Krishna's Solution | Auburn Hills Bhakti Vriksha</title>
+    <meta name="description" content="Krishna consciousness, rooted in scriptures like Srimad Bhagavatam, provides the ultimate solution to the perpetual struggle of material existence by ">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #E8D4A2 0%, #D4C5A0 50%, #C4B598 100%);
+            min-height: 100vh;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #8B7752 0%, #6B5D42 100%);
+            padding: 30px 20px;
+            text-align: center;
+            color: #E8D4A2;
+            border-bottom: 4px solid #3A2F1F;
+        }
+        
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8em, 4vw, 2.5em);
+            font-weight: 900;
+            margin-bottom: 5px;
+        }
+        
+        header a {
+            color: #E8D4A2;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        header a:hover { opacity: 0.8; }
+        
+        .breadcrumbs {
+            background: rgba(232, 212, 162, 0.3);
+            padding: 15px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+        }
+        
+        .breadcrumbs a {
+            color: #5A4D37;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .breadcrumbs a:hover { color: #3A2F1F; }
+        
+        .breadcrumbs span { margin: 0 8px; color: #8B7752; }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .lecture-header {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 3px solid rgba(139, 119, 82, 0.2);
+            box-shadow: 0 4px 12px rgba(58, 47, 31, 0.1);
+        }
+        
+        .lecture-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8em, 4vw, 2.8em);
+            color: #3A2F1F;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        .lecture-meta {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .badge-date {
+            background: rgba(232, 212, 162, 0.4);
+            color: #5A4D37;
+            border: 2px solid rgba(139, 119, 82, 0.3);
+        }
+        
+        .badge-verse {
+            background: rgba(139, 119, 82, 0.2);
+            color: #3A2F1F;
+            border: 2px solid rgba(139, 119, 82, 0.4);
+        }
+        
+        .badge-speaker {
+            background: rgba(196, 30, 58, 0.1);
+            color: #8b0000;
+            border: 2px solid rgba(196, 30, 58, 0.3);
+        }
+        
+        .lecture-tabs {
+            display: flex;
+            background: rgba(232, 212, 162, 0.3);
+            border-radius: 12px 12px 0 0;
+            overflow-x: auto;
+            border: 3px solid rgba(139, 119, 82, 0.2);
+            border-bottom: none;
+        }
+        
+        .tab-btn {
+            flex: 1;
+            padding: 18px 24px;
+            border: none;
+            background: transparent;
+            color: #5A4D37;
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(0.85em, 2vw, 1em);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            border-right: 1px solid rgba(139, 119, 82, 0.2);
+        }
+        
+        .tab-btn:last-child { border-right: none; }
+        
+        .tab-btn:hover {
+            background: rgba(232, 212, 162, 0.5);
+            color: #3A2F1F;
+        }
+        
+        .tab-btn.active {
+            background: white;
+            color: #3A2F1F;
+            font-weight: 700;
+        }
+        
+        .tab-content {
+            display: none;
+            background: white;
+            padding: 40px;
+            border-radius: 0 0 12px 12px;
+            border: 3px solid rgba(139, 119, 82, 0.2);
+            border-top: none;
+            min-height: 400px;
+        }
+        
+        .tab-content.active { display: block; }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .section-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            color: #3A2F1F;
+            margin: 30px 0 20px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(139, 119, 82, 0.2);
+        }
+        
+        .content-text {
+            font-size: 1.15em;
+            line-height: 1.8;
+            color: #5A4D37;
+            margin-bottom: 20px;
+        }
+        
+        .theme-card {
+            background: rgba(232, 212, 162, 0.2);
+            border: 2px solid rgba(139, 119, 82, 0.3);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .theme-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4em;
+            color: #3A2F1F;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .flashcard-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .flashcard {
+            perspective: 1000px;
+            height: 250px;
+            cursor: pointer;
+        }
+        
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flashcard-front, .flashcard-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            border: 3px solid rgba(139, 119, 82, 0.3);
+        }
+        
+        .flashcard-front {
+            background: linear-gradient(135deg, #8B7752 0%, #6B5D42 100%);
+            color: #E8D4A2;
+            font-weight: 700;
+        }
+        
+        .flashcard-back {
+            background: white;
+            color: #3A2F1F;
+            transform: rotateY(180deg);
+            line-height: 1.6;
+        }
+        
+        .quiz-question {
+            background: rgba(232, 212, 162, 0.2);
+            border: 2px solid rgba(139, 119, 82, 0.3);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+        
+        .quiz-options {
+            display: grid;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        .quiz-option {
+            padding: 15px 20px;
+            border: 2px solid rgba(139, 119, 82, 0.3);
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.1em;
+        }
+        
+        .quiz-option:hover {
+            background: rgba(232, 212, 162, 0.3);
+            border-color: #8B7752;
+        }
+        
+        .quiz-option.selected {
+            background: #8B7752;
+            color: #E8D4A2;
+            border-color: #3A2F1F;
+        }
+        
+        .transcript-text {
+            font-size: 1.15em;
+            line-height: 1.9;
+            color: #5A4D37;
+            white-space: pre-wrap;
+        }
+        
+        @media (max-width: 768px) {
+            .lecture-header { padding: 25px; }
+            .tab-content { padding: 25px; }
+            .tab-btn { padding: 14px 16px; font-size: 0.85em; }
+            .flashcard-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="../index.html">🕉️ Auburn Hills Bhakti Vriksha</a></h1>
+    </header>
+    <div class="breadcrumbs">
+        <a href="../index.html">Home</a>
+        <span>›</span>
+        <a href="../bg-lectures.html">Bhagavad Gita Lectures</a>
+        <span>›</span>
+        <span>Conquer Death: The Ultimate Problem & Krishna's Solution</span>
+    </div>
+    
+    <div class="container">
+        <div class="lecture-header">
+            <h1 class="lecture-title">Conquer Death: The Ultimate Problem & Krishna's Solution</h1>
+            <div class="lecture-meta">
+                <span class="badge badge-date">📅 October 25, 2025</span>
+                <span class="badge badge-verse">📖 BG 13.9</span>
+                <span class="badge badge-speaker">🎤 Jai Sacinandana Kṛṣṇa Dāsa</span>
+            </div>
+        </div>
+        
+        <div class="lecture-tabs">
+            <button class="tab-btn active" data-tab="overview">Overview</button>
+            <button class="tab-btn" data-tab="notes">Study Notes</button>
+            <button class="tab-btn" data-tab="flashcards">Flashcards</button>
+            <button class="tab-btn" data-tab="quiz">Quiz</button>
+            <button class="tab-btn" data-tab="transcript">Transcript</button>
+        </div>
+        
+        <div class="tab-content active" id="overview">
+            
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/G5C7JiG89ok" frameborder="0" allowfullscreen></iframe>
+        </div>
+        
+        
+        <h2 class="section-heading">Key Takeaway</h2>
+        <p class="content-text">Krishna consciousness, rooted in scriptures like Srimad Bhagavatam, provides the ultimate solution to the perpetual struggle of material existence by enabling a firm decision to surrender to Krishna and transcend birth, death, old age, and disease.</p>
+        
+        
+        
+        <h2 class="section-heading">Main Theme</h2>
+        <p class="content-text">Conquering material existence by choosing Krishna</p>
+        
+        
+        
+        <h2 class="section-heading">Summary</h2>
+        <p class="content-text">This lecture explains that material existence is a 'death sentence,' where everyone struggles to exist. The real problems are birth, death, old age, and disease, not mundane issues. By seriously taking up Krishna consciousness and making a firm decision to surrender, one can conquer death and return to the spiritual world, as taught by scriptures like Srimad Bhagavatam.</p>
+        
+    
+        </div>
+        
+        <div class="tab-content" id="notes">
+            <h2 class="section-heading">Key Concepts</h2>
+            <div class="theme-card">
+                <h3 class="theme-title">The Illusion of Time and Inevitability of Death</h3>
+                <p class="content-text">The speaker vividly portrays material existence as a 'Mrityu Lokam' (place of death), where everyone is on a 'death sentence.' He uses examples like prison documentaries and cruel execution methods (the suspended knee) to illustrate how life is a ticking time bomb, with days constantly being taken away. The most astonishing thing, as asked by Yaksha and answered by Yudhishthira, is that everyone sees others dying daily yet thinks they will never die. This illusion of having endless time prevents people from addressing the real problems of life, leading to forgetfulness of our eternal nature.</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">The analogy of a 'death sentence' in a prison.</li><li class="content-text">The cruel execution method of a suspended knee losing weights daily, symbolizing lost days.</li><li class="content-text">Yudhishthira's answer to Yaksha's question: 'The most wonderful thing in this world is that everyone is going to die day after day, but everyone is saying, 'I am not going to die.''</li><li class="content-text">Personal stories of sudden death at 19 or 57 despite regular checkups, highlighting life's unpredictability.</li></ul>
+                
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Distinguishing Real Problems from False Problems</h3>
+                <p class="content-text">The lecture highlights a fundamental misconception in modern society: people focus on solving trivial, temporary problems while ignoring the ultimate, existential ones. The speaker contrasts startup culture's emphasis on 'customer pain points' (like HVAC bills, falling leaves, gray hair, children's schedules) with the core problems identified in Vedic scriptures: birth, death, old age, and disease (janma-mṛtyu-jarā-vyādhi). Addressing these superficial problems only provides temporary relief (1-5%) and does not solve the root cause of suffering, keeping us absorbed in a 'false problem statement.'</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">Startups solving 'problems' like organizing clothes, collecting leaves, reminding about gray hair, or children's schedules.</li><li class="content-text">The speaker's transition from mechanical engineering to product management, where the focus was on 'customer pain points' in contrast to the real 'pain point' of material existence.</li><li class="content-text">The four problems of human life: birth, death, old age, and disease (janma-mṛtyu-jarā-vyādhi), which are the true problems according to Shastras.</li></ul>
+                
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">The Supremacy and Power of Vedic Literature</h3>
+                <p class="content-text">Starting with Srimad Bhagavatam 1.2.4, the speaker emphasizes that Vedic scriptures, especially the Puranas and Bhagavatam, are specifically designed to conquer the 'darkest region of material existence.' They provide the 'remedial measures' and the 'strategy' to re-establish one's eternal relationship with God. Bhagavatam is called the 'spotless Purana,' meant for those who genuinely desire to escape material entanglement. These texts offer the 'data points' necessary for making the decisive choice to return to the spiritual world, convincing one to 'invest' their life in spiritual pursuits, moving beyond the perpetual struggle for existence.</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">The verse 'nārāyaṇaṁ namaskṛtya...' as the means of conquest against material existence.</li><li class="content-text">Describing Srimad Bhagavatam as the 'spotless Purana' and a 'very strong strategy' for spiritual transportation.</li><li class="content-text">The idea of reading Bhagavatam to be 'sold to the strategy' of investing in spiritual life, much like an investor studies a paper before committing funds.</li></ul>
+                
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">The Meaning of Surrender and Decisive Choice</h3>
+                <p class="content-text">The lecture explains surrender not as a passive act, but as a firm, conscious decision. It is the determination to dedicate one's entire lifetime to Krishna and make the return to the spiritual world one's ultimate goal. The speaker asserts that what keeps an individual in the material world is their own decision to stay. By changing this decision and making an 'intelligent choice quickly' (`toornan yateyat anumritya yavat`), one can immediately be transferred to the spiritual realm and become blissful in this life, thus conquering the struggle for existence.</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">Defining surrender as a 'determination' to dedicate one's life to Krishna and go back to the spiritual world.</li><li class="content-text">The concept that 'what keeps you in the material world is your decision to stay in this material world.'</li><li class="content-text">The example of an 'intelligent person' making a quick decision to embrace Krishna consciousness.</li></ul>
+                
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Persistence in Japa and Krishna's Reciprocation</h3>
+                <p class="content-text">The speaker acknowledges that chanting the Hare Krishna mantra (Japa) can often feel boring, likening it to an eagle needing to penetrate a frozen lake to reach the fish. This initial boredom is natural, but persistence is key. By offering one's bad habits or the very boredom itself to Krishna with a spirit of surrender, Krishna reciprocates by revealing Himself, making the chanting sweet. This principle extends to any difficulty taken for Krishna, such as attending morning programs, assuring that He will be pleased and reciprocate.</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">The analogy of an eagle trying to fish in a frozen lake: the need to penetrate the 'thick crust' of boredom to find the 'liquid' sweetness below.</li><li class="content-text">The practice of surrendering a 'bad habit' or even the feeling of boredom during Japa to Krishna.</li><li class="content-text">Coming to the morning program despite a 'laborious day yesterday' as an example of taking difficulty for Krishna, which leads to His reciprocation.</li></ul>
+                
+            </div><h2 class="section-heading">📚 Sanskrit Terms</h2>
+            <div class="theme-card">
+                <h3 class="theme-title">Narayanam namaskritya (नारायणं नमस्कृत्य)</h3>
+                <p class="content-text">Offering obeisances to Lord Narayana</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Mrityu Lokam (मृत्यु लोकम्)</h3>
+                <p class="content-text">Place of death</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Janma-mrtyu-jara-vyadhi (जन्म-मृत्यु-जरा-व्याधि)</h3>
+                <p class="content-text">Birth, death, old age, disease</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Kim Ashcaryam (किम् आश्चर्यम्)</h3>
+                <p class="content-text">What is the most wonderful thing?</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Tapasya (तपस्या)</h3>
+                <p class="content-text">Austerity, penance</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Shastras (शास्त्र)</h3>
+                <p class="content-text">Scriptures, revealed texts</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Japa (जप)</h3>
+                <p class="content-text">Chanting of mantras</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Toornan yateyat anumritya yavat (तूर्णं यतेत अनुमृत्यु यावत्)</h3>
+                <p class="content-text">Strive quickly before death</p>
+            </div><h2 class="section-heading">Practical Applications</h2><ul><li class="content-text">Persist in chanting Japa despite initial boredom.</li><li class="content-text">Shift focus from temporary material problems to ultimate spiritual realities.</li><li class="content-text">Make a firm, conscious decision to dedicate your life to Krishna.</li><li class="content-text">Take shelter of authoritative Vedic scriptures, especially Srimad Bhagavatam.</li><li class="content-text">Incorporate Krishna consciousness deeply into your lifestyle.</li></ul><h2 class="section-heading">Notable Quotes</h2><blockquote class="content-text">"Krishna consciousness is so wonderful and if we simply realize Krishna's existence... We will become abstract."</blockquote><blockquote class="content-text">"If you are chanting Hare Krishna mantra it can be boring and most probably 99.99% it will be boring."</blockquote><blockquote class="content-text">"Krishna is there in this nature. It must be sweet. Sweetness is inside. I just have to unlock it."</blockquote><blockquote class="content-text">"Krishna, I find it very boring during chanting. I am going to surrender to you because when I surrender you will reveal yourself to me."</blockquote><blockquote class="content-text">"We are in a war with the mind."</blockquote><blockquote class="content-text">"We are all on a death sentence."</blockquote><blockquote class="content-text">"When you shift your way of seeing problems... When you are able to see that this is the real problem: Janamrithu dharavyaadhi dhuksa doshaana rishanam (birth, death, old age, disease)."</blockquote><blockquote class="content-text">"We are not meant to solve these useless problems. We are meant to solve the ultimate problem."</blockquote><blockquote class="content-text">"The biggest wonder is that everyone is going to die day after day, but everyone is saying, 'I am going to die, I am going to die'."</blockquote><blockquote class="content-text">"The illusion is that I think I have time."</blockquote><blockquote class="content-text">"We are not meant to die... We can go back to the spiritual world and be with Krishna."</blockquote><blockquote class="content-text">"What is the gain in this material world? For this samosa, for this kachori and for this chicken butter masala. It is an amassing sin. So give it up."</blockquote><blockquote class="content-text">"An intelligent person will take this decision quickly. Toornan means quickly. Quickly do it."</blockquote><blockquote class="content-text">"You cannot get it by making plans... The real pain point is this (janma-mṛtyu-jarā-vyādhi)."</blockquote><blockquote class="content-text">"What keeps you in the material world is your decision to stay in this material world."</blockquote><blockquote class="content-text">"Surrender means you decide. You make a determination: This lifetime I dedicate to Krishna and I am going to go back to the spiritual world. That is surrender."</blockquote><blockquote class="content-text">"If you read this paper [Bhagavatam], you will be sold to the strategy [of going back to the spiritual world]. Yes, I subscribe. I will invest here."</blockquote><blockquote class="content-text">"We all want to become victorious... To be not miserable at any point in your life, you just need one thing: you should always feel, 'I won.'"</blockquote><blockquote class="content-text">"Your path will become enlightened... Intelligence will become open... I am spirit soul. Yes! I am eternal. I am going to go back to this spiritual world. It will become very enthusiastic."</blockquote><blockquote class="content-text">"You already account for the facts of this material world and you won't be surprised. Go back to the spiritual world."</blockquote><blockquote class="content-text">"Don't be cheated. So let's get rid of the material entanglement permanently by making a decision to go back to the spiritual world."</blockquote><blockquote class="content-text">"Stuff your weekend with Krishna consciousness. Stuff your weekend completely populated with Krishna consciousness."</blockquote>
+        </div>
+        
+        <div class="tab-content" id="flashcards">
+            
+        <p class="content-text">Click on a card to flip it!</p>
+        <div class="flashcard-container">
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Narayanam namaskritya (नारायणं नमस्कृत्य)</div>
+                    <div class="flashcard-back">Offering obeisances to Lord Narayana</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Mrityu Lokam (मृत्यु लोकम्)</div>
+                    <div class="flashcard-back">Place of death</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Janma-mrtyu-jara-vyadhi (जन्म-मृत्यु-जरा-व्याधि)</div>
+                    <div class="flashcard-back">Birth, death, old age, disease</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Kim Ashcaryam (किम् आश्चर्यम्)</div>
+                    <div class="flashcard-back">What is the most wonderful thing?</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Tapasya (तपस्या)</div>
+                    <div class="flashcard-back">Austerity, penance</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Shastras (शास्त्र)</div>
+                    <div class="flashcard-back">Scriptures, revealed texts</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Japa (जप)</div>
+                    <div class="flashcard-back">Chanting of mantras</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Toornan yateyat anumritya yavat (तूर्णं यतेत अनुमृत्यु यावत्)</div>
+                    <div class="flashcard-back">Strive quickly before death</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Who is Narayana Rishi?</div>
+                    <div class="flashcard-back">Narayana Rishi is one of the incarnations of the Lord. Narayana is Krishna Himself, and Nara (Arjuna) and Narayana (Krishna) exemplify how to practice the process of Ashtanga Yoga. There was a Rishi called Narayana Rishi, and when he and Nara were performing Tapasya, Indra became very insecure. Indra sent a lot of Rishis, but Narayana Rishi merely laughed, and then produced dancers from his thigh. All the dancers who came from Devaloka felt ashamed because they felt they were ugly compared to the dancers created by Narayana Rishi, demonstrating the power of the Rishi's spiritual potency.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">The Illusion of Time and Inevitability of Death</div>
+                    <div class="flashcard-back">The speaker vividly portrays material existence as a 'Mrityu Lokam' (place of death), where everyone is on a 'death sentence.' He uses examples like prison documentaries and cruel execution methods (t...</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Distinguishing Real Problems from False Problems</div>
+                    <div class="flashcard-back">The lecture highlights a fundamental misconception in modern society: people focus on solving trivial, temporary problems while ignoring the ultimate, existential ones. The speaker contrasts startup c...</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">The Supremacy and Power of Vedic Literature</div>
+                    <div class="flashcard-back">Starting with Srimad Bhagavatam 1.2.4, the speaker emphasizes that Vedic scriptures, especially the Puranas and Bhagavatam, are specifically designed to conquer the 'darkest region of material existen...</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">The Meaning of Surrender and Decisive Choice</div>
+                    <div class="flashcard-back">The lecture explains surrender not as a passive act, but as a firm, conscious decision. It is the determination to dedicate one's entire lifetime to Krishna and make the return to the spiritual world ...</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Persistence in Japa and Krishna's Reciprocation</div>
+                    <div class="flashcard-back">The speaker acknowledges that chanting the Hare Krishna mantra (Japa) can often feel boring, likening it to an eagle needing to penetrate a frozen lake to reach the fish. This initial boredom is natur...</div>
+                </div>
+            </div>
+            
+        </div>
+    
+        </div>
+        
+        <div class="tab-content" id="quiz">
+            
+        <div id="quizContainer">
+            <p class="content-text">Test your knowledge! Results will be saved locally.</p>
+            
+            <div class="quiz-question">
+                <p class="content-text"><strong>Question 1:</strong> According to the lecture, what is the 'most wonderful thing' in this world, as famously described by Yudhishthira Maharaj?</p>
+                <div class="quiz-options">
+                    
+                    <div class="quiz-option" onclick="selectOption(0, 0, 1)">The Taj Mahal</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(0, 1, 1)">Everyone sees others die daily but believes they will never die.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(0, 2, 1)">The vastness of the universe</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(0, 3, 1)">The complexity of the human mind</div>
+                    
+                </div>
+                <div id="explanation-0" style="display:none; margin-top:15px;">
+                    <p class="content-text"><strong>Explanation:</strong> The speaker references Yudhishthira's answer to Yaksha, stating that the greatest wonder is that people witness death constantly yet deny their own mortality, an illusion that prevents them from seeking real solutions.</p>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <p class="content-text"><strong>Question 2:</strong> What analogy does the speaker use to encourage persistence in chanting Japa despite boredom?</p>
+                <div class="quiz-options">
+                    
+                    <div class="quiz-option" onclick="selectOption(1, 0, 2)">A marathon runner pushing through fatigue.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(1, 1, 2)">A farmer waiting for his crops to grow.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(1, 2, 2)">An eagle trying to fish in a frozen lake.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(1, 3, 2)">A student studying for a difficult exam.</div>
+                    
+                </div>
+                <div id="explanation-1" style="display:none; margin-top:15px;">
+                    <p class="content-text"><strong>Explanation:</strong> The speaker compares Japa to an eagle needing to penetrate a frozen lake (boredom) to reach the fish (sweetness) beneath, emphasizing that persistence is required to experience the joy of the Holy Name.</p>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <p class="content-text"><strong>Question 3:</strong> What does the speaker identify as the 'real pain point' that humans often ignore while focusing on superficial problems?</p>
+                <div class="quiz-options">
+                    
+                    <div class="quiz-option" onclick="selectOption(2, 0, 2)">Financial debt and economic instability.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(2, 1, 2)">Social isolation and lack of community.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(2, 2, 2)">Janma-mṛtyu-jarā-vyādhi (birth, death, old age, and disease).</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(2, 3, 2)">Technological obsolescence and digital distraction.</div>
+                    
+                </div>
+                <div id="explanation-2" style="display:none; margin-top:15px;">
+                    <p class="content-text"><strong>Explanation:</strong> The lecture strongly emphasizes that the ultimate problems of human existence are birth, death, old age, and disease, which are often overlooked in favor of addressing minor material inconveniences.</p>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <p class="content-text"><strong>Question 4:</strong> How does the speaker define 'surrender' in the context of Krishna consciousness?</p>
+                <div class="quiz-options">
+                    
+                    <div class="quiz-option" onclick="selectOption(3, 0, 2)">Passively accepting whatever happens.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(3, 1, 2)">Giving up all material possessions.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(3, 2, 2)">Making a firm determination to dedicate one's lifetime to Krishna and return to the spiritual world.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(3, 3, 2)">Performing intense austerities and penances.</div>
+                    
+                </div>
+                <div id="explanation-3" style="display:none; margin-top:15px;">
+                    <p class="content-text"><strong>Explanation:</strong> The speaker explicitly states that surrender means making a decisive determination to dedicate this life to Krishna and returning to the spiritual world, actively choosing a spiritual destiny.</p>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <p class="content-text"><strong>Question 5:</strong> According to the lecture, why should one quickly take up Krishna consciousness (`Toornan yateyat anumritya yavat`)?</p>
+                <div class="quiz-options">
+                    
+                    <div class="quiz-option" onclick="selectOption(4, 0, 1)">To gain material prosperity.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(4, 1, 1)">Because we don't know when we will die and time is an illusion.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(4, 2, 1)">To impress others with one's spiritual advancement.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(4, 3, 1)">To avoid all worldly responsibilities.</div>
+                    
+                </div>
+                <div id="explanation-4" style="display:none; margin-top:15px;">
+                    <p class="content-text"><strong>Explanation:</strong> The speaker repeatedly stresses the illusion of having time and the unpredictable nature of death, urging quick action in spiritual life before it's too late.</p>
+                </div>
+            </div>
+            
+        </div>
+    
+        </div>
+        
+        <div class="tab-content" id="transcript">
+            <p class="content-text">No transcript available for this lecture.</p>
+        </div>
+    </div>
+    
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+        
+        // Tab switching
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tab = btn.dataset.tab;
+                
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                btn.classList.add('active');
+                document.getElementById(tab).classList.add('active');
+            });
+        });
+        
+        // Quiz functionality
+        let quizScore = 0;
+        let quizTotal = 5;
+        
+        function selectOption(questionIndex, optionIndex, correctIndex) {
+            const options = document.querySelectorAll(`.quiz-question:nth-child(${questionIndex + 2}) .quiz-option`);
+            options.forEach(opt => opt.classList.remove('selected'));
+            options[optionIndex].classList.add('selected');
+            
+            document.getElementById(`explanation-${questionIndex}`).style.display = 'block';
+            
+            if (optionIndex === correctIndex) {
+                quizScore++;
+                options[optionIndex].style.background = '#4CAF50';
+                options[optionIndex].style.color = 'white';
+            } else {
+                options[optionIndex].style.background = '#f44336';
+                options[optionIndex].style.color = 'white';
+                options[correctIndex].style.background = '#4CAF50';
+                options[correctIndex].style.color = 'white';
+            }
+            
+            // Save to localStorage
+            saveQuizResult('2025-10-26-bg-13-9', quizScore, quizTotal);
+        }
+        
+        function saveQuizResult(lectureId, score, total) {
+            const results = JSON.parse(localStorage.getItem('quizResults') || '[]');
+            results.push({
+                lectureId,
+                score,
+                total,
+                date: new Date().toISOString()
+            });
+            localStorage.setItem('quizResults', JSON.stringify(results));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlocking Krishna's Heart: The Secret of Damodara Leela | Auburn Hills Bhakti Vriksha</title>
+    <meta name="description" content="Krishna's highest display of personhood is found in His Vrindavan pastimes, particularly Damodara Leela, where He willingly becomes dependent on His d">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #E8D4A2 0%, #D4C5A0 50%, #C4B598 100%);
+            min-height: 100vh;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #8B7752 0%, #6B5D42 100%);
+            padding: 30px 20px;
+            text-align: center;
+            color: #E8D4A2;
+            border-bottom: 4px solid #3A2F1F;
+        }
+        
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8em, 4vw, 2.5em);
+            font-weight: 900;
+            margin-bottom: 5px;
+        }
+        
+        header a {
+            color: #E8D4A2;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        header a:hover { opacity: 0.8; }
+        
+        .breadcrumbs {
+            background: rgba(232, 212, 162, 0.3);
+            padding: 15px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+        }
+        
+        .breadcrumbs a {
+            color: #5A4D37;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .breadcrumbs a:hover { color: #3A2F1F; }
+        
+        .breadcrumbs span { margin: 0 8px; color: #8B7752; }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .lecture-header {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 3px solid rgba(139, 119, 82, 0.2);
+            box-shadow: 0 4px 12px rgba(58, 47, 31, 0.1);
+        }
+        
+        .lecture-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8em, 4vw, 2.8em);
+            color: #3A2F1F;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        .lecture-meta {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .badge-date {
+            background: rgba(232, 212, 162, 0.4);
+            color: #5A4D37;
+            border: 2px solid rgba(139, 119, 82, 0.3);
+        }
+        
+        .badge-verse {
+            background: rgba(139, 119, 82, 0.2);
+            color: #3A2F1F;
+            border: 2px solid rgba(139, 119, 82, 0.4);
+        }
+        
+        .badge-speaker {
+            background: rgba(196, 30, 58, 0.1);
+            color: #8b0000;
+            border: 2px solid rgba(196, 30, 58, 0.3);
+        }
+        
+        .lecture-tabs {
+            display: flex;
+            background: rgba(232, 212, 162, 0.3);
+            border-radius: 12px 12px 0 0;
+            overflow-x: auto;
+            border: 3px solid rgba(139, 119, 82, 0.2);
+            border-bottom: none;
+        }
+        
+        .tab-btn {
+            flex: 1;
+            padding: 18px 24px;
+            border: none;
+            background: transparent;
+            color: #5A4D37;
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(0.85em, 2vw, 1em);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            border-right: 1px solid rgba(139, 119, 82, 0.2);
+        }
+        
+        .tab-btn:last-child { border-right: none; }
+        
+        .tab-btn:hover {
+            background: rgba(232, 212, 162, 0.5);
+            color: #3A2F1F;
+        }
+        
+        .tab-btn.active {
+            background: white;
+            color: #3A2F1F;
+            font-weight: 700;
+        }
+        
+        .tab-content {
+            display: none;
+            background: white;
+            padding: 40px;
+            border-radius: 0 0 12px 12px;
+            border: 3px solid rgba(139, 119, 82, 0.2);
+            border-top: none;
+            min-height: 400px;
+        }
+        
+        .tab-content.active { display: block; }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .section-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            color: #3A2F1F;
+            margin: 30px 0 20px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(139, 119, 82, 0.2);
+        }
+        
+        .content-text {
+            font-size: 1.15em;
+            line-height: 1.8;
+            color: #5A4D37;
+            margin-bottom: 20px;
+        }
+        
+        .theme-card {
+            background: rgba(232, 212, 162, 0.2);
+            border: 2px solid rgba(139, 119, 82, 0.3);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .theme-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4em;
+            color: #3A2F1F;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .flashcard-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .flashcard {
+            perspective: 1000px;
+            height: 250px;
+            cursor: pointer;
+        }
+        
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flashcard-front, .flashcard-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            border: 3px solid rgba(139, 119, 82, 0.3);
+        }
+        
+        .flashcard-front {
+            background: linear-gradient(135deg, #8B7752 0%, #6B5D42 100%);
+            color: #E8D4A2;
+            font-weight: 700;
+        }
+        
+        .flashcard-back {
+            background: white;
+            color: #3A2F1F;
+            transform: rotateY(180deg);
+            line-height: 1.6;
+        }
+        
+        .quiz-question {
+            background: rgba(232, 212, 162, 0.2);
+            border: 2px solid rgba(139, 119, 82, 0.3);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+        
+        .quiz-options {
+            display: grid;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        .quiz-option {
+            padding: 15px 20px;
+            border: 2px solid rgba(139, 119, 82, 0.3);
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.1em;
+        }
+        
+        .quiz-option:hover {
+            background: rgba(232, 212, 162, 0.3);
+            border-color: #8B7752;
+        }
+        
+        .quiz-option.selected {
+            background: #8B7752;
+            color: #E8D4A2;
+            border-color: #3A2F1F;
+        }
+        
+        .transcript-text {
+            font-size: 1.15em;
+            line-height: 1.9;
+            color: #5A4D37;
+            white-space: pre-wrap;
+        }
+        
+        @media (max-width: 768px) {
+            .lecture-header { padding: 25px; }
+            .tab-content { padding: 25px; }
+            .tab-btn { padding: 14px 16px; font-size: 0.85em; }
+            .flashcard-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="../index.html">🕉️ Auburn Hills Bhakti Vriksha</a></h1>
+    </header>
+    <div class="breadcrumbs">
+        <a href="../index.html">Home</a>
+        <span>›</span>
+        <a href="../bg-lectures.html">Bhagavad Gita Lectures</a>
+        <span>›</span>
+        <span>Unlocking Krishna's Heart: The Secret of Damodara Leela</span>
+    </div>
+    
+    <div class="container">
+        <div class="lecture-header">
+            <h1 class="lecture-title">Unlocking Krishna's Heart: The Secret of Damodara Leela</h1>
+            <div class="lecture-meta">
+                <span class="badge badge-date">📅 October 16, 2025</span>
+                <span class="badge badge-verse">📖 SB 10</span>
+                <span class="badge badge-speaker">🎤 Jai Sacinandana Kṛṣṇa Dāsa</span>
+            </div>
+        </div>
+        
+        <div class="lecture-tabs">
+            <button class="tab-btn active" data-tab="overview">Overview</button>
+            <button class="tab-btn" data-tab="notes">Study Notes</button>
+            <button class="tab-btn" data-tab="flashcards">Flashcards</button>
+            <button class="tab-btn" data-tab="quiz">Quiz</button>
+            <button class="tab-btn" data-tab="transcript">Transcript</button>
+        </div>
+        
+        <div class="tab-content active" id="overview">
+            
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/0pMnem11e5Q" frameborder="0" allowfullscreen></iframe>
+        </div>
+        
+        
+        <h2 class="section-heading">Key Takeaway</h2>
+        <p class="content-text">Krishna's highest display of personhood is found in His Vrindavan pastimes, particularly Damodara Leela, where He willingly becomes dependent on His devotee's love, accessible through simple, sincere bhakti.</p>
+        
+        
+        
+        <h2 class="section-heading">Main Theme</h2>
+        <p class="content-text">Unveiling Krishna's intimate, dependent, and personal nature through Damodara Leela</p>
+        
+        
+        
+        <h2 class="section-heading">Summary</h2>
+        <p class="content-text">This lecture delves into the profound Damodara Leela, revealing Krishna's ultimate personal nature and dependence on His devotees' love. It emphasizes the supremacy of simple, heartfelt bhakti over other spiritual paths, guiding us to transcend material attachments and enter spiritual reality.</p>
+        
+    
+        </div>
+        
+        <div class="tab-content" id="notes">
+            <h2 class="section-heading">Key Concepts</h2>
+            <div class="theme-card">
+                <h3 class="theme-title">The Goal of Bhakti: Pleasing Krishna and Vaishnavas</h3>
+                <p class="content-text">The speaker contrasts bhakti with karma, jnana, and ashtanga yoga, which are described as process-based approaches aimed at acquiring something one lacks. Bhakti, however, is presented as a personal process focused on bringing pleasure to Krishna and His devotees. This is exemplified by Narottam Das Thakur's bhajan, where he systematically seeks the mercy of various Vaishnavas and gurus. The essence is that by pleasing these spiritual personalities, one naturally advances and receives what is needed, rather than demanding it through one's own efforts.</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">Narottam Das Thakur seeking mercy from Nithyananda Prabhu, Chaitanya Mahaprabhu, Advaita Acharya, Gadadhar Pandit, Goswamis, and his spiritual master Lokanath Goswami.</li><li class="content-text">Comparing material work (e.g., going to office for money) to spiritual practices where actions are meant to please, not to gain a transactional outcome.</li></ul>
+                
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Transcending Material Attachments ('I and Mine')</h3>
+                <p class="content-text">The lecture strongly critiques the illusory nature of material connections and the concept of 'I and mine' that binds conditioned souls. It argues that everyone in the material world is 'wasting time' working hard for relationships and possessions that they have no true connection with, calling it a 'skin disease.' Marriage is highlighted as a 'formalization of expansion of service of matter' and an 'expansion of false ego,' leading to misery if not connected to Krishna's service. True humility is defined as the 'I' separating from everything material, leading to detachment and happiness.</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">The example of managing a large bank account for a family that is temporarily connected.</li><li class="content-text">The anecdote about being happier before marriage because one served matter lesser.</li><li class="content-text">The analogy of a painful tooth: if it's causing pain and not truly related, get rid of it through detachment.</li><li class="content-text">Manufacturing duties and desires to alleviate boredom in the material world.</li></ul>
+                
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Krishna's Supreme Personal Nature & Intimacy</h3>
+                <p class="content-text">The lecture emphasizes that the Absolute Truth is ultimately a person—Krishna—whose form, name, qualities, and pastimes are non-different from Him, unlike the speaker's words being different from himself. It discusses the 'transcendental variety' in Krishna's manifestation of personhood across different forms (Narasimha, Rama, Krishna) and different dhams (Dwaraka, Mathura, Vrindavan). Vrindavan Krishna, especially in His Bhaalya Leela, exhibits the maximum personhood, including 'weakness' and dependence, which makes Him supremely endearing and accessible to devotees.</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">Comparing Krishna's words being non-different from Him, unlike our words which we forget.</li><li class="content-text">Narasimha Dev not exhibiting weakness, but Rama exhibiting some, and Krishna exhibiting the most.</li><li class="content-text">Krishna in Vrindavan being 'happier' than in Dwaraka (from the perspective of the Vrajwasis).</li><li class="content-text">The Absolute Truth experiencing fear with Yashoda Mai, a concept difficult for impersonalists to grasp.</li></ul>
+                
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">The Philosophy of Damodara Leela</h3>
+                <p class="content-text">Damodara Leela is presented as a profound illustration of Krishna's intimate and dependent nature. Krishna, the independent Supreme Personality of Godhead, willingly becomes dependent on His devotee's love. His 'anger' at Mother Yashoda for being distracted, and His subsequent capture, are not signs of material weakness but ultimate expressions of His bhaktavatsala nature—His desire to be overruled and 'insulted' by His devotee's pure love. Mother Yashoda is glorified as the 'hero' because her intense desire to capture Krishna manifests this unique form and pastime of Damodara.</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">Yashoda Mai's bangles and the pounding sound compared to kartals and mridangam while singing Krishna kirtan.</li><li class="content-text">Krishna's anger when Yashoda Mai is distracted by the boiling milk, showing His expectation of her exclusive attention.</li><li class="content-text">The concept of Krishna taking pleasure in 'menial things' for His devotee, akin to a husband serving his wife.</li><li class="content-text">The idea that Damodara is a unique form and pastime, distinct from Krishna in other moods, brought about by Yashoda Mai's desire.</li></ul>
+                
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Simplicity in Devotion & Association of Devotees</h3>
+                <p class="content-text">Krishna's simplicity is highlighted as one of His 64 qualities, and He is attracted to devotees who are equally simple and uncomplicated, such as the Vrajwasis. This 'uncomplicated bhakti' cannot be achieved through intellectual study or austerities but only through the association of pure devotees (Vrajwasis in mood) and the spiritual master. By serving the spiritual master and imbibing their simple, devotional mood, one can actually capture Krishna's heart and experience His pastimes as factual realities rather than mere mythology.</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">Vrajwasis' uncomplicated devotion, which is spontaneous and does not acknowledge Krishna as God.</li><li class="content-text">The necessity of a spiritual master's association and blessings to develop this simple mood.</li><li class="content-text">The example of how we get attracted to Krishna because a devotee (like Prabhupada or Narottam Das Thakur) sang or spoke so nicely about Him.</li></ul>
+                
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Hare Krishna Mantra: The Gateway to Spiritual Reality</h3>
+                <p class="content-text">The lecture concludes by emphasizing the Hare Krishna mantra as the practical and accessible means to achieve all the profound spiritual insights and experiences discussed. The chanting is not merely a ritual but a process meant to 'flower' into a deep understanding and realization of Krishna's intimate pastimes and personal nature. One must chant with genuine desire and the intention for this flowering to occur, ensuring that the practice is not approached mechanically.</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">Connecting all spiritual discussions back to the chanting of Hare Krishna mantra.</li><li class="content-text">The idea that if the 'flowering' of desire and realization is not happening, something is wrong with the approach to chanting.</li></ul>
+                
+            </div><h2 class="section-heading">📚 Sanskrit Terms</h2>
+            <div class="theme-card">
+                <h3 class="theme-title">Bhakti (भक्ति)</h3>
+                <p class="content-text">Devotional service; love and devotion to God.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Jnana (ज्ञान)</h3>
+                <p class="content-text">Knowledge, particularly spiritual knowledge.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Chittashuddhi (चित्तशुद्धि)</h3>
+                <p class="content-text">Purification of the mind and heart.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Ashtanga Yoga (अष्टाङ्ग योग)</h3>
+                <p class="content-text">Eight-limbed yoga system.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Daya koro more </h3>
+                <p class="content-text">Please give me your mercy.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Vaishnavata (वैष्णवता)</h3>
+                <p class="content-text">The quality or path of a Vaishnava.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Sambandha (सम्बन्ध)</h3>
+                <p class="content-text">Relationship, connection.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Sadhana (साधना)</h3>
+                <p class="content-text">Spiritual practice.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Maya (माया)</h3>
+                <p class="content-text">Illusion, deluding potency.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Samsara (संसार)</h3>
+                <p class="content-text">The cycle of birth and death; material existence.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Anarthas (अनर्थ)</h3>
+                <p class="content-text">Unwanted things; impediments to spiritual progress.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Asangho yayampoorushah (असङ्गो ह्ययं पुरुषः)</h3>
+                <p class="content-text">The spirit soul is unattached.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Hladini Shakti (ह्लादिनी शक्ति)</h3>
+                <p class="content-text">Krishna's internal pleasure-giving potency.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Sandini Shakti (सन्धिनी शक्ति)</h3>
+                <p class="content-text">Krishna's internal existence-giving potency.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Sachidananda Vigraha (सच्चिदानन्द विग्रह)</h3>
+                <p class="content-text">Form of eternity, knowledge, and bliss.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Asat, Achit, Nirananda (असत्, अचित्, निरानन्द)</h3>
+                <p class="content-text">Temporary, unconscious, devoid of bliss.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Prema (प्रेम)</h3>
+                <p class="content-text">Pure love of God.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Naama, Rupa, Guna, Leela (नाम, रूप, गुण, लीला)</h3>
+                <p class="content-text">Name, Form, Qualities, Pastimes.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Advayat Tattva (अद्वय तत्त्व)</h3>
+                <p class="content-text">Absolute Truth, non-dual.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Swayam Bhagavan (स्वयं भगवान्)</h3>
+                <p class="content-text">The original Supreme Personality of Godhead.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Nahi Nidhanyaya </h3>
+                <p class="content-text">The logic of comparison for appreciation.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Bhaalya Leela (बाल्य लीला)</h3>
+                <p class="content-text">Childhood pastimes.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Bikaram (विकारम्)</h3>
+                <p class="content-text">Transformation, change.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Agnanam (अज्ञानम्)</h3>
+                <p class="content-text">Ignorance.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Hetu (हेतु)</h3>
+                <p class="content-text">Cause, reason, motive.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Vrajwasis (व्रजवासी)</h3>
+                <p class="content-text">Residents of Vrindavan.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Bhaktavatsala (भक्तवत्सल)</h3>
+                <p class="content-text">One who is very dear to His devotees.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Upayanistha (उपयेष्ठा)</h3>
+                <p class="content-text">The goal or desired outcome.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Upayanishtha (उपायनिष्ठ)</h3>
+                <p class="content-text">The means to achieve the goal.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Shraddhavan (श्रद्धावान्)</h3>
+                <p class="content-text">One who has faith.</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Yuktatama (युक्ततम)</h3>
+                <p class="content-text">Most perfectly situated among yogis.</p>
+            </div><h2 class="section-heading">Practical Applications</h2><ul><li class="content-text">Cultivating the mood of pleasing Vaishnavas and the Lord</li><li class="content-text">Detachment from material identification and false 'I and mine'</li><li class="content-text">Infusing all daily activities with a spiritual vision</li><li class="content-text">Appreciating Krishna's personal pastimes (Leela) as reality</li><li class="content-text">Cultivating simplicity and unconditional devotion</li></ul><h2 class="section-heading">Notable Quotes</h2><blockquote class="content-text">"Bhakti means to know whom to go actually, to whom to go to get water."</blockquote><blockquote class="content-text">"Bhakti means very simple that I go to a person, I satisfy him and by his being pleased he gives me something that I don't have."</blockquote><blockquote class="content-text">"Because I see I will do something, by doing that I will get something I don't have. This is what we do in the material world."</blockquote><blockquote class="content-text">"Mercy means you must [like] me now. Does it mean Krishna does not [like] me? Krishna likes me, but Krishna doesn't [like] my actions."</blockquote><blockquote class="content-text">"If you are able to bring pleasure in the heart of the person, it's over. Whatever process based it takes so long, you'll get it in a jiffy."</blockquote><blockquote class="content-text">"We can't please one person in this world... To please one person it is so difficult to please my husband or wife or children. Very difficult."</blockquote><blockquote class="content-text">"Krishna Consciousness as a means to satisfy the previous Acharyas. It is a question of satisfaction."</blockquote><blockquote class="content-text">"In the conditioned life we are simply satisfying people whom we have no relationship with."</blockquote><blockquote class="content-text">"Everyone in this world is simply wasting time. Why? Because we are working hard for something that I have no connection with."</blockquote><blockquote class="content-text">"The less you serve matter, the happier you will be. This is pratyakshama from your own life."</blockquote><blockquote class="content-text">"If you don't engage in Krishna's service, it is very difficult to engage in Krishna's service. Don't think it is easy. It is very difficult. It can be made easy, but it is not cheap."</blockquote><blockquote class="content-text">"If someone is not a devotee and he is married, he must be miserable."</blockquote><blockquote class="content-text">"Unless we have this conviction that whatever activities I am doing that is not Krishna conscious is a complete grand zero."</blockquote><blockquote class="content-text">"You must have a spiritual vision. This might appear a little impractical or exaggerated maybe a little fanatical also sometimes. I don't know. The reality is that I have nothing to do here."</blockquote><blockquote class="content-text">"If it is not related to me I have nothing to do with why should I be attached?"</blockquote><blockquote class="content-text">"This material world must cause confusion in his life. So he becomes detached from it and he must come back to me. This is the product description."</blockquote><blockquote class="content-text">"The difficulties of this world is Krishna's kiss on our cheeks."</blockquote><blockquote class="content-text">"If you are able to stop glorifying Krishna, then we have not gotten the disease of Krishna. Prema."</blockquote><blockquote class="content-text">"Where one doesn't know the passage of time... that is the meaning of realizing our eternal nature. Where we forget time."</blockquote><blockquote class="content-text">"This mundaneization has to become disinfected. How do you disinfect that mundaneization? We understand their glory and their lofty nature."</blockquote><blockquote class="content-text">"To read Krishna Leela means to have very intimate association of the absolute truth. Very intimate. And if you are not qualified, you can take it cheaply."</blockquote><blockquote class="content-text">"The highest understanding of the absolute truth is to understand the absolute truth as a dependent person on his devotee's love."</blockquote><blockquote class="content-text">"Krishna himself wants to become menial for the sake of love of his devotee."</blockquote><blockquote class="content-text">"Krishna loves it. He just loves it."</blockquote><blockquote class="content-text">"Our real nature is to be anxious, to be lusty, to be angry, to be tensed, to be anxious, to be worried, to be concerned. All these emotions to Krishna."</blockquote><blockquote class="content-text">"The simplicity, Krishna is so simple. One of the sixty four qualities of Krishna is that he is very very simple. He has no complexity, he is no crooked. Crookedness, very simple."</blockquote><blockquote class="content-text">"This uncomplicated bhakti cannot come by study... Only by having the association of another Vrajwasi, one who is actually present in this mood, can one have this uncomplicated attitude."</blockquote>
+        </div>
+        
+        <div class="tab-content" id="flashcards">
+            
+        <p class="content-text">Click on a card to flip it!</p>
+        <div class="flashcard-container">
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Bhakti (भक्ति)</div>
+                    <div class="flashcard-back">Devotional service; love and devotion to God.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Jnana (ज्ञान)</div>
+                    <div class="flashcard-back">Knowledge, particularly spiritual knowledge.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Chittashuddhi (चित्तशुद्धि)</div>
+                    <div class="flashcard-back">Purification of the mind and heart.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Ashtanga Yoga (अष्टाङ्ग योग)</div>
+                    <div class="flashcard-back">Eight-limbed yoga system.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Daya koro more</div>
+                    <div class="flashcard-back">Please give me your mercy.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Vaishnavata (वैष्णवता)</div>
+                    <div class="flashcard-back">The quality or path of a Vaishnava.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Sambandha (सम्बन्ध)</div>
+                    <div class="flashcard-back">Relationship, connection.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Sadhana (साधना)</div>
+                    <div class="flashcard-back">Spiritual practice.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Maya (माया)</div>
+                    <div class="flashcard-back">Illusion, deluding potency.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Samsara (संसार)</div>
+                    <div class="flashcard-back">The cycle of birth and death; material existence.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Anarthas (अनर्थ)</div>
+                    <div class="flashcard-back">Unwanted things; impediments to spiritual progress.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Asangho yayampoorushah (असङ्गो ह्ययं पुरुषः)</div>
+                    <div class="flashcard-back">The spirit soul is unattached.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Hladini Shakti (ह्लादिनी शक्ति)</div>
+                    <div class="flashcard-back">Krishna's internal pleasure-giving potency.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Sandini Shakti (सन्धिनी शक्ति)</div>
+                    <div class="flashcard-back">Krishna's internal existence-giving potency.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Sachidananda Vigraha (सच्चिदानन्द विग्रह)</div>
+                    <div class="flashcard-back">Form of eternity, knowledge, and bliss.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Asat, Achit, Nirananda (असत्, अचित्, निरानन्द)</div>
+                    <div class="flashcard-back">Temporary, unconscious, devoid of bliss.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Prema (प्रेम)</div>
+                    <div class="flashcard-back">Pure love of God.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Naama, Rupa, Guna, Leela (नाम, रूप, गुण, लीला)</div>
+                    <div class="flashcard-back">Name, Form, Qualities, Pastimes.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Advayat Tattva (अद्वय तत्त्व)</div>
+                    <div class="flashcard-back">Absolute Truth, non-dual.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Swayam Bhagavan (स्वयं भगवान्)</div>
+                    <div class="flashcard-back">The original Supreme Personality of Godhead.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Nahi Nidhanyaya</div>
+                    <div class="flashcard-back">The logic of comparison for appreciation.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Bhaalya Leela (बाल्य लीला)</div>
+                    <div class="flashcard-back">Childhood pastimes.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Bikaram (विकारम्)</div>
+                    <div class="flashcard-back">Transformation, change.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Agnanam (अज्ञानम्)</div>
+                    <div class="flashcard-back">Ignorance.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Hetu (हेतु)</div>
+                    <div class="flashcard-back">Cause, reason, motive.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Vrajwasis (व्रजवासी)</div>
+                    <div class="flashcard-back">Residents of Vrindavan.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Bhaktavatsala (भक्तवत्सल)</div>
+                    <div class="flashcard-back">One who is very dear to His devotees.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Upayanistha (उपयेष्ठा)</div>
+                    <div class="flashcard-back">The goal or desired outcome.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Upayanishtha (उपायनिष्ठ)</div>
+                    <div class="flashcard-back">The means to achieve the goal.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Shraddhavan (श्रद्धावान्)</div>
+                    <div class="flashcard-back">One who has faith.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Yuktatama (युक्ततम)</div>
+                    <div class="flashcard-back">Most perfectly situated among yogis.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">The Goal of Bhakti: Pleasing Krishna and Vaishnavas</div>
+                    <div class="flashcard-back">The speaker contrasts bhakti with karma, jnana, and ashtanga yoga, which are described as process-based approaches aimed at acquiring something one lacks. Bhakti, however, is presented as a personal p...</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Transcending Material Attachments ('I and Mine')</div>
+                    <div class="flashcard-back">The lecture strongly critiques the illusory nature of material connections and the concept of 'I and mine' that binds conditioned souls. It argues that everyone in the material world is 'wasting time'...</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Krishna's Supreme Personal Nature & Intimacy</div>
+                    <div class="flashcard-back">The lecture emphasizes that the Absolute Truth is ultimately a person—Krishna—whose form, name, qualities, and pastimes are non-different from Him, unlike the speaker's words being different from hims...</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">The Philosophy of Damodara Leela</div>
+                    <div class="flashcard-back">Damodara Leela is presented as a profound illustration of Krishna's intimate and dependent nature. Krishna, the independent Supreme Personality of Godhead, willingly becomes dependent on His devotee's...</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Simplicity in Devotion & Association of Devotees</div>
+                    <div class="flashcard-back">Krishna's simplicity is highlighted as one of His 64 qualities, and He is attracted to devotees who are equally simple and uncomplicated, such as the Vrajwasis. This 'uncomplicated bhakti' cannot be a...</div>
+                </div>
+            </div>
+            
+        </div>
+    
+        </div>
+        
+        <div class="tab-content" id="quiz">
+            
+        <div id="quizContainer">
+            <p class="content-text">Test your knowledge! Results will be saved locally.</p>
+            
+            <div class="quiz-question">
+                <p class="content-text"><strong>Question 1:</strong> According to the lecture, how does Narottam Das Thakur approach obtaining mercy to understand Radha Krishna Leela?</p>
+                <div class="quiz-options">
+                    
+                    <div class="quiz-option" onclick="selectOption(0, 0, 2)">By performing strict austerities</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(0, 1, 2)">By studying complex philosophical texts</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(0, 2, 2)">By seeking the mercy of Nithyananda Prabhu and Chaitanya Mahaprabhu through a lineage of devotees</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(0, 3, 2)">By directly praying to Radha Krishna without intermediaries</div>
+                    
+                </div>
+                <div id="explanation-0" style="display:none; margin-top:15px;">
+                    <p class="content-text"><strong>Explanation:</strong> Narottam Das Thakur is depicted as approaching Chaitanya Mahaprabhu through Nithyananda Prabhu, and then through other Goswamis, indicating a step-by-step approach through the mercy of associates.</p>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <p class="content-text"><strong>Question 2:</strong> What does the speaker identify as the fundamental difference between the material world and the spiritual world in terms of purpose?</p>
+                <div class="quiz-options">
+                    
+                    <div class="quiz-option" onclick="selectOption(1, 0, 1)">The material world aims for pleasure, while the spiritual world aims for knowledge.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(1, 1, 1)">The material world is meant to cause Nirananda (misery) and detachment, while the spiritual world causes pleasure to Krishna.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(1, 2, 1)">Both worlds are designed to test the living entity.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(1, 3, 1)">The material world is for temporary enjoyment, and the spiritual world is for eternal enjoyment.</div>
+                    
+                </div>
+                <div id="explanation-1" style="display:none; margin-top:15px;">
+                    <p class="content-text"><strong>Explanation:</strong> The speaker explicitly states, 'This material world is Asat, Achit and Nirananda. This material world is meant to cause Nirananda in me... This is the product description.' In contrast, the spiritual world's purpose is to cause pleasure to Krishna.</p>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <p class="content-text"><strong>Question 3:</strong> Which of the following is NOT described as a 'transcendental variety' or comparison point for Krishna's personhood?</p>
+                <div class="quiz-options">
+                    
+                    <div class="quiz-option" onclick="selectOption(2, 0, 3)">Comparison between different forms of the Lord (e.g., Varaha Dev, Narasimha Dev, Lord Rama, Lord Krishna)</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(2, 1, 3)">Variety within the dhams (e.g., Krishna in Dwaraka vs. Vrindavan)</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(2, 2, 3)">Same Krishna in Vrindavan having different interactions with different types of devotees</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(2, 3, 3)">Comparison between Krishna's pastimes and human mythological stories</div>
+                    
+                </div>
+                <div id="explanation-2" style="display:none; margin-top:15px;">
+                    <p class="content-text"><strong>Explanation:</strong> The speaker lists three types of transcendental varieties for understanding Krishna's personhood, and comparing Krishna's pastimes with human mythology is not one of them; in fact, the lecture argues against such a mundane comparison.</p>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <p class="content-text"><strong>Question 4:</strong> What is the 'disease of a devotee' as mentioned by the speaker?</p>
+                <div class="quiz-options">
+                    
+                    <div class="quiz-option" onclick="selectOption(3, 0, 1)">Becoming overly emotional in kirtan</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(3, 1, 1)">Constantly glorifying Krishna and being unable to stop</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(3, 2, 1)">Experiencing material attachments despite spiritual practice</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(3, 3, 1)">Doubting Krishna's existence</div>
+                    
+                </div>
+                <div id="explanation-3" style="display:none; margin-top:15px;">
+                    <p class="content-text"><strong>Explanation:</strong> The speaker says, 'If you are able to stop glorifying Krishna, then we have not gotten the disease of Krishna. Prema.'</p>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <p class="content-text"><strong>Question 5:</strong> How does the speaker describe the suffering experienced in marital life for non-devotees?</p>
+                <div class="quiz-options">
+                    
+                    <div class="quiz-option" onclick="selectOption(4, 0, 1)">It is a natural part of human existence.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(4, 1, 1)">It is due to embracing matter more intimately and expanding false ego.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(4, 2, 1)">It is a consequence of not finding the right partner.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(4, 3, 1)">It is a temporary phase that eventually leads to happiness.</div>
+                    
+                </div>
+                <div id="explanation-4" style="display:none; margin-top:15px;">
+                    <p class="content-text"><strong>Explanation:</strong> The speaker asserts, 'If you embrace matter more intimately, you will suffer more. Very simple... If someone is not a devotee and he is married, he must be miserable.' and 'It is an expansion of false ego... That is what is marriage.'</p>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <p class="content-text"><strong>Question 6:</strong> What does the speaker emphasize as the significance of Damodara Leela regarding Krishna's nature?</p>
+                <div class="quiz-options">
+                    
+                    <div class="quiz-option" onclick="selectOption(5, 0, 2)">It shows Krishna's supreme power and independence.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(5, 1, 2)">It highlights Krishna's detachment from all material affairs.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(5, 2, 2)">It reveals Krishna's willing dependence on His devotee's love and His agreement to meniality.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(5, 3, 2)">It proves Krishna is an impersonal energy.</div>
+                    
+                </div>
+                <div id="explanation-5" style="display:none; margin-top:15px;">
+                    <p class="content-text"><strong>Explanation:</strong> The lecture repeatedly stresses that Damodara Leela shows Krishna's 'weakness,' 'helplessness,' and 'meniality' for the sake of His devotee's love, demonstrating His unique personal nature and dependence.</p>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <p class="content-text"><strong>Question 7:</strong> According to the lecture, what is the role of the Hare Krishna mantra in relation to the profound spiritual realities discussed?</p>
+                <div class="quiz-options">
+                    
+                    <div class="quiz-option" onclick="selectOption(6, 0, 2)">It is merely a preliminary step before engaging in advanced practices.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(6, 1, 2)">It is the only means to achieve Brahman realization.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(6, 2, 2)">It is the means through which all desires for spiritual flowering can be guided and fulfilled, making spiritual realities accessible.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(6, 3, 2)">It is a substitute for engaging in Krishna's pastimes.</div>
+                    
+                </div>
+                <div id="explanation-6" style="display:none; margin-top:15px;">
+                    <p class="content-text"><strong>Explanation:</strong> The speaker explicitly states, 'The reason why I always connect everything to Hare Krishna mantra is that you must understand all the means that Hare Krishna mantra should flower itself into.' and 'this fortune is available by the chanting of Hare Krishna mantra.'</p>
+                </div>
+            </div>
+            
+        </div>
+    
+        </div>
+        
+        <div class="tab-content" id="transcript">
+            <p class="content-text">No transcript available for this lecture.</p>
+        </div>
+    </div>
+    
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+        
+        // Tab switching
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tab = btn.dataset.tab;
+                
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                btn.classList.add('active');
+                document.getElementById(tab).classList.add('active');
+            });
+        });
+        
+        // Quiz functionality
+        let quizScore = 0;
+        let quizTotal = 7;
+        
+        function selectOption(questionIndex, optionIndex, correctIndex) {
+            const options = document.querySelectorAll(`.quiz-question:nth-child(${questionIndex + 2}) .quiz-option`);
+            options.forEach(opt => opt.classList.remove('selected'));
+            options[optionIndex].classList.add('selected');
+            
+            document.getElementById(`explanation-${questionIndex}`).style.display = 'block';
+            
+            if (optionIndex === correctIndex) {
+                quizScore++;
+                options[optionIndex].style.background = '#4CAF50';
+                options[optionIndex].style.color = 'white';
+            } else {
+                options[optionIndex].style.background = '#f44336';
+                options[optionIndex].style.color = 'white';
+                options[correctIndex].style.background = '#4CAF50';
+                options[correctIndex].style.color = 'white';
+            }
+            
+            // Save to localStorage
+            saveQuizResult('2025-10-17-sb-10', quizScore, quizTotal);
+        }
+        
+        function saveQuizResult(lectureId, score, total) {
+            const results = JSON.parse(localStorage.getItem('quizResults') || '[]');
+            results.push({
+                lectureId,
+                score,
+                total,
+                date: new Date().toISOString()
+            });
+            localStorage.setItem('quizResults', JSON.stringify(results));
+        }
+    </script>
+</body>
+</html>

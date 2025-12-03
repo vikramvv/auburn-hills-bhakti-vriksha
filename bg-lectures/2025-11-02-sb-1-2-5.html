@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquiring About Krishna: The Path to Self-Satisfaction | Auburn Hills Bhakti Vriksha</title>
+    <meta name="description" content="The most auspicious and purifying act is to inquire about Krishna, as this brings ultimate satisfaction to the self and promotes the welfare of all be">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #E8D4A2 0%, #D4C5A0 50%, #C4B598 100%);
+            min-height: 100vh;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #8B7752 0%, #6B5D42 100%);
+            padding: 30px 20px;
+            text-align: center;
+            color: #E8D4A2;
+            border-bottom: 4px solid #3A2F1F;
+        }
+        
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8em, 4vw, 2.5em);
+            font-weight: 900;
+            margin-bottom: 5px;
+        }
+        
+        header a {
+            color: #E8D4A2;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        header a:hover { opacity: 0.8; }
+        
+        .breadcrumbs {
+            background: rgba(232, 212, 162, 0.3);
+            padding: 15px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+        }
+        
+        .breadcrumbs a {
+            color: #5A4D37;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .breadcrumbs a:hover { color: #3A2F1F; }
+        
+        .breadcrumbs span { margin: 0 8px; color: #8B7752; }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .lecture-header {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 3px solid rgba(139, 119, 82, 0.2);
+            box-shadow: 0 4px 12px rgba(58, 47, 31, 0.1);
+        }
+        
+        .lecture-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8em, 4vw, 2.8em);
+            color: #3A2F1F;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        .lecture-meta {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .badge-date {
+            background: rgba(232, 212, 162, 0.4);
+            color: #5A4D37;
+            border: 2px solid rgba(139, 119, 82, 0.3);
+        }
+        
+        .badge-verse {
+            background: rgba(139, 119, 82, 0.2);
+            color: #3A2F1F;
+            border: 2px solid rgba(139, 119, 82, 0.4);
+        }
+        
+        .badge-speaker {
+            background: rgba(196, 30, 58, 0.1);
+            color: #8b0000;
+            border: 2px solid rgba(196, 30, 58, 0.3);
+        }
+        
+        .lecture-tabs {
+            display: flex;
+            background: rgba(232, 212, 162, 0.3);
+            border-radius: 12px 12px 0 0;
+            overflow-x: auto;
+            border: 3px solid rgba(139, 119, 82, 0.2);
+            border-bottom: none;
+        }
+        
+        .tab-btn {
+            flex: 1;
+            padding: 18px 24px;
+            border: none;
+            background: transparent;
+            color: #5A4D37;
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(0.85em, 2vw, 1em);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            border-right: 1px solid rgba(139, 119, 82, 0.2);
+        }
+        
+        .tab-btn:last-child { border-right: none; }
+        
+        .tab-btn:hover {
+            background: rgba(232, 212, 162, 0.5);
+            color: #3A2F1F;
+        }
+        
+        .tab-btn.active {
+            background: white;
+            color: #3A2F1F;
+            font-weight: 700;
+        }
+        
+        .tab-content {
+            display: none;
+            background: white;
+            padding: 40px;
+            border-radius: 0 0 12px 12px;
+            border: 3px solid rgba(139, 119, 82, 0.2);
+            border-top: none;
+            min-height: 400px;
+        }
+        
+        .tab-content.active { display: block; }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .section-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            color: #3A2F1F;
+            margin: 30px 0 20px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(139, 119, 82, 0.2);
+        }
+        
+        .content-text {
+            font-size: 1.15em;
+            line-height: 1.8;
+            color: #5A4D37;
+            margin-bottom: 20px;
+        }
+        
+        .theme-card {
+            background: rgba(232, 212, 162, 0.2);
+            border: 2px solid rgba(139, 119, 82, 0.3);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .theme-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4em;
+            color: #3A2F1F;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .flashcard-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .flashcard {
+            perspective: 1000px;
+            height: 250px;
+            cursor: pointer;
+        }
+        
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flashcard-front, .flashcard-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            border: 3px solid rgba(139, 119, 82, 0.3);
+        }
+        
+        .flashcard-front {
+            background: linear-gradient(135deg, #8B7752 0%, #6B5D42 100%);
+            color: #E8D4A2;
+            font-weight: 700;
+        }
+        
+        .flashcard-back {
+            background: white;
+            color: #3A2F1F;
+            transform: rotateY(180deg);
+            line-height: 1.6;
+        }
+        
+        .quiz-question {
+            background: rgba(232, 212, 162, 0.2);
+            border: 2px solid rgba(139, 119, 82, 0.3);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+        
+        .quiz-options {
+            display: grid;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        .quiz-option {
+            padding: 15px 20px;
+            border: 2px solid rgba(139, 119, 82, 0.3);
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.1em;
+        }
+        
+        .quiz-option:hover {
+            background: rgba(232, 212, 162, 0.3);
+            border-color: #8B7752;
+        }
+        
+        .quiz-option.selected {
+            background: #8B7752;
+            color: #E8D4A2;
+            border-color: #3A2F1F;
+        }
+        
+        .transcript-text {
+            font-size: 1.15em;
+            line-height: 1.9;
+            color: #5A4D37;
+            white-space: pre-wrap;
+        }
+        
+        @media (max-width: 768px) {
+            .lecture-header { padding: 25px; }
+            .tab-content { padding: 25px; }
+            .tab-btn { padding: 14px 16px; font-size: 0.85em; }
+            .flashcard-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="../index.html">🕉️ Auburn Hills Bhakti Vriksha</a></h1>
+    </header>
+    <div class="breadcrumbs">
+        <a href="../index.html">Home</a>
+        <span>›</span>
+        <a href="../bg-lectures.html">Bhagavad Gita Lectures</a>
+        <span>›</span>
+        <span>Inquiring About Krishna: The Path to Self-Satisfaction</span>
+    </div>
+    
+    <div class="container">
+        <div class="lecture-header">
+            <h1 class="lecture-title">Inquiring About Krishna: The Path to Self-Satisfaction</h1>
+            <div class="lecture-meta">
+                <span class="badge badge-date">📅 November 1, 2025</span>
+                <span class="badge badge-verse">📖 SB 1.2.5</span>
+                <span class="badge badge-speaker">🎤 Jai Sacinandana Kṛṣṇa Dāsa</span>
+            </div>
+        </div>
+        
+        <div class="lecture-tabs">
+            <button class="tab-btn active" data-tab="overview">Overview</button>
+            <button class="tab-btn" data-tab="notes">Study Notes</button>
+            <button class="tab-btn" data-tab="flashcards">Flashcards</button>
+            <button class="tab-btn" data-tab="quiz">Quiz</button>
+            <button class="tab-btn" data-tab="transcript">Transcript</button>
+        </div>
+        
+        <div class="tab-content active" id="overview">
+            
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/v74cBM3VP9c" frameborder="0" allowfullscreen></iframe>
+        </div>
+        
+        
+        <h2 class="section-heading">Key Takeaway</h2>
+        <p class="content-text">The most auspicious and purifying act is to inquire about Krishna, as this brings ultimate satisfaction to the self and promotes the welfare of all beings.</p>
+        
+        
+        
+        <h2 class="section-heading">Main Theme</h2>
+        <p class="content-text">The Supreme Importance of Inquiring About Krishna</p>
+        
+        
+        
+        <h2 class="section-heading">Summary</h2>
+        <p class="content-text">This lecture highlights the profound significance of honest inquiry into Krishna, as described in Srimad Bhagavatam 1.2.5. Such questions, focused on the Supreme Lord, are not only beneficial for the questioner but also for the entire world, leading to ultimate self-satisfaction.</p>
+        
+    
+        </div>
+        
+        <div class="tab-content" id="notes">
+            <h2 class="section-heading">Key Concepts</h2>
+            <div class="theme-card">
+                <h3 class="theme-title">The Auspiciousness of Spiritual Inquiry</h3>
+                <p class="content-text">The lecture explains that sincere questions about Krishna are not ordinary inquiries; they are inherently auspicious (loka-maṅgalam), contributing to the welfare of all people. Engaging in such inquiry elevates consciousness and creates a positive ripple effect in society.</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">The inquiries made by the sages of Naimiṣāraṇya to Sūta Gosvāmī are considered exemplary for their focus on the Supreme Truth.</li></ul>
+                
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Self-Satisfaction through Krishna Consciousness</h3>
+                <p class="content-text">This theme explores how genuine inquiry about Krishna leads to ultimate self-satisfaction (yenātmā suprasīdati). True and lasting happiness, the lecture suggests, does not come from fleeting material pursuits but from aligning one's consciousness with the Supreme Lord. Such spiritual absorption purifies the heart and brings profound inner peace.</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">A mind constantly absorbed in Krishna's pastimes and teachings finds peace and contentment even amidst worldly challenges.</li><li class="content-text">Experiencing a deep sense of purpose and fulfillment that material achievements cannot provide.</li></ul>
+                
+            </div><h2 class="section-heading">📚 Sanskrit Terms</h2>
+            <div class="theme-card">
+                <h3 class="theme-title">Krishna-sampraśno (कृष्ण-संप्रश्नः)</h3>
+                <p class="content-text">Inquiry about Krishna</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">loka-maṅgalam (लोक-मङ्गलम्)</h3>
+                <p class="content-text">Welfare of all people</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">ātmā suprasīdati (आत्मा सुप्रसीदति)</h3>
+                <p class="content-text">The self is completely satisfied</p>
+            </div><h2 class="section-heading">Practical Applications</h2><ul><li class="content-text">Prioritize spiritual inquiry in daily life</li><li class="content-text">Engage in discussions for universal welfare</li></ul>
+        </div>
+        
+        <div class="tab-content" id="flashcards">
+            
+        <p class="content-text">Click on a card to flip it!</p>
+        <div class="flashcard-container">
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Krishna-sampraśno (कृष्ण-संप्रश्नः)</div>
+                    <div class="flashcard-back">Inquiry about Krishna</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">loka-maṅgalam (लोक-मङ्गलम्)</div>
+                    <div class="flashcard-back">Welfare of all people</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">ātmā suprasīdati (आत्मा सुप्रसीदति)</div>
+                    <div class="flashcard-back">The self is completely satisfied</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">The Auspiciousness of Spiritual Inquiry</div>
+                    <div class="flashcard-back">The lecture explains that sincere questions about Krishna are not ordinary inquiries; they are inherently auspicious (loka-maṅgalam), contributing to the welfare of all people. Engaging in such inquir...</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Self-Satisfaction through Krishna Consciousness</div>
+                    <div class="flashcard-back">This theme explores how genuine inquiry about Krishna leads to ultimate self-satisfaction (yenātmā suprasīdati). True and lasting happiness, the lecture suggests, does not come from fleeting material ...</div>
+                </div>
+            </div>
+            
+        </div>
+    
+        </div>
+        
+        <div class="tab-content" id="quiz">
+            
+        <div id="quizContainer">
+            <p class="content-text">Test your knowledge! Results will be saved locally.</p>
+            
+            <div class="quiz-question">
+                <p class="content-text"><strong>Question 1:</strong> According to SB 1.2.5, what is the primary subject of inquiry that leads to the perfection and satisfaction of the self?</p>
+                <div class="quiz-options">
+                    
+                    <div class="quiz-option" onclick="selectOption(0, 0, 2)">Material prosperity</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(0, 1, 2)">Social and political systems</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(0, 2, 2)">Kṛṣṇa</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(0, 3, 2)">Scientific advancements</div>
+                    
+                </div>
+                <div id="explanation-0" style="display:none; margin-top:15px;">
+                    <p class="content-text"><strong>Explanation:</strong> SB 1.2.5 explicitly states 'yat kṛtaḥ kṛṣṇa-sampraśno yenātmā suprasīdati' – that inquiry about Krishna is the means by which the self is completely satisfied.</p>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <p class="content-text"><strong>Question 2:</strong> The phrase 'loka-maṅgalam' in SB 1.2.5 signifies that questions about Krishna are primarily for:</p>
+                <div class="quiz-options">
+                    
+                    <div class="quiz-option" onclick="selectOption(1, 0, 1)">Individual spiritual gain only</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(1, 1, 1)">The welfare of all people</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(1, 2, 1)">Philosophical debate</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(1, 3, 1)">Ascetic practices</div>
+                    
+                </div>
+                <div id="explanation-1" style="display:none; margin-top:15px;">
+                    <p class="content-text"><strong>Explanation:</strong> Loka-maṅgalam means 'the welfare of all people,' indicating that sincere inquiry about Krishna has universal benefits.</p>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <p class="content-text"><strong>Question 3:</strong> Explain the significance of 'yenātmā suprasīdati' in the context of Krishna-sampraśna as described in SB 1.2.5.</p>
+                <div class="quiz-options">
+                    
+                    <div class="quiz-option" onclick="selectOption(2, 0, 1)">It means the self becomes pleased through material achievements.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(2, 1, 1)">It means the self becomes completely satisfied through inquiry about Krishna, leading to profound spiritual happiness beyond material pursuits.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(2, 2, 1)">It refers to the satisfaction gained from intellectual debates.</div>
+                    
+                    <div class="quiz-option" onclick="selectOption(2, 3, 1)">It indicates the self becoming indifferent to all results.</div>
+                    
+                </div>
+                <div id="explanation-2" style="display:none; margin-top:15px;">
+                    <p class="content-text"><strong>Explanation:</strong> 'Yenātmā suprasīdati' means 'by which the self is completely satisfied.' In the context of Krishna-sampraśna, it implies that the ultimate and lasting satisfaction of the soul comes from genuine inquiry and connection with Krishna, transcending any temporary material happiness.</p>
+                </div>
+            </div>
+            
+        </div>
+    
+        </div>
+        
+        <div class="tab-content" id="transcript">
+            <p class="content-text">No transcript available for this lecture.</p>
+        </div>
+    </div>
+    
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+        
+        // Tab switching
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tab = btn.dataset.tab;
+                
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                btn.classList.add('active');
+                document.getElementById(tab).classList.add('active');
+            });
+        });
+        
+        // Quiz functionality
+        let quizScore = 0;
+        let quizTotal = 3;
+        
+        function selectOption(questionIndex, optionIndex, correctIndex) {
+            const options = document.querySelectorAll(`.quiz-question:nth-child(${questionIndex + 2}) .quiz-option`);
+            options.forEach(opt => opt.classList.remove('selected'));
+            options[optionIndex].classList.add('selected');
+            
+            document.getElementById(`explanation-${questionIndex}`).style.display = 'block';
+            
+            if (optionIndex === correctIndex) {
+                quizScore++;
+                options[optionIndex].style.background = '#4CAF50';
+                options[optionIndex].style.color = 'white';
+            } else {
+                options[optionIndex].style.background = '#f44336';
+                options[optionIndex].style.color = 'white';
+                options[correctIndex].style.background = '#4CAF50';
+                options[correctIndex].style.color = 'white';
+            }
+            
+            // Save to localStorage
+            saveQuizResult('2025-11-02-sb-1-2-5', quizScore, quizTotal);
+        }
+        
+        function saveQuizResult(lectureId, score, total) {
+            const results = JSON.parse(localStorage.getItem('quizResults') || '[]');
+            results.push({
+                lectureId,
+                score,
+                total,
+                date: new Date().toISOString()
+            });
+            localStorage.setItem('quizResults', JSON.stringify(results));
+        }
+    </script>
+</body>
+</html>
