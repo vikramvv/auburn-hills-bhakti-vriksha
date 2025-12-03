@@ -1,10 +1,33 @@
 {
   "section": "bg-lectures",
   "title": "Bhagavad Gita Lectures",
-  "count": 1,
+  "count": 2,
   "lectures": [
     {
-      "id": "bg-6-47-2024-11-27",
+      "id": "2025-11-29-bg-2-7",
+      "title": "Krishna's Supreme Secret: Jnana, Karma, Bhakti Yoga",
+      "date": "2025-11-29",
+      "primary_verse": "BG 2.7",
+      "takeaway": "Krishna reveals that whether through knowledge, action, or meditation, the ultimate goal is to always remember Him, become His devotee, worship Him, and offer obeisances, thereby attaining Him without fail.",
+      "summary_short": "This lecture summarizes the Bhagavad Gita's core teachings across its first nine chapters, culminating in Krishna's supreme secret (BG 9.34): always remember Him, be His devotee, worship Him, and offer obeisances. It underscores how all spiritual paths ultimately lead to pure devotion to Krishna.",
+      "featured": false,
+      "media": {
+        "video": {
+          "youtube_id": "lktKpL_SiPc"
+        }
+      },
+      "stream_metadata": {
+        "video_id": "lktKpL_SiPc",
+        "title": "Bhakti Yoga - Auburn Hills is live!",
+        "duration": "PT1H27M34S",
+        "published_date": "2025-11-29",
+        "view_count": 35,
+        "channel_title": "Bhakti Yoga - Auburn Hills"
+      },
+      "section": "bg-lectures"
+    },
+    {
+      "id": "2024-11-27-bg-6-47",
       "title": "Bhakti Supremacy: Why Pure Devotion Surpasses All Other Paths",
       "date": "2024-11-27",
       "primary_verse": "BG 6.47",
