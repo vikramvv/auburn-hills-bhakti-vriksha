@@ -1,707 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CC Antya 20.21 • Humility & Dependence: The Path to Krishna Consciousness | Auburn Hills Bhakti Vriksha</title>
-    <meta name="description" content="True spiritual advancement lies in recognizing our dependence on Krishna, spiritual master, and devotees, cultivating deep humility to overcome pride ">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: 'Cormorant Garamond', serif;
-            background: linear-gradient(135deg, #E8D4A2 0%, #D4C5A0 50%, #C4B598 100%);
-            min-height: 100vh;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #8B7752 0%, #6B5D42 100%);
-            padding: 30px 20px;
-            text-align: center;
-            color: #E8D4A2;
-            border-bottom: 4px solid #3A2F1F;
-        }
-        
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(1.8em, 4vw, 2.5em);
-            font-weight: 900;
-            margin-bottom: 5px;
-        }
-        
-        header a {
-            color: #E8D4A2;
-            text-decoration: none;
-            transition: opacity 0.3s;
-        }
-        
-        header a:hover { opacity: 0.8; }
-        
-        .breadcrumbs {
-            background: rgba(232, 212, 162, 0.3);
-            padding: 15px 20px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9em;
-        }
-        
-        .breadcrumbs a {
-            color: #5A4D37;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        
-        .breadcrumbs a:hover { color: #3A2F1F; }
-        
-        .breadcrumbs span { margin: 0 8px; color: #8B7752; }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        .lecture-header {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            border: 3px solid rgba(139, 119, 82, 0.2);
-            box-shadow: 0 4px 12px rgba(58, 47, 31, 0.1);
-        }
-        
-        .lecture-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(1.8em, 4vw, 2.8em);
-            color: #3A2F1F;
-            margin-bottom: 20px;
-            font-weight: 700;
-            line-height: 1.3;
-        }
-        
-        .lecture-meta {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-        
-        .badge {
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9em;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .badge-date {
-            background: rgba(232, 212, 162, 0.4);
-            color: #5A4D37;
-            border: 2px solid rgba(139, 119, 82, 0.3);
-        }
-        
-        .badge-verse {
-            background: rgba(139, 119, 82, 0.2);
-            color: #3A2F1F;
-            border: 2px solid rgba(139, 119, 82, 0.4);
-        }
-        
-        .badge-speaker {
-            background: rgba(196, 30, 58, 0.1);
-            color: #8b0000;
-            border: 2px solid rgba(196, 30, 58, 0.3);
-        }
-        
-        .lecture-tabs {
-            display: flex;
-            background: rgba(232, 212, 162, 0.3);
-            border-radius: 12px 12px 0 0;
-            overflow-x: auto;
-            border: 3px solid rgba(139, 119, 82, 0.2);
-            border-bottom: none;
-        }
-        
-        .tab-btn {
-            flex: 1;
-            padding: 18px 24px;
-            border: none;
-            background: transparent;
-            color: #5A4D37;
-            font-family: 'Montserrat', sans-serif;
-            font-size: clamp(0.85em, 2vw, 1em);
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            white-space: nowrap;
-            border-right: 1px solid rgba(139, 119, 82, 0.2);
-        }
-        
-        .tab-btn:last-child { border-right: none; }
-        
-        .tab-btn:hover {
-            background: rgba(232, 212, 162, 0.5);
-            color: #3A2F1F;
-        }
-        
-        .tab-btn.active {
-            background: white;
-            color: #3A2F1F;
-            font-weight: 700;
-        }
-        
-        .tab-content {
-            display: none;
-            background: white;
-            padding: 40px;
-            border-radius: 0 0 12px 12px;
-            border: 3px solid rgba(139, 119, 82, 0.2);
-            border-top: none;
-            min-height: 400px;
-        }
-        
-        .tab-content.active { display: block; }
-        
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }
-        
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .section-heading {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8em;
-            color: #3A2F1F;
-            margin: 30px 0 20px;
-            font-weight: 700;
-            padding-bottom: 10px;
-            border-bottom: 2px solid rgba(139, 119, 82, 0.2);
-        }
-        
-        .content-text {
-            font-size: 1.15em;
-            line-height: 1.8;
-            color: #5A4D37;
-            margin-bottom: 20px;
-        }
-        
-        .theme-card {
-            background: rgba(232, 212, 162, 0.2);
-            border: 2px solid rgba(139, 119, 82, 0.3);
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 20px;
-        }
-        
-        .theme-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4em;
-            color: #3A2F1F;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-        
-        .flashcard-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        
-        .flashcard {
-            perspective: 1000px;
-            height: 250px;
-            cursor: pointer;
-        }
-        
-        .flashcard-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transition: transform 0.6s;
-            transform-style: preserve-3d;
-        }
-        
-        .flashcard.flipped .flashcard-inner {
-            transform: rotateY(180deg);
-        }
-        
-        .flashcard-front, .flashcard-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            border-radius: 12px;
-            padding: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2em;
-            border: 3px solid rgba(139, 119, 82, 0.3);
-        }
-        
-        .flashcard-front {
-            background: linear-gradient(135deg, #8B7752 0%, #6B5D42 100%);
-            color: #E8D4A2;
-            font-weight: 700;
-        }
-        
-        .flashcard-back {
-            background: white;
-            color: #3A2F1F;
-            transform: rotateY(180deg);
-            line-height: 1.6;
-        }
-        
-        .quiz-question {
-            background: rgba(232, 212, 162, 0.2);
-            border: 2px solid rgba(139, 119, 82, 0.3);
-            border-radius: 8px;
-            padding: 30px;
-            margin-bottom: 25px;
-        }
-        
-        .quiz-options {
-            display: grid;
-            gap: 12px;
-            margin-top: 20px;
-        }
-        
-        .quiz-option {
-            padding: 15px 20px;
-            border: 2px solid rgba(139, 119, 82, 0.3);
-            border-radius: 8px;
-            background: white;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-size: 1.1em;
-        }
-        
-        .quiz-option:hover {
-            background: rgba(232, 212, 162, 0.3);
-            border-color: #8B7752;
-        }
-        
-        .quiz-option.selected {
-            background: #8B7752;
-            color: #E8D4A2;
-            border-color: #3A2F1F;
-        }
-        
-        .transcript-text {
-            font-size: 1.15em;
-            line-height: 1.9;
-            color: #5A4D37;
-            white-space: pre-wrap;
-        }
-        
-        @media (max-width: 768px) {
-            .lecture-header { padding: 25px; }
-            .tab-content { padding: 25px; }
-            .tab-btn { padding: 14px 16px; font-size: 0.85em; }
-            .flashcard-container { grid-template-columns: 1fr; }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1><a href="../index.html">🕉️ Auburn Hills Bhakti Vriksha</a></h1>
-    </header>
-    <div class="breadcrumbs">
-        <a href="../index.html">Home</a>
-        <span>›</span>
-        <a href="../bg-lectures.html">Bhagavad Gita Lectures</a>
-        <span>›</span>
-        <span>CC Antya 20.21 • Humility & Dependence: The Path to Krishna Consciousness</span>
-    </div>
-    
-    <div class="container">
-        <div class="lecture-header">
-            <h1 class="lecture-title">CC Antya 20.21 • Humility & Dependence: The Path to Krishna Consciousness</h1>
-            <div class="lecture-meta">
-                <span class="badge badge-date">📅 October 31, 2025</span>
-                
-                <span class="badge badge-speaker">🎤 Jai Sacinandana Kṛṣṇa Dāsa</span>
-            </div>
-        </div>
-        
-        <div class="lecture-tabs">
-            <button class="tab-btn active" data-tab="overview">Overview</button>
-            <button class="tab-btn" data-tab="notes">Study Notes</button>
-            <button class="tab-btn" data-tab="flashcards">Flashcards</button>
-            <button class="tab-btn" data-tab="quiz">Quiz</button>
-            <button class="tab-btn" data-tab="transcript">Transcript</button>
-        </div>
-        
-        <div class="tab-content active" id="overview">
-            
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/9WpSYPf2mng" frameborder="0" allowfullscreen></iframe>
-        </div>
-        
-        
-        <h2 class="section-heading">Key Takeaway</h2>
-        <p class="content-text">True spiritual advancement lies in recognizing our dependence on Krishna, spiritual master, and devotees, cultivating deep humility to overcome pride and sustain Krishna consciousness.</p>
-        
-        
-        
-        <h2 class="section-heading">Main Theme</h2>
-        <p class="content-text">Cultivating humility and dependence for spiritual progress</p>
-        
-        
-        
-        <h2 class="section-heading">Summary</h2>
-        <p class="content-text">This lecture by Jai Sacinandana Kṛṣṇa Dāsa emphasizes humility and dependence on Krishna and devotees as the cornerstone of spiritual life. It contrasts the material world's emphasis on independence with the freedom found in sincere dependence, drawing lessons from Nalakuvera and Manigriva's liberation.</p>
-        
-    
-        </div>
-        
-        <div class="tab-content" id="notes">
-            <h2 class="section-heading">Key Concepts</h2>
-            <div class="theme-card">
-                <h3 class="theme-title">The Story of Nalakuvera and Manigriva</h3>
-                <p class="content-text">The lecture opens by referencing the story of Nalakuvera and Manigriva, who were cursed to become trees due to their intoxication by pride and sense gratification. Their liberation by Krishna served as a powerful lesson in humility. The speaker identifies with their state of being 'intoxicated by pride, thinking we possess something,' highlighting the universal applicability of their story.</p>
-                
-                <p><strong>Examples:</strong></p>
-                <ul><li class="content-text">Nalakuvera and Manigriva's intoxication by pride and liquor</li><li class="content-text">Krishna going between the trees to liberate them</li></ul>
-                
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Humility as a Core Spiritual Austerity</h3>
-                <p class="content-text">The speaker explains that the austerity required in Kali-yuga is not necessarily harsh penance but the cultivation of humility. This involves offering obeisances to devotees, considering oneself a servant of the servant, and recognizing one's insignificance. Such an attitude helps to reduce pride and fosters a receptive mindset for spiritual growth, as opposed to the difficult austerities of past ages.</p>
-                
-                <p><strong>Examples:</strong></p>
-                <ul><li class="content-text">Offering obeisances to devotees</li><li class="content-text">Chanting Hare Krishna in great humility</li><li class="content-text">Taking prasadam and dancing joyfully as Mahaprabhu's austerity</li></ul>
-                
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">The Revolutionary Act of Saying 'No' to Sense Enjoyment</h3>
-                <p class="content-text">A profound insight shared is that merely saying 'no' to sense enjoyment, even once, is a revolutionary act. The speaker marvels at the greatness of a devotee who practices this discipline daily, emphasizing that it's a constant struggle against material desires. This highlights the internal revolution inherent in devotional service and cautions against underestimating the spiritual strength of a devotee.</p>
-                
-                <p><strong>Examples:</strong></p>
-                <ul><li class="content-text">Difficulty in saying no to sense enjoyment even once</li><li class="content-text">Appreciating a devotee's daily practice of renunciation</li></ul>
-                
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Dependence vs. Independence in Spiritual Life</h3>
-                <p class="content-text">The lecture draws a crucial distinction between material independence and spiritual dependence. It states that 'Independence is a disease. Dependence is freedom.' In the material world, society often trains individuals to be impersonal and self-sufficient, but entering Krishna's world requires becoming deeply personal and dependent on Krishna, the spiritual master, and other devotees. This personal dependence is essential for sustained spiritual progress.</p>
-                
-                <p><strong>Examples:</strong></p>
-                <ul><li class="content-text">The material world's training towards impersonality</li><li class="content-text">Feeling 'Without you I cannot progress in spiritual life. I need you.'</li></ul>
-                
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Sustaining Krishna Consciousness with Humility and Tolerance</h3>
-                <p class="content-text">The speaker concludes by emphasizing that true humility, tolerance, and respect are paramount for sustaining Krishna consciousness, citing the teaching of `Trinadapi suni chena`. Without these qualities, one risks being thrown out by Maya and struggling again in the material world. This foundational principle from Chaitanya Mahaprabhu's Siksastaka is presented as the key to enduring and flourishing in devotional service.</p>
-                
-                <p><strong>Examples:</strong></p>
-                <ul><li class="content-text">Vishwamitra Muni's fall due to lack of humility despite austerities</li><li class="content-text">Ambarisha Maharaja's humility despite great challenges</li><li class="content-text">The necessity of `Trinadapi suni chena` for spiritual sustainability</li></ul>
-                
-            </div><h2 class="section-heading">📚 Sanskrit Terms</h2>
-            <div class="theme-card">
-                <h3 class="theme-title">Nalakuvera (नलकुवेर)</h3>
-                <p class="content-text">Son of Kuvera, cursed to be a tree</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Manigriva (मणिग्रीव)</h3>
-                <p class="content-text">Son of Kuvera, cursed to be a tree</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Sadhana (साधन)</h3>
-                <p class="content-text">Spiritual practice or discipline</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Prasadam (प्रसादम्)</h3>
-                <p class="content-text">Food offered to Krishna</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Mahaprabhu (महाप्रभु)</h3>
-                <p class="content-text">Lord Chaitanya Mahaprabhu</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Sadhu (साधु)</h3>
-                <p class="content-text">A saintly person or pure devotee</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Sunicata (सुनीचता)</h3>
-                <p class="content-text">Humility, thinking oneself lower</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Maya (माया)</h3>
-                <p class="content-text">Krishna's external energy, illusion</p>
-            </div><h2 class="section-heading">Practical Applications</h2><ul><li class="content-text">Overcoming spiritual pride</li><li class="content-text">Embracing spiritual dependence</li><li class="content-text">Sustaining Krishna consciousness</li></ul><h2 class="section-heading">Notable Quotes</h2><blockquote class="content-text">"Intoxicated by pride, pride because of thinking we possess something."</blockquote><blockquote class="content-text">"The only way to reduce our pride... is very simple: Offer obeisances to devotees. Think of yourself as I am a servant of the servant. I am very insignificant. And chant Hare Krishna mantra in great humility."</blockquote><blockquote class="content-text">"To say no to sense enjoyment even once is a greatest act of revolution."</blockquote><blockquote class="content-text">"Someone who is practicing every day, how great he is."</blockquote><blockquote class="content-text">"Don't underestimate a devotee. It is a great act of revolution. It is the biggest revolution."</blockquote><blockquote class="content-text">"Independence is a disease. Dependence is freedom."</blockquote><blockquote class="content-text">"Without you I cannot progress in spiritual life. I need you. Without you there is no meaning. Feel that from the core of your heart."</blockquote><blockquote class="content-text">"I'll die if you don't appear before me Krishna. I'll die if you don't show me your mercy."</blockquote><blockquote class="content-text">"This material life makes us feel we are independent. Independence is a disease. Dependence is freedom."</blockquote><blockquote class="content-text">"To enter into Krishna's world, we need to become very personal."</blockquote><blockquote class="content-text">"You can perform any austerity but you'll fall down... you didn't have humility."</blockquote><blockquote class="content-text">"Ambarisha Maharaja... he had humility even in the wake of greatest disaster."</blockquote><blockquote class="content-text">"You have to get the blessings of the Sadhu, instruction of the Sadhu."</blockquote><blockquote class="content-text">"Only then you can sustain Krishna consciousness. Or you'll be thrown out by Maya."</blockquote>
-        </div>
-        
-        <div class="tab-content" id="flashcards">
-            
-        <p class="content-text">Click on a card to flip it!</p>
-        <div class="flashcard-container">
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Nalakuvera (नलकुवेर)</div>
-                    <div class="flashcard-back">Son of Kuvera, cursed to be a tree</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Manigriva (मणिग्रीव)</div>
-                    <div class="flashcard-back">Son of Kuvera, cursed to be a tree</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Sadhana (साधन)</div>
-                    <div class="flashcard-back">Spiritual practice or discipline</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Prasadam (प्रसादम्)</div>
-                    <div class="flashcard-back">Food offered to Krishna</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Mahaprabhu (महाप्रभु)</div>
-                    <div class="flashcard-back">Lord Chaitanya Mahaprabhu</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Sadhu (साधु)</div>
-                    <div class="flashcard-back">A saintly person or pure devotee</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Sunicata (सुनीचता)</div>
-                    <div class="flashcard-back">Humility, thinking oneself lower</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Maya (माया)</div>
-                    <div class="flashcard-back">Krishna's external energy, illusion</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">The Story of Nalakuvera and Manigriva</div>
-                    <div class="flashcard-back">The lecture opens by referencing the story of Nalakuvera and Manigriva, who were cursed to become trees due to their intoxication by pride and sense gratification. Their liberation by Krishna served a...</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Humility as a Core Spiritual Austerity</div>
-                    <div class="flashcard-back">The speaker explains that the austerity required in Kali-yuga is not necessarily harsh penance but the cultivation of humility. This involves offering obeisances to devotees, considering oneself a ser...</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">The Revolutionary Act of Saying 'No' to Sense Enjoyment</div>
-                    <div class="flashcard-back">A profound insight shared is that merely saying 'no' to sense enjoyment, even once, is a revolutionary act. The speaker marvels at the greatness of a devotee who practices this discipline daily, empha...</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Dependence vs. Independence in Spiritual Life</div>
-                    <div class="flashcard-back">The lecture draws a crucial distinction between material independence and spiritual dependence. It states that 'Independence is a disease. Dependence is freedom.' In the material world, society often ...</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Sustaining Krishna Consciousness with Humility and Tolerance</div>
-                    <div class="flashcard-back">The speaker concludes by emphasizing that true humility, tolerance, and respect are paramount for sustaining Krishna consciousness, citing the teaching of `Trinadapi suni chena`. Without these qualiti...</div>
-                </div>
-            </div>
-            
-        </div>
-    
-        </div>
-        
-        <div class="tab-content" id="quiz">
-            
-        <div id="quizContainer">
-            <p class="content-text">Test your knowledge! Results will be saved locally.</p>
-            
-            <div class="quiz-question">
-                <p class="content-text"><strong>Question 1:</strong> According to the lecture, what was the primary cause of Nalakuvera and Manigriva's intoxication?</p>
-                <div class="quiz-options">
-                    
-                    <div class="quiz-option" onclick="selectOption(0, 0, 1)">Drinking too much liquor</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(0, 1, 1)">Pride due to thinking they possessed something</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(0, 2, 1)">Associating with sinful people</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(0, 3, 1)">Their father Kuvera's wealth</div>
-                    
-                </div>
-                <div id="explanation-0" style="display:none; margin-top:15px;">
-                    <p class="content-text"><strong>Explanation:</strong> The speaker explicitly states that Nalakuvera and Manigriva were 'intoxicated by pride, pride because of thinking we possess something,' which led to their situation.</p>
-                </div>
-            </div>
-            
-            <div class="quiz-question">
-                <p class="content-text"><strong>Question 2:</strong> What 'austerity' does Mahaprabhu recommend for devotees in Kali-yuga to reduce pride, as mentioned in the lecture?</p>
-                <div class="quiz-options">
-                    
-                    <div class="quiz-option" onclick="selectOption(1, 0, 2)">Standing on one leg for hours</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(1, 1, 2)">Fasting for a month</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(1, 2, 2)">Offering obeisances to devotees and chanting Hare Krishna humbly</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(1, 3, 2)">Living in seclusion in the Himalayas</div>
-                    
-                </div>
-                <div id="explanation-1" style="display:none; margin-top:15px;">
-                    <p class="content-text"><strong>Explanation:</strong> The speaker says Mahaprabhu's austerity is 'very simple: Offer obeisances to devotees... And chant Hare Krishna mantra in great humility.'</p>
-                </div>
-            </div>
-            
-            <div class="quiz-question">
-                <p class="content-text"><strong>Question 3:</strong> What does the speaker mean by the statement: 'Independence is a disease. Dependence is freedom.'?</p>
-                <div class="quiz-options">
-                    
-                    <div class="quiz-option" onclick="selectOption(2, 0, 1)">Financial independence leads to arrogance, while relying on others brings peace.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(2, 1, 1)">Material independence fosters an impersonal attitude that hinders spiritual growth, whereas dependence on Krishna, guru, and devotees leads to true spiritual liberation.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(2, 2, 1)">Being self-sufficient in life is harmful, and one should always rely on governmental support.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(2, 3, 1)">Physical dependence on others is a sign of freedom from responsibility.</div>
-                    
-                </div>
-                <div id="explanation-2" style="display:none; margin-top:15px;">
-                    <p class="content-text"><strong>Explanation:</strong> The lecture explains that the material world trains us to be impersonal and independent, which is a 'disease' in spiritual life. True 'freedom' comes from becoming very personal and dependent on Krishna, guru, and devotees.</p>
-                </div>
-            </div>
-            
-            <div class="quiz-question">
-                <p class="content-text"><strong>Question 4:</strong> Which of the following figures was cited as an example of someone who fell despite performing great austerities, due to a lack of humility?</p>
-                <div class="quiz-options">
-                    
-                    <div class="quiz-option" onclick="selectOption(3, 0, 2)">Ambarisha Maharaja</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(3, 1, 2)">Narada Muni</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(3, 2, 2)">Vishwamitra Muni</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(3, 3, 2)">King Parikshit</div>
-                    
-                </div>
-                <div id="explanation-3" style="display:none; margin-top:15px;">
-                    <p class="content-text"><strong>Explanation:</strong> The speaker contrasts Vishwamitra Muni, who 'fell down' despite austerities because he lacked humility, with Ambarisha Maharaja, who maintained humility.</p>
-                </div>
-            </div>
-            
-            <div class="quiz-question">
-                <p class="content-text"><strong>Question 5:</strong> Which specific scriptural instruction (and its source) is emphasized as crucial for sustaining Krishna consciousness?</p>
-                <div class="quiz-options">
-                    
-                    <div class="quiz-option" onclick="selectOption(4, 0, 2)">Bhagavad Gita 18.66: sarva-dharmān parityajya</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(4, 1, 2)">Srimad Bhagavatam 1.2.6: sa vai puṁsāṁ paro dharmo</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(4, 2, 2)">Caitanya Caritamrta Antya 20.21: tṛṇād api sunīcena</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(4, 3, 2)">Brahma-samhita 5.1: īśvaraḥ paramaḥ kṛṣṇaḥ</div>
-                    
-                </div>
-                <div id="explanation-4" style="display:none; margin-top:15px;">
-                    <p class="content-text"><strong>Explanation:</strong> The speaker explicitly quotes and refers to 'Trinadapi suni chena, tarorapi sahishnuna Amanina manadhena, keerthaniya sadahari,' which is Caitanya Caritamrta Antya 20.21 (Siksastaka Verse 3).</p>
-                </div>
-            </div>
-            
-        </div>
-    
-        </div>
-        
-        <div class="tab-content" id="transcript">
-            <p class="content-text">No transcript available for this lecture.</p>
-        </div>
-    </div>
-    
-    <script>
-        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
-        
-        // Tab switching
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const tab = btn.dataset.tab;
-                
-                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-                
-                btn.classList.add('active');
-                document.getElementById(tab).classList.add('active');
-            });
-        });
-        
-        // Quiz functionality
-        let quizScore = 0;
-        let quizTotal = 5;
-        
-        function selectOption(questionIndex, optionIndex, correctIndex) {
-            const options = document.querySelectorAll(`.quiz-question:nth-child(${questionIndex + 2}) .quiz-option`);
-            options.forEach(opt => opt.classList.remove('selected'));
-            options[optionIndex].classList.add('selected');
-            
-            document.getElementById(`explanation-${questionIndex}`).style.display = 'block';
-            
-            if (optionIndex === correctIndex) {
-                quizScore++;
-                options[optionIndex].style.background = '#4CAF50';
-                options[optionIndex].style.color = 'white';
-            } else {
-                options[optionIndex].style.background = '#f44336';
-                options[optionIndex].style.color = 'white';
-                options[correctIndex].style.background = '#4CAF50';
-                options[correctIndex].style.color = 'white';
-            }
-            
-            // Save to localStorage
-            saveQuizResult('2025-11-01-cc-antya-20-21-humility-dependence-the-p', quizScore, quizTotal);
-        }
-        
-        function saveQuizResult(lectureId, score, total) {
-            const results = JSON.parse(localStorage.getItem('quizResults') || '[]');
-            results.push({
-                lectureId,
-                score,
-                total,
-                date: new Date().toISOString()
-            });
-            localStorage.setItem('quizResults', JSON.stringify(results));
-        }
-    </script>
-</body>
-</html>
+<html><head><meta charset="UTF-8"><title>CC Antya 20.21 • Humility & Dependence: The Path to Krishna Consciousness</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;700&family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Cormorant Garamond',serif;background:linear-gradient(135deg,#E8D4A2,#C4B598);min-height:100vh}header{background:linear-gradient(135deg,#8B7752,#6B5D42);padding:30px 20px;text-align:center;color:#E8D4A2;border-bottom:4px solid #3A2F1F}header h1{font-family:'Playfair Display',serif;font-size:2em;font-weight:900}header a{color:#E8D4A2;text-decoration:none}.breadcrumbs{background:rgba(232,212,162,0.3);padding:15px 20px}.breadcrumbs a{color:#5A4D37;text-decoration:none;font-weight:600}.container{max-width:1200px;margin:0 auto;padding:20px}.lecture-header{background:white;padding:40px;border-radius:12px;margin-bottom:20px;border:3px solid rgba(139,119,82,0.2)}.lecture-title{font-family:'Playfair Display',serif;font-size:2.5em;color:#3A2F1F;margin-bottom:20px}.badge{padding:8px 16px;border-radius:8px;font-size:0.9em;font-weight:600;margin-right:10px}.badge-date{background:rgba(232,212,162,0.4);color:#5A4D37;border:2px solid rgba(139,119,82,0.3)}.badge-verse{background:rgba(139,119,82,0.2);color:#3A2F1F;border:2px solid rgba(139,119,82,0.4)}.badge-speaker{background:rgba(196,30,58,0.1);color:#8b0000;border:2px solid rgba(196,30,58,0.3)}.lecture-tabs{display:flex;background:rgba(232,212,162,0.3);border-radius:12px 12px 0 0;overflow-x:auto;border:3px solid rgba(139,119,82,0.2);border-bottom:none}.tab-btn{flex:1;padding:18px 24px;border:none;background:transparent;color:#5A4D37;font-weight:600;cursor:pointer;text-transform:uppercase;white-space:nowrap}.tab-btn:hover{background:rgba(232,212,162,0.5)}.tab-btn.active{background:white;color:#3A2F1F;font-weight:700}.tab-content{display:none;background:white;padding:40px;border-radius:0 0 12px 12px;border:3px solid rgba(139,119,82,0.2);border-top:none;min-height:400px}.tab-content.active{display:block}.video-container{position:relative;padding-bottom:56.25%;height:0;margin-bottom:30px}.video-container iframe{position:absolute;width:100%;height:100%}.mermaid-container{background:rgba(232,212,162,0.1);padding:30px;border-radius:12px;overflow-x:auto}.content-text{font-size:1.15em;line-height:1.8;margin-bottom:20px}.section-heading{font-family:'Playfair Display',serif;font-size:1.8em;color:#3A2F1F;margin:30px 0 20px;font-weight:700;border-bottom:2px solid rgba(139,119,82,0.2);padding-bottom:10px}.theme-card{background:rgba(232,212,162,0.2);border:2px solid rgba(139,119,82,0.3);border-radius:8px;padding:25px;margin-bottom:20px}.flashcard-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}.flashcard{perspective:1000px;height:250px;cursor:pointer}.flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d}.flashcard.flipped .flashcard-inner{transform:rotateY(180deg)}.flashcard-front,.flashcard-back{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:12px;padding:30px;display:flex;align-items:center;justify-content:center;font-size:1.2em;border:3px solid rgba(139,119,82,0.3)}.flashcard-front{background:linear-gradient(135deg,#8B7752,#6B5D42);color:#E8D4A2;font-weight:700}.flashcard-back{background:white;color:#3A2F1F;transform:rotateY(180deg)}</style>
+</head><body>
+<header><h1><a href="../index.html">🕉️ Auburn Hills Bhakti Vriksha</a></h1></header>
+<div class="breadcrumbs"><a href="../index.html">Home</a> › <a href="../bg-lectures.html">Bhagavad Gita Lectures</a> › CC Antya 20.21 • Humility & Dependence: The Path to Krishna Consciousness</div>
+<div class="container">
+<div class="lecture-header"><h1 class="lecture-title">CC Antya 20.21 • Humility & Dependence: The Path to Krishna Consciousness</h1>
+<div><span class="badge badge-date">📅 October 31, 2025</span><span class="badge badge-speaker">🎤 Jai Sacinandana Kṛṣṇa Dāsa</span></div></div>
+<div class="lecture-tabs">
+<button class="tab-btn active" data-tab="overview">Overview</button>
+
+<button class="tab-btn" data-tab="notes">Notes</button>
+<button class="tab-btn" data-tab="flashcards">Flashcards</button>
+<button class="tab-btn" data-tab="transcript">Transcript</button>
+</div>
+<div class="tab-content active" id="overview">
+<div class="video-container"><iframe src="https://www.youtube.com/embed/9WpSYPf2mng" allowfullscreen></iframe></div>
+<h2 class="section-heading">Key Takeaway</h2><p class="content-text">True spiritual advancement lies in recognizing our dependence on Krishna, spiritual master, and devotees, cultivating deep humility to overcome pride and sustain Krishna consciousness.</p>
+<h2 class="section-heading">Summary</h2><p class="content-text">This lecture by Jai Sacinandana Kṛṣṇa Dāsa emphasizes humility and dependence on Krishna and devotees as the cornerstone of spiritual life. It contrasts the material world's emphasis on independence with the freedom found in sincere dependence, drawing lessons from Nalakuvera and Manigriva's liberation.</p>
+</div>
+
+<div class="tab-content" id="notes"><h2 class="section-heading">Key Concepts</h2><div class="theme-card"><h3>The Story of Nalakuvera and Manigriva</h3><p>The lecture opens by referencing the story of Nalakuvera and Manigriva, who were cursed to become trees due to their intoxication by pride and sense gratification. Their liberation by Krishna served as a powerful lesson in humility. The speaker identifies with their state of being 'intoxicated by pride, thinking we possess something,' highlighting the universal applicability of their story.</p></div><div class="theme-card"><h3>Humility as a Core Spiritual Austerity</h3><p>The speaker explains that the austerity required in Kali-yuga is not necessarily harsh penance but the cultivation of humility. This involves offering obeisances to devotees, considering oneself a servant of the servant, and recognizing one's insignificance. Such an attitude helps to reduce pride and fosters a receptive mindset for spiritual growth, as opposed to the difficult austerities of past ages.</p></div><div class="theme-card"><h3>The Revolutionary Act of Saying 'No' to Sense Enjoyment</h3><p>A profound insight shared is that merely saying 'no' to sense enjoyment, even once, is a revolutionary act. The speaker marvels at the greatness of a devotee who practices this discipline daily, emphasizing that it's a constant struggle against material desires. This highlights the internal revolution inherent in devotional service and cautions against underestimating the spiritual strength of a devotee.</p></div><div class="theme-card"><h3>Dependence vs. Independence in Spiritual Life</h3><p>The lecture draws a crucial distinction between material independence and spiritual dependence. It states that 'Independence is a disease. Dependence is freedom.' In the material world, society often trains individuals to be impersonal and self-sufficient, but entering Krishna's world requires becoming deeply personal and dependent on Krishna, the spiritual master, and other devotees. This personal dependence is essential for sustained spiritual progress.</p></div><div class="theme-card"><h3>Sustaining Krishna Consciousness with Humility and Tolerance</h3><p>The speaker concludes by emphasizing that true humility, tolerance, and respect are paramount for sustaining Krishna consciousness, citing the teaching of `Trinadapi suni chena`. Without these qualities, one risks being thrown out by Maya and struggling again in the material world. This foundational principle from Chaitanya Mahaprabhu's Siksastaka is presented as the key to enduring and flourishing in devotional service.</p></div><h2 class="section-heading">Sanskrit Terms</h2><div class="theme-card"><h3>Nalakuvera</h3><p>Son of Kuvera, cursed to be a tree</p></div><div class="theme-card"><h3>Manigriva</h3><p>Son of Kuvera, cursed to be a tree</p></div><div class="theme-card"><h3>Sadhana</h3><p>Spiritual practice or discipline</p></div><div class="theme-card"><h3>Prasadam</h3><p>Food offered to Krishna</p></div><div class="theme-card"><h3>Mahaprabhu</h3><p>Lord Chaitanya Mahaprabhu</p></div><div class="theme-card"><h3>Sadhu</h3><p>A saintly person or pure devotee</p></div><div class="theme-card"><h3>Sunicata</h3><p>Humility, thinking oneself lower</p></div><div class="theme-card"><h3>Maya</h3><p>Krishna's external energy, illusion</p></div></div>
+<div class="tab-content" id="flashcards"><p class="content-text">Click to flip!</p><div class="flashcard-container">
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Nalakuvera</div>
+<div class="flashcard-back">Son of Kuvera, cursed to be a tree</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Manigriva</div>
+<div class="flashcard-back">Son of Kuvera, cursed to be a tree</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Sadhana</div>
+<div class="flashcard-back">Spiritual practice or discipline</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Prasadam</div>
+<div class="flashcard-back">Food offered to Krishna</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Mahaprabhu</div>
+<div class="flashcard-back">Lord Chaitanya Mahaprabhu</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Sadhu</div>
+<div class="flashcard-back">A saintly person or pure devotee</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Sunicata</div>
+<div class="flashcard-back">Humility, thinking oneself lower</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Maya</div>
+<div class="flashcard-back">Krishna's external energy, illusion</div>
+</div></div></div></div>
+<div class="tab-content" id="transcript"><div class="content-text" style="white-space:pre-wrap">No transcript available</div></div>
+</div>
+<script>
+mermaid.initialize({startOnLoad:true,theme:'neutral'});
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+btn.addEventListener('click',()=>{
+const tab=btn.dataset.tab;
+document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
+btn.classList.add('active');
+document.getElementById(tab).classList.add('active');
+});
+});
+</script>
+</body></html>

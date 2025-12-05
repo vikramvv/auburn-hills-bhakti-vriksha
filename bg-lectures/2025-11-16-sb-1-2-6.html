@@ -1,843 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pure Devotion: The Supreme Path to Soul's Happiness | Auburn Hills Bhakti Vriksha</title>
-    <meta name="description" content="The ultimate human endeavor is to engage in unmotivated and uninterrupted devotional service to the transcendent Lord, which alone can completely sati">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: 'Cormorant Garamond', serif;
-            background: linear-gradient(135deg, #E8D4A2 0%, #D4C5A0 50%, #C4B598 100%);
-            min-height: 100vh;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #8B7752 0%, #6B5D42 100%);
-            padding: 30px 20px;
-            text-align: center;
-            color: #E8D4A2;
-            border-bottom: 4px solid #3A2F1F;
-        }
-        
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(1.8em, 4vw, 2.5em);
-            font-weight: 900;
-            margin-bottom: 5px;
-        }
-        
-        header a {
-            color: #E8D4A2;
-            text-decoration: none;
-            transition: opacity 0.3s;
-        }
-        
-        header a:hover { opacity: 0.8; }
-        
-        .breadcrumbs {
-            background: rgba(232, 212, 162, 0.3);
-            padding: 15px 20px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9em;
-        }
-        
-        .breadcrumbs a {
-            color: #5A4D37;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        
-        .breadcrumbs a:hover { color: #3A2F1F; }
-        
-        .breadcrumbs span { margin: 0 8px; color: #8B7752; }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        .lecture-header {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            border: 3px solid rgba(139, 119, 82, 0.2);
-            box-shadow: 0 4px 12px rgba(58, 47, 31, 0.1);
-        }
-        
-        .lecture-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(1.8em, 4vw, 2.8em);
-            color: #3A2F1F;
-            margin-bottom: 20px;
-            font-weight: 700;
-            line-height: 1.3;
-        }
-        
-        .lecture-meta {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-        
-        .badge {
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9em;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .badge-date {
-            background: rgba(232, 212, 162, 0.4);
-            color: #5A4D37;
-            border: 2px solid rgba(139, 119, 82, 0.3);
-        }
-        
-        .badge-verse {
-            background: rgba(139, 119, 82, 0.2);
-            color: #3A2F1F;
-            border: 2px solid rgba(139, 119, 82, 0.4);
-        }
-        
-        .badge-speaker {
-            background: rgba(196, 30, 58, 0.1);
-            color: #8b0000;
-            border: 2px solid rgba(196, 30, 58, 0.3);
-        }
-        
-        .lecture-tabs {
-            display: flex;
-            background: rgba(232, 212, 162, 0.3);
-            border-radius: 12px 12px 0 0;
-            overflow-x: auto;
-            border: 3px solid rgba(139, 119, 82, 0.2);
-            border-bottom: none;
-        }
-        
-        .tab-btn {
-            flex: 1;
-            padding: 18px 24px;
-            border: none;
-            background: transparent;
-            color: #5A4D37;
-            font-family: 'Montserrat', sans-serif;
-            font-size: clamp(0.85em, 2vw, 1em);
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            white-space: nowrap;
-            border-right: 1px solid rgba(139, 119, 82, 0.2);
-        }
-        
-        .tab-btn:last-child { border-right: none; }
-        
-        .tab-btn:hover {
-            background: rgba(232, 212, 162, 0.5);
-            color: #3A2F1F;
-        }
-        
-        .tab-btn.active {
-            background: white;
-            color: #3A2F1F;
-            font-weight: 700;
-        }
-        
-        .tab-content {
-            display: none;
-            background: white;
-            padding: 40px;
-            border-radius: 0 0 12px 12px;
-            border: 3px solid rgba(139, 119, 82, 0.2);
-            border-top: none;
-            min-height: 400px;
-        }
-        
-        .tab-content.active { display: block; }
-        
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }
-        
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .section-heading {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8em;
-            color: #3A2F1F;
-            margin: 30px 0 20px;
-            font-weight: 700;
-            padding-bottom: 10px;
-            border-bottom: 2px solid rgba(139, 119, 82, 0.2);
-        }
-        
-        .content-text {
-            font-size: 1.15em;
-            line-height: 1.8;
-            color: #5A4D37;
-            margin-bottom: 20px;
-        }
-        
-        .theme-card {
-            background: rgba(232, 212, 162, 0.2);
-            border: 2px solid rgba(139, 119, 82, 0.3);
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 20px;
-        }
-        
-        .theme-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4em;
-            color: #3A2F1F;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-        
-        .flashcard-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        
-        .flashcard {
-            perspective: 1000px;
-            height: 250px;
-            cursor: pointer;
-        }
-        
-        .flashcard-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transition: transform 0.6s;
-            transform-style: preserve-3d;
-        }
-        
-        .flashcard.flipped .flashcard-inner {
-            transform: rotateY(180deg);
-        }
-        
-        .flashcard-front, .flashcard-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            border-radius: 12px;
-            padding: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2em;
-            border: 3px solid rgba(139, 119, 82, 0.3);
-        }
-        
-        .flashcard-front {
-            background: linear-gradient(135deg, #8B7752 0%, #6B5D42 100%);
-            color: #E8D4A2;
-            font-weight: 700;
-        }
-        
-        .flashcard-back {
-            background: white;
-            color: #3A2F1F;
-            transform: rotateY(180deg);
-            line-height: 1.6;
-        }
-        
-        .quiz-question {
-            background: rgba(232, 212, 162, 0.2);
-            border: 2px solid rgba(139, 119, 82, 0.3);
-            border-radius: 8px;
-            padding: 30px;
-            margin-bottom: 25px;
-        }
-        
-        .quiz-options {
-            display: grid;
-            gap: 12px;
-            margin-top: 20px;
-        }
-        
-        .quiz-option {
-            padding: 15px 20px;
-            border: 2px solid rgba(139, 119, 82, 0.3);
-            border-radius: 8px;
-            background: white;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-size: 1.1em;
-        }
-        
-        .quiz-option:hover {
-            background: rgba(232, 212, 162, 0.3);
-            border-color: #8B7752;
-        }
-        
-        .quiz-option.selected {
-            background: #8B7752;
-            color: #E8D4A2;
-            border-color: #3A2F1F;
-        }
-        
-        .transcript-text {
-            font-size: 1.15em;
-            line-height: 1.9;
-            color: #5A4D37;
-            white-space: pre-wrap;
-        }
-        
-        @media (max-width: 768px) {
-            .lecture-header { padding: 25px; }
-            .tab-content { padding: 25px; }
-            .tab-btn { padding: 14px 16px; font-size: 0.85em; }
-            .flashcard-container { grid-template-columns: 1fr; }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1><a href="../index.html">🕉️ Auburn Hills Bhakti Vriksha</a></h1>
-    </header>
-    <div class="breadcrumbs">
-        <a href="../index.html">Home</a>
-        <span>›</span>
-        <a href="../bg-lectures.html">Bhagavad Gita Lectures</a>
-        <span>›</span>
-        <span>Pure Devotion: The Supreme Path to Soul's Happiness</span>
-    </div>
-    
-    <div class="container">
-        <div class="lecture-header">
-            <h1 class="lecture-title">Pure Devotion: The Supreme Path to Soul's Happiness</h1>
-            <div class="lecture-meta">
-                <span class="badge badge-date">📅 November 15, 2025</span>
-                <span class="badge badge-verse">📖 SB 1.2.6</span>
-                <span class="badge badge-speaker">🎤 Jai Sacinandana Kṛṣṇa Dāsa</span>
-            </div>
-        </div>
-        
-        <div class="lecture-tabs">
-            <button class="tab-btn active" data-tab="overview">Overview</button>
-            <button class="tab-btn" data-tab="notes">Study Notes</button>
-            <button class="tab-btn" data-tab="flashcards">Flashcards</button>
-            <button class="tab-btn" data-tab="quiz">Quiz</button>
-            <button class="tab-btn" data-tab="transcript">Transcript</button>
-        </div>
-        
-        <div class="tab-content active" id="overview">
-            
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/CpSh1tqISSI" frameborder="0" allowfullscreen></iframe>
-        </div>
-        
-        
-        <h2 class="section-heading">Key Takeaway</h2>
-        <p class="content-text">The ultimate human endeavor is to engage in unmotivated and uninterrupted devotional service to the transcendent Lord, which alone can completely satisfy the soul.</p>
-        
-        
-        
-        <h2 class="section-heading">Main Theme</h2>
-        <p class="content-text">The Supreme Occupation: Pure Devotional Service</p>
-        
-        
-        
-        <h2 class="section-heading">Summary</h2>
-        <p class="content-text">Jai Sacinandana Kṛṣṇa Dāsa explains SB 1.2.6, revealing that true fulfillment comes from pure devotional service to Krishna. This service, characterized by being unmotivated (ahaituki) and uninterrupted (apratihata), is the supreme occupation that brings complete satisfaction to the soul, transcending all material desires.</p>
-        
-    
-        </div>
-        
-        <div class="tab-content" id="notes">
-            <h2 class="section-heading">Key Concepts</h2>
-            <div class="theme-card">
-                <h3 class="theme-title">The Supreme Occupation: Pure Devotional Service</h3>
-                <p class="content-text">The lecture centers on Srimad Bhagavatam 1.2.6, which defines the *parodharma* (supreme occupation) for all humanity. This ultimate activity is loving devotional service to the transcendent Lord, Krishna. The speaker emphasizes that this bhakti must be *ahaituki* (unmotivated) and *apratihata* (uninterrupted) to genuinely satisfy the *atma* (soul). This pure form of devotion is presented as the essence (*saram*) of all Vedic scriptures, superior to any other path or conditional dharma. It moves beyond merely knowing what to do, to understanding *how* that activity must be performed to be truly transformative.</p>
-                
-                <p><strong>Examples:</strong></p>
-                <ul><li class="content-text">The sages' request to Suta Goswami for the essence of all scriptures</li><li class="content-text">Bhishma Dev's instruction to Yudhishthira on the highest dharma</li></ul>
-                
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Ahaituki: The Unmotivated Nature of True Devotion</h3>
-                <p class="content-text">*Ahaituki* means 'without any cause or motive.' The speaker asserts that true bhakti is not driven by desires for material gain (*sarvakama*) or even liberation (*muktikama*), as these still constitute 'hetu' (reasons). Instead, genuine service arises from the soul's intrinsic nature to serve Krishna. Just as a parent cares for a child without questioning 'why,' the soul's natural relationship with Krishna means service is unconditional. The dependence on Krishna is seen as a fundamental aspect of bhakti-yoga, a realization that frees one from the strenuous pursuit of independence.</p>
-                
-                <p><strong>Examples:</strong></p>
-                <ul><li class="content-text">Praying for India to win a cricket match as *sarvakama*</li><li class="content-text">A parent raising a child without questioning 'why'</li><li class="content-text">An employee asking for more pay from an employer versus feeling belonging</li></ul>
-                
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Apratihata: The Unbroken Continuity of Devotion</h3>
-                <p class="content-text">*Apratihata* signifies that bhakti must be continuous and unbroken, not circumstantial or intermittent. The speaker contrasts this with material activities, which are inherently temporary and changing, thus unable to satisfy the unchanging soul. He points out that conditional devotional practices, such as *karma-mishra* (mixed with fruitive actions) or *jnana-mishra* (mixed with speculative knowledge) bhakti, often lack continuity because they are driven by ulterior motives. True bhakti is a 24/7 engagement of body, mind, and words, permeating all aspects of life, ensuring constant connection and satisfaction for the self.</p>
-                
-                <p><strong>Examples:</strong></p>
-                <ul><li class="content-text">Only chanting a few rounds</li><li class="content-text">Experiencing boredom in bhakti without devotee association</li><li class="content-text">The changing nature of material activities failing to satisfy the unchanging self</li></ul>
-                
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Beyond Lust, Fame, and Money: Finding Soul's Happiness</h3>
-                <p class="content-text">The lecture starkly identifies three primary material motivations that hinder the soul's happiness: lust (sex), popularity (fame), and money. These are characterized as *adharma*, a 'disease' that individuals strenuously strive to increase, likening it to a patient with typhoid craving prohibited food. The speaker urges deep introspection to recognize these underlying motivations in one's daily activities across household, social, and professional spheres. He emphasizes that pursuing these temporary, illusory, and miserable goals prevents the *atma* from finding true contentment.</p>
-                
-                <p><strong>Examples:</strong></p>
-                <ul><li class="content-text">Personal motivations for beauty, admiration, financial gain, and popularity in service</li><li class="content-text">A doctor advising a typhoid patient against eating *pulao*</li></ul>
-                
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Seamless Devotion: Weaving Krishna Consciousness into Life</h3>
-                <p class="content-text">Rather than attempting to 'balance' material and spiritual life, the speaker advocates for a complete integration where spiritual life *percolates* through and transforms every material aspect. Using the analogy of *gulab jamun* soaking in sugar syrup, he explains that material life, by itself, lacks inherent sweetness but becomes spiritualized when saturated with Krishna consciousness. This requires determination to ruthlessly give up anything that cannot be engaged in Krishna's service (*anya abhilashita shunyam*), thereby cleaning the 'house' of one's life and making space for divine presence.</p>
-                
-                <p><strong>Examples:</strong></p>
-                <ul><li class="content-text">*Gulab jamun* absorbing sugar syrup</li><li class="content-text">'Throwing out' unused items from one's house to make it bigger and cleaner</li><li class="content-text">A crowded Indian shopping mall before Diwali, symbolizing a heart full of Krishna activities</li></ul>
-                
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Anchoring Devotion: Morning Program and Kirtanam</h3>
-                <p class="content-text">The lecture highlights the profound importance of the morning program (Mangala Arati, Japa, Bhagavatam class) as a *kavacham* (spiritual armor) against the challenges of *maya*. It is presented as a vital step in 'fighting' the material world, ensuring a significant portion of the spiritual battle is won daily. Furthermore, the speaker emphasizes the continuous cycle of *shravanam* (hearing) followed by *kirtanam* (chanting/speaking) for effective learning and purification. By actively sharing what one hears, the knowledge becomes deeply ingrained and personal. The holy name (*Harinam*) is glorified as the ultimate wealth and the means to dispel the darkness of ignorance (*avidya timira*).</p>
-                
-                <p><strong>Examples:</strong></p>
-                <ul><li class="content-text">The morning program as 50-70% of the fight with Maya</li><li class="content-text">Preaching heard knowledge to remember it</li><li class="content-text">Chaitanya Mahaprabhu's early morning Harinam Sankirtan</li><li class="content-text">The sun of the holy name rising in the heart</li></ul>
-                
-            </div><h2 class="section-heading">📚 Sanskrit Terms</h2>
-            <div class="theme-card">
-                <h3 class="theme-title">Pumsam (पुंसाम्)</h3>
-                <p class="content-text">For mankind</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Adhokshaje (अधोक्षजे)</h3>
-                <p class="content-text">Unto the transcendent Lord (Krishna)</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Ahaituki (अहैतुकी)</h3>
-                <p class="content-text">Unmotivated, without cause</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Apratihata (अप्रहता)</h3>
-                <p class="content-text">Uninterrupted, unbroken</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Atma Suprasidati (आत्मा सुप्रसीदति)</h3>
-                <p class="content-text">The self is completely satisfied</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Saram (सारम्)</h3>
-                <p class="content-text">Essence</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Pravritti Marga (प्रवृत्ति मार्ग)</h3>
-                <p class="content-text">Path of sense enjoyment</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Nivritti Marga (निवृत्ति मार्ग)</h3>
-                <p class="content-text">Path of renunciation</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Hetu (हेतु)</h3>
-                <p class="content-text">Reason, cause, motive</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Sarvakama (सर्वकाम)</h3>
-                <p class="content-text">All desires (material)</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Muktikama (मुक्ति काम)</h3>
-                <p class="content-text">Desire for liberation</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Upadhi (उपाधि)</h3>
-                <p class="content-text">Designation</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Swabhavam (स्वभावम्)</h3>
-                <p class="content-text">Nature, inherent quality</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Kavacham (कवचम्)</h3>
-                <p class="content-text">Armor</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Avidya Timira (अविद्यातिमिर)</h3>
-                <p class="content-text">Darkness of ignorance</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Shravanam (श्रवणम्)</h3>
-                <p class="content-text">Hearing</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Kirtanam (कीर्तनम्)</h3>
-                <p class="content-text">Chanting, speaking</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Paratantriya Bhavam (परतन्त्रिय भावम्)</h3>
-                <p class="content-text">Mood of dependence</p>
-            </div><h2 class="section-heading">Practical Applications</h2><ul><li class="content-text">Utilize the rare human form for spiritual advancement.</li><li class="content-text">Integrate Krishna consciousness into all aspects of life.</li><li class="content-text">Develop a mood of dependence on Krishna and His devotees.</li><li class="content-text">Prioritize the morning program.</li><li class="content-text">Preach what you hear.</li></ul><h2 class="section-heading">Notable Quotes</h2><blockquote class="content-text">"This life, this human form of life, is very durlabha. It's very rare. So please, please make use of this good opportunity."</blockquote><blockquote class="content-text">"The sun is rising. And the sun is setting. But one day is passing by. How is it passing by? Vyasta. Vyasta means it is going waste."</blockquote><blockquote class="content-text">"Wake up, wake up."</blockquote><blockquote class="content-text">"Nama bina kichu. Nahi kohaarau. Chaudhbhuva namaje. He's telling there is no other wealth. Nama bina kichu. There is nothing else. Chautabhuana. In the 14 words, there is nothing else but the holy name."</blockquote><blockquote class="content-text">"If we are able to do the morning program, our 50 to 70% of the fight with Maya is successful."</blockquote><blockquote class="content-text">"The way to outside is through inside."</blockquote><blockquote class="content-text">"Nothing else in our spiritual life is more important than the morning program."</blockquote><blockquote class="content-text">"Whatever we are hearing, ultimately it has to become personal."</blockquote><blockquote class="content-text">"So whatever you are hearing today, go and preach it to someone else. Someone you should preach."</blockquote><blockquote class="content-text">"After shravanam, there must be kirtanam of what you hear."</blockquote><blockquote class="content-text">"Atma must become happy. tell me what if you do, Atma will become happy."</blockquote><blockquote class="content-text">"What are those three things? We are doing three things that make us unhappy. First thing, we are after lust. Second thing, we are after popularity. Third thing, we are after money."</blockquote><blockquote class="content-text">"This is called a disease, to increase material disease. So everyone is struggling so hard in this material world to increase their disease."</blockquote><blockquote class="content-text">"Your mind must become very slow, not slow, must become very observant, introspective to see your motivations for every activity."</blockquote><blockquote class="content-text">"Bhakti hi, to serve the Lord of the heart."</blockquote><blockquote class="content-text">"Not serve these senses enough of doing this work. No, this will not satisfy you. Enough."</blockquote><blockquote class="content-text">"When you have understood something to be related to you, you are related to that, there won't be a question of why I perform that activity."</blockquote><blockquote class="content-text">"Because we belong to Krishna, our nature is to serve Krishna continuously."</blockquote><blockquote class="content-text">"Our bhakti yoga itself is depending on Krishna. Without any hetu, without any caste, because our nature is to depend."</blockquote><blockquote class="content-text">"Spiritual life means continuous."</blockquote><blockquote class="content-text">"Because these entities are constantly changing the activities which are emanating from those entities are also constantly changing So they cannot please the unchanging self."</blockquote><blockquote class="content-text">"If you try to balance, you cannot practice spiritual life. Don't try to balance. Do only spiritual life."</blockquote><blockquote class="content-text">"Spiritual life should enter into material life, sugar syrup is entering into Gulab Jamun."</blockquote><blockquote class="content-text">"If you are not able to engage something in Krishna consciousness, we must have the determination to ruthlessly give it up."</blockquote><blockquote class="content-text">"So many lifetimes have simply gone for sex, money and fame. Enough of this. Enough of this."</blockquote><blockquote class="content-text">"My spiritual body became wounded. You see, this material world, Prabhupada is saying, is merely temporary, illusory and full of miseries. IST, if you want to remember."</blockquote><blockquote class="content-text">"Nirmalam Rishi Kenarishi Keshna Sevanam Bhakti Ruchyate. Sarva Upadhir Viniyir Muktam. All the Upadhi, give up."</blockquote><blockquote class="content-text">"The nature of the soul is to serve everyone I see."</blockquote><blockquote class="content-text">"If I want to enjoy anyone else Maya jeopardy other captured Complicated immediately because I want to enjoy you enjoy means what I want to use you for my own agenda."</blockquote><blockquote class="content-text">"How do you become determined in Krishna consciousness? Very simple. He said, you have to become dependent."</blockquote><blockquote class="content-text">"I am dependent on Krishna to live my life, to become happy. If there is no Krishna, I cannot become happy. I am dependent on the spiritual master. I am dependent on devotees."</blockquote><blockquote class="content-text">"It is not that after I become independent, I will stamp on you. No, not that. I am eternally dependent. You are eternally independent."</blockquote><blockquote class="content-text">"Because you must not think it will have some hetu and it will have some break."</blockquote><blockquote class="content-text">"16 rounds I chant in one day and that is bhakti. No, that is not bhakti. That is the beginning of bhakti."</blockquote><blockquote class="content-text">"Every moment, 24 hours a day, 7 days a week, 365 days a year, in all times, in all places, in all circumstances, with my body, mind and words."</blockquote><blockquote class="content-text">"If you have not used something for three, four months, you will not use it. Throw it out."</blockquote><blockquote class="content-text">"If Krishna comes inside the house, he's a cleaner, he will throw everything out of the house which you don't use, which is not useful for you. Throw it out, throw it out."</blockquote><blockquote class="content-text">"Our heart must be so full of Krishna. With so many activities that there is no other space for something else."</blockquote>
-        </div>
-        
-        <div class="tab-content" id="flashcards">
-            
-        <p class="content-text">Click on a card to flip it!</p>
-        <div class="flashcard-container">
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Pumsam (पुंसाम्)</div>
-                    <div class="flashcard-back">For mankind</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Adhokshaje (अधोक्षजे)</div>
-                    <div class="flashcard-back">Unto the transcendent Lord (Krishna)</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Ahaituki (अहैतुकी)</div>
-                    <div class="flashcard-back">Unmotivated, without cause</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Apratihata (अप्रहता)</div>
-                    <div class="flashcard-back">Uninterrupted, unbroken</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Atma Suprasidati (आत्मा सुप्रसीदति)</div>
-                    <div class="flashcard-back">The self is completely satisfied</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Saram (सारम्)</div>
-                    <div class="flashcard-back">Essence</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Pravritti Marga (प्रवृत्ति मार्ग)</div>
-                    <div class="flashcard-back">Path of sense enjoyment</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Nivritti Marga (निवृत्ति मार्ग)</div>
-                    <div class="flashcard-back">Path of renunciation</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Hetu (हेतु)</div>
-                    <div class="flashcard-back">Reason, cause, motive</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Sarvakama (सर्वकाम)</div>
-                    <div class="flashcard-back">All desires (material)</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Muktikama (मुक्ति काम)</div>
-                    <div class="flashcard-back">Desire for liberation</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Upadhi (उपाधि)</div>
-                    <div class="flashcard-back">Designation</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Swabhavam (स्वभावम्)</div>
-                    <div class="flashcard-back">Nature, inherent quality</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Kavacham (कवचम्)</div>
-                    <div class="flashcard-back">Armor</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Avidya Timira (अविद्यातिमिर)</div>
-                    <div class="flashcard-back">Darkness of ignorance</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Shravanam (श्रवणम्)</div>
-                    <div class="flashcard-back">Hearing</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Kirtanam (कीर्तनम्)</div>
-                    <div class="flashcard-back">Chanting, speaking</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Paratantriya Bhavam (परतन्त्रिय भावम्)</div>
-                    <div class="flashcard-back">Mood of dependence</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">The Supreme Occupation: Pure Devotional Service</div>
-                    <div class="flashcard-back">The lecture centers on Srimad Bhagavatam 1.2.6, which defines the *parodharma* (supreme occupation) for all humanity. This ultimate activity is loving devotional service to the transcendent Lord, Kris...</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Ahaituki: The Unmotivated Nature of True Devotion</div>
-                    <div class="flashcard-back">*Ahaituki* means 'without any cause or motive.' The speaker asserts that true bhakti is not driven by desires for material gain (*sarvakama*) or even liberation (*muktikama*), as these still constitut...</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Apratihata: The Unbroken Continuity of Devotion</div>
-                    <div class="flashcard-back">*Apratihata* signifies that bhakti must be continuous and unbroken, not circumstantial or intermittent. The speaker contrasts this with material activities, which are inherently temporary and changing...</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Beyond Lust, Fame, and Money: Finding Soul's Happiness</div>
-                    <div class="flashcard-back">The lecture starkly identifies three primary material motivations that hinder the soul's happiness: lust (sex), popularity (fame), and money. These are characterized as *adharma*, a 'disease' that ind...</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Seamless Devotion: Weaving Krishna Consciousness into Life</div>
-                    <div class="flashcard-back">Rather than attempting to 'balance' material and spiritual life, the speaker advocates for a complete integration where spiritual life *percolates* through and transforms every material aspect. Using ...</div>
-                </div>
-            </div>
-            
-        </div>
-    
-        </div>
-        
-        <div class="tab-content" id="quiz">
-            
-        <div id="quizContainer">
-            <p class="content-text">Test your knowledge! Results will be saved locally.</p>
-            
-            <div class="quiz-question">
-                <p class="content-text"><strong>Question 1:</strong> According to SB 1.2.6, what is the supreme occupation (paro dharma) for humanity?</p>
-                <div class="quiz-options">
-                    
-                    <div class="quiz-option" onclick="selectOption(0, 0, 2)">Engaging in fruitive activities for material gain</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(0, 1, 2)">Performing sacrifices for heavenly planets</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(0, 2, 2)">Achieving unmotivated and uninterrupted devotional service to the transcendent Lord</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(0, 3, 2)">Speculating philosophically on the nature of Brahman</div>
-                    
-                </div>
-                <div id="explanation-0" style="display:none; margin-top:15px;">
-                    <p class="content-text"><strong>Explanation:</strong> SB 1.2.6 states that the supreme occupation is 'yato bhaktir adhokṣaje ahaituky apratihatā yayātmā suprasīdati' – devotional service to the transcendent Lord, which is unmotivated and uninterrupted, satisfying the self.</p>
-                </div>
-            </div>
-            
-            <div class="quiz-question">
-                <p class="content-text"><strong>Question 2:</strong> What does the term 'ahaituki' mean in the context of pure devotional service?</p>
-                <div class="quiz-options">
-                    
-                    <div class="quiz-option" onclick="selectOption(1, 0, 2)">Motivated by desire for liberation</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(1, 1, 2)">Performed for material benefits</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(1, 2, 2)">Without any ulterior motive or cause</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(1, 3, 2)">Dependent on specific circumstances</div>
-                    
-                </div>
-                <div id="explanation-1" style="display:none; margin-top:15px;">
-                    <p class="content-text"><strong>Explanation:</strong> 'Ahaituki' signifies that the devotional service is 'costless' or 'unmotivated,' meaning it is not performed for personal gain, liberation, or any other external reason, but purely out of love.</p>
-                </div>
-            </div>
-            
-            <div class="quiz-question">
-                <p class="content-text"><strong>Question 3:</strong> What are the three main material pursuits that the speaker identifies as making the soul unhappy?</p>
-                <div class="quiz-options">
-                    
-                    <div class="quiz-option" onclick="selectOption(2, 0, 1)">Food, shelter, and clothing</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(2, 1, 1)">Lust (sex), popularity (fame), and money</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(2, 2, 1)">Knowledge, renunciation, and mystic powers</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(2, 3, 1)">Duty, charity, and austerity</div>
-                    
-                </div>
-                <div id="explanation-2" style="display:none; margin-top:15px;">
-                    <p class="content-text"><strong>Explanation:</strong> The speaker explicitly states that 'lust,' 'popularity,' and 'money' are the three primary motivations that lead to the soul's unhappiness and increase the material disease.</p>
-                </div>
-            </div>
-            
-            <div class="quiz-question">
-                <p class="content-text"><strong>Question 4:</strong> The speaker compares the relationship between spiritual life and material life to what analogy?</p>
-                <div class="quiz-options">
-                    
-                    <div class="quiz-option" onclick="selectOption(3, 0, 2)">Two separate roads running parallel</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(3, 1, 2)">A seesaw needing careful balancing</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(3, 2, 2)">Sugar syrup permeating a Gulab Jamun</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(3, 3, 2)">A tug-of-war between opposing forces</div>
-                    
-                </div>
-                <div id="explanation-3" style="display:none; margin-top:15px;">
-                    <p class="content-text"><strong>Explanation:</strong> The speaker uses the analogy of 'sugar syrup entering into Gulab Jamun' to explain that spiritual life should not be balanced with material life, but rather permeate and transform it.</p>
-                </div>
-            </div>
-            
-            <div class="quiz-question">
-                <p class="content-text"><strong>Question 5:</strong> What is the significance of the 'morning program' according to the lecture?</p>
-                <div class="quiz-options">
-                    
-                    <div class="quiz-option" onclick="selectOption(4, 0, 2)">It helps maintain physical health for the day.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(4, 1, 2)">It's a social gathering for devotees.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(4, 2, 2)">It provides spiritual strength and acts as a *kavacham* (armor) against Maya.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(4, 3, 2)">It's a time for planning daily material activities.</div>
-                    
-                </div>
-                <div id="explanation-4" style="display:none; margin-top:15px;">
-                    <p class="content-text"><strong>Explanation:</strong> The lecture highlights that the morning program is essential for fighting Maya, providing spiritual protection like a *kavacham*, and ensuring 50-70% success in the daily spiritual battle.</p>
-                </div>
-            </div>
-            
-            <div class="quiz-question">
-                <p class="content-text"><strong>Question 6:</strong> The speaker emphasizes that after 'shravanam' (hearing), what must follow for better retention and purification?</p>
-                <div class="quiz-options">
-                    
-                    <div class="quiz-option" onclick="selectOption(5, 0, 3)">Mananam (meditation)</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(5, 1, 3)">Dhyanam (contemplation)</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(5, 2, 3)">Sevanam (service)</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(5, 3, 3)">Kirtanam (chanting/speaking)</div>
-                    
-                </div>
-                <div id="explanation-5" style="display:none; margin-top:15px;">
-                    <p class="content-text"><strong>Explanation:</strong> The speaker explicitly states, 'After shravanam, there must be kirtanam of what you hear,' emphasizing that speaking what one hears helps in remembering and purifying oneself.</p>
-                </div>
-            </div>
-            
-        </div>
-    
-        </div>
-        
-        <div class="tab-content" id="transcript">
-            <p class="content-text">No transcript available for this lecture.</p>
-        </div>
-    </div>
-    
-    <script>
-        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
-        
-        // Tab switching
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const tab = btn.dataset.tab;
-                
-                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-                
-                btn.classList.add('active');
-                document.getElementById(tab).classList.add('active');
-            });
-        });
-        
-        // Quiz functionality
-        let quizScore = 0;
-        let quizTotal = 6;
-        
-        function selectOption(questionIndex, optionIndex, correctIndex) {
-            const options = document.querySelectorAll(`.quiz-question:nth-child(${questionIndex + 2}) .quiz-option`);
-            options.forEach(opt => opt.classList.remove('selected'));
-            options[optionIndex].classList.add('selected');
-            
-            document.getElementById(`explanation-${questionIndex}`).style.display = 'block';
-            
-            if (optionIndex === correctIndex) {
-                quizScore++;
-                options[optionIndex].style.background = '#4CAF50';
-                options[optionIndex].style.color = 'white';
-            } else {
-                options[optionIndex].style.background = '#f44336';
-                options[optionIndex].style.color = 'white';
-                options[correctIndex].style.background = '#4CAF50';
-                options[correctIndex].style.color = 'white';
-            }
-            
-            // Save to localStorage
-            saveQuizResult('2025-11-16-sb-1-2-6', quizScore, quizTotal);
-        }
-        
-        function saveQuizResult(lectureId, score, total) {
-            const results = JSON.parse(localStorage.getItem('quizResults') || '[]');
-            results.push({
-                lectureId,
-                score,
-                total,
-                date: new Date().toISOString()
-            });
-            localStorage.setItem('quizResults', JSON.stringify(results));
-        }
-    </script>
-</body>
-</html>
+<html><head><meta charset="UTF-8"><title>Pure Devotion: The Supreme Path to Soul's Happiness</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;700&family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Cormorant Garamond',serif;background:linear-gradient(135deg,#E8D4A2,#C4B598);min-height:100vh}header{background:linear-gradient(135deg,#8B7752,#6B5D42);padding:30px 20px;text-align:center;color:#E8D4A2;border-bottom:4px solid #3A2F1F}header h1{font-family:'Playfair Display',serif;font-size:2em;font-weight:900}header a{color:#E8D4A2;text-decoration:none}.breadcrumbs{background:rgba(232,212,162,0.3);padding:15px 20px}.breadcrumbs a{color:#5A4D37;text-decoration:none;font-weight:600}.container{max-width:1200px;margin:0 auto;padding:20px}.lecture-header{background:white;padding:40px;border-radius:12px;margin-bottom:20px;border:3px solid rgba(139,119,82,0.2)}.lecture-title{font-family:'Playfair Display',serif;font-size:2.5em;color:#3A2F1F;margin-bottom:20px}.badge{padding:8px 16px;border-radius:8px;font-size:0.9em;font-weight:600;margin-right:10px}.badge-date{background:rgba(232,212,162,0.4);color:#5A4D37;border:2px solid rgba(139,119,82,0.3)}.badge-verse{background:rgba(139,119,82,0.2);color:#3A2F1F;border:2px solid rgba(139,119,82,0.4)}.badge-speaker{background:rgba(196,30,58,0.1);color:#8b0000;border:2px solid rgba(196,30,58,0.3)}.lecture-tabs{display:flex;background:rgba(232,212,162,0.3);border-radius:12px 12px 0 0;overflow-x:auto;border:3px solid rgba(139,119,82,0.2);border-bottom:none}.tab-btn{flex:1;padding:18px 24px;border:none;background:transparent;color:#5A4D37;font-weight:600;cursor:pointer;text-transform:uppercase;white-space:nowrap}.tab-btn:hover{background:rgba(232,212,162,0.5)}.tab-btn.active{background:white;color:#3A2F1F;font-weight:700}.tab-content{display:none;background:white;padding:40px;border-radius:0 0 12px 12px;border:3px solid rgba(139,119,82,0.2);border-top:none;min-height:400px}.tab-content.active{display:block}.video-container{position:relative;padding-bottom:56.25%;height:0;margin-bottom:30px}.video-container iframe{position:absolute;width:100%;height:100%}.mermaid-container{background:rgba(232,212,162,0.1);padding:30px;border-radius:12px;overflow-x:auto}.content-text{font-size:1.15em;line-height:1.8;margin-bottom:20px}.section-heading{font-family:'Playfair Display',serif;font-size:1.8em;color:#3A2F1F;margin:30px 0 20px;font-weight:700;border-bottom:2px solid rgba(139,119,82,0.2);padding-bottom:10px}.theme-card{background:rgba(232,212,162,0.2);border:2px solid rgba(139,119,82,0.3);border-radius:8px;padding:25px;margin-bottom:20px}.flashcard-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}.flashcard{perspective:1000px;height:250px;cursor:pointer}.flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d}.flashcard.flipped .flashcard-inner{transform:rotateY(180deg)}.flashcard-front,.flashcard-back{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:12px;padding:30px;display:flex;align-items:center;justify-content:center;font-size:1.2em;border:3px solid rgba(139,119,82,0.3)}.flashcard-front{background:linear-gradient(135deg,#8B7752,#6B5D42);color:#E8D4A2;font-weight:700}.flashcard-back{background:white;color:#3A2F1F;transform:rotateY(180deg)}</style>
+</head><body>
+<header><h1><a href="../index.html">🕉️ Auburn Hills Bhakti Vriksha</a></h1></header>
+<div class="breadcrumbs"><a href="../index.html">Home</a> › <a href="../bg-lectures.html">Bhagavad Gita Lectures</a> › Pure Devotion: The Supreme Path to Soul's Happiness</div>
+<div class="container">
+<div class="lecture-header"><h1 class="lecture-title">Pure Devotion: The Supreme Path to Soul's Happiness</h1>
+<div><span class="badge badge-date">📅 November 15, 2025</span><span class="badge badge-verse">📖 SB 1.2.6</span><span class="badge badge-speaker">🎤 Jai Sacinandana Kṛṣṇa Dāsa</span></div></div>
+<div class="lecture-tabs">
+<button class="tab-btn active" data-tab="overview">Overview</button>
+
+<button class="tab-btn" data-tab="notes">Notes</button>
+<button class="tab-btn" data-tab="flashcards">Flashcards</button>
+<button class="tab-btn" data-tab="transcript">Transcript</button>
+</div>
+<div class="tab-content active" id="overview">
+<div class="video-container"><iframe src="https://www.youtube.com/embed/CpSh1tqISSI" allowfullscreen></iframe></div>
+<h2 class="section-heading">Key Takeaway</h2><p class="content-text">The ultimate human endeavor is to engage in unmotivated and uninterrupted devotional service to the transcendent Lord, which alone can completely satisfy the soul.</p>
+<h2 class="section-heading">Summary</h2><p class="content-text">Jai Sacinandana Kṛṣṇa Dāsa explains SB 1.2.6, revealing that true fulfillment comes from pure devotional service to Krishna. This service, characterized by being unmotivated (ahaituki) and uninterrupted (apratihata), is the supreme occupation that brings complete satisfaction to the soul, transcending all material desires.</p>
+</div>
+
+<div class="tab-content" id="notes"><h2 class="section-heading">Key Concepts</h2><div class="theme-card"><h3>The Supreme Occupation: Pure Devotional Service</h3><p>The lecture centers on Srimad Bhagavatam 1.2.6, which defines the *parodharma* (supreme occupation) for all humanity. This ultimate activity is loving devotional service to the transcendent Lord, Krishna. The speaker emphasizes that this bhakti must be *ahaituki* (unmotivated) and *apratihata* (uninterrupted) to genuinely satisfy the *atma* (soul). This pure form of devotion is presented as the essence (*saram*) of all Vedic scriptures, superior to any other path or conditional dharma. It moves beyond merely knowing what to do, to understanding *how* that activity must be performed to be truly transformative.</p></div><div class="theme-card"><h3>Ahaituki: The Unmotivated Nature of True Devotion</h3><p>*Ahaituki* means 'without any cause or motive.' The speaker asserts that true bhakti is not driven by desires for material gain (*sarvakama*) or even liberation (*muktikama*), as these still constitute 'hetu' (reasons). Instead, genuine service arises from the soul's intrinsic nature to serve Krishna. Just as a parent cares for a child without questioning 'why,' the soul's natural relationship with Krishna means service is unconditional. The dependence on Krishna is seen as a fundamental aspect of bhakti-yoga, a realization that frees one from the strenuous pursuit of independence.</p></div><div class="theme-card"><h3>Apratihata: The Unbroken Continuity of Devotion</h3><p>*Apratihata* signifies that bhakti must be continuous and unbroken, not circumstantial or intermittent. The speaker contrasts this with material activities, which are inherently temporary and changing, thus unable to satisfy the unchanging soul. He points out that conditional devotional practices, such as *karma-mishra* (mixed with fruitive actions) or *jnana-mishra* (mixed with speculative knowledge) bhakti, often lack continuity because they are driven by ulterior motives. True bhakti is a 24/7 engagement of body, mind, and words, permeating all aspects of life, ensuring constant connection and satisfaction for the self.</p></div><div class="theme-card"><h3>Beyond Lust, Fame, and Money: Finding Soul's Happiness</h3><p>The lecture starkly identifies three primary material motivations that hinder the soul's happiness: lust (sex), popularity (fame), and money. These are characterized as *adharma*, a 'disease' that individuals strenuously strive to increase, likening it to a patient with typhoid craving prohibited food. The speaker urges deep introspection to recognize these underlying motivations in one's daily activities across household, social, and professional spheres. He emphasizes that pursuing these temporary, illusory, and miserable goals prevents the *atma* from finding true contentment.</p></div><div class="theme-card"><h3>Seamless Devotion: Weaving Krishna Consciousness into Life</h3><p>Rather than attempting to 'balance' material and spiritual life, the speaker advocates for a complete integration where spiritual life *percolates* through and transforms every material aspect. Using the analogy of *gulab jamun* soaking in sugar syrup, he explains that material life, by itself, lacks inherent sweetness but becomes spiritualized when saturated with Krishna consciousness. This requires determination to ruthlessly give up anything that cannot be engaged in Krishna's service (*anya abhilashita shunyam*), thereby cleaning the 'house' of one's life and making space for divine presence.</p></div><div class="theme-card"><h3>Anchoring Devotion: Morning Program and Kirtanam</h3><p>The lecture highlights the profound importance of the morning program (Mangala Arati, Japa, Bhagavatam class) as a *kavacham* (spiritual armor) against the challenges of *maya*. It is presented as a vital step in 'fighting' the material world, ensuring a significant portion of the spiritual battle is won daily. Furthermore, the speaker emphasizes the continuous cycle of *shravanam* (hearing) followed by *kirtanam* (chanting/speaking) for effective learning and purification. By actively sharing what one hears, the knowledge becomes deeply ingrained and personal. The holy name (*Harinam*) is glorified as the ultimate wealth and the means to dispel the darkness of ignorance (*avidya timira*).</p></div><h2 class="section-heading">Sanskrit Terms</h2><div class="theme-card"><h3>Pumsam</h3><p>For mankind</p></div><div class="theme-card"><h3>Adhokshaje</h3><p>Unto the transcendent Lord (Krishna)</p></div><div class="theme-card"><h3>Ahaituki</h3><p>Unmotivated, without cause</p></div><div class="theme-card"><h3>Apratihata</h3><p>Uninterrupted, unbroken</p></div><div class="theme-card"><h3>Atma Suprasidati</h3><p>The self is completely satisfied</p></div><div class="theme-card"><h3>Saram</h3><p>Essence</p></div><div class="theme-card"><h3>Pravritti Marga</h3><p>Path of sense enjoyment</p></div><div class="theme-card"><h3>Nivritti Marga</h3><p>Path of renunciation</p></div><div class="theme-card"><h3>Hetu</h3><p>Reason, cause, motive</p></div><div class="theme-card"><h3>Sarvakama</h3><p>All desires (material)</p></div><div class="theme-card"><h3>Muktikama</h3><p>Desire for liberation</p></div><div class="theme-card"><h3>Upadhi</h3><p>Designation</p></div><div class="theme-card"><h3>Swabhavam</h3><p>Nature, inherent quality</p></div><div class="theme-card"><h3>Kavacham</h3><p>Armor</p></div><div class="theme-card"><h3>Avidya Timira</h3><p>Darkness of ignorance</p></div><div class="theme-card"><h3>Shravanam</h3><p>Hearing</p></div><div class="theme-card"><h3>Kirtanam</h3><p>Chanting, speaking</p></div><div class="theme-card"><h3>Paratantriya Bhavam</h3><p>Mood of dependence</p></div></div>
+<div class="tab-content" id="flashcards"><p class="content-text">Click to flip!</p><div class="flashcard-container">
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Pumsam</div>
+<div class="flashcard-back">For mankind</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Adhokshaje</div>
+<div class="flashcard-back">Unto the transcendent Lord (Krishna)</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Ahaituki</div>
+<div class="flashcard-back">Unmotivated, without cause</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Apratihata</div>
+<div class="flashcard-back">Uninterrupted, unbroken</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Atma Suprasidati</div>
+<div class="flashcard-back">The self is completely satisfied</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Saram</div>
+<div class="flashcard-back">Essence</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Pravritti Marga</div>
+<div class="flashcard-back">Path of sense enjoyment</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Nivritti Marga</div>
+<div class="flashcard-back">Path of renunciation</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Hetu</div>
+<div class="flashcard-back">Reason, cause, motive</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Sarvakama</div>
+<div class="flashcard-back">All desires (material)</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Muktikama</div>
+<div class="flashcard-back">Desire for liberation</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Upadhi</div>
+<div class="flashcard-back">Designation</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Swabhavam</div>
+<div class="flashcard-back">Nature, inherent quality</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Kavacham</div>
+<div class="flashcard-back">Armor</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Avidya Timira</div>
+<div class="flashcard-back">Darkness of ignorance</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Shravanam</div>
+<div class="flashcard-back">Hearing</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Kirtanam</div>
+<div class="flashcard-back">Chanting, speaking</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Paratantriya Bhavam</div>
+<div class="flashcard-back">Mood of dependence</div>
+</div></div></div></div>
+<div class="tab-content" id="transcript"><div class="content-text" style="white-space:pre-wrap">No transcript available</div></div>
+</div>
+<script>
+mermaid.initialize({startOnLoad:true,theme:'neutral'});
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+btn.addEventListener('click',()=>{
+const tab=btn.dataset.tab;
+document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
+btn.classList.add('active');
+document.getElementById(tab).classList.add('active');
+});
+});
+</script>
+</body></html>

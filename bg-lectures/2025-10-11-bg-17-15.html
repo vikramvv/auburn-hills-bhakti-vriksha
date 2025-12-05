@@ -1,787 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Divine Speech: The Path to Inner Peace (BG 17.15) | Auburn Hills Bhakti Vriksha</title>
-    <meta name="description" content="Krishna reveals that the austerity of speech (vāṅ-mayaṁ tapa) involves speaking words that are truthful, pleasing, beneficial, and non-agitating, coup">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: 'Cormorant Garamond', serif;
-            background: linear-gradient(135deg, #E8D4A2 0%, #D4C5A0 50%, #C4B598 100%);
-            min-height: 100vh;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #8B7752 0%, #6B5D42 100%);
-            padding: 30px 20px;
-            text-align: center;
-            color: #E8D4A2;
-            border-bottom: 4px solid #3A2F1F;
-        }
-        
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(1.8em, 4vw, 2.5em);
-            font-weight: 900;
-            margin-bottom: 5px;
-        }
-        
-        header a {
-            color: #E8D4A2;
-            text-decoration: none;
-            transition: opacity 0.3s;
-        }
-        
-        header a:hover { opacity: 0.8; }
-        
-        .breadcrumbs {
-            background: rgba(232, 212, 162, 0.3);
-            padding: 15px 20px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9em;
-        }
-        
-        .breadcrumbs a {
-            color: #5A4D37;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        
-        .breadcrumbs a:hover { color: #3A2F1F; }
-        
-        .breadcrumbs span { margin: 0 8px; color: #8B7752; }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        .lecture-header {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            border: 3px solid rgba(139, 119, 82, 0.2);
-            box-shadow: 0 4px 12px rgba(58, 47, 31, 0.1);
-        }
-        
-        .lecture-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(1.8em, 4vw, 2.8em);
-            color: #3A2F1F;
-            margin-bottom: 20px;
-            font-weight: 700;
-            line-height: 1.3;
-        }
-        
-        .lecture-meta {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-        
-        .badge {
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9em;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .badge-date {
-            background: rgba(232, 212, 162, 0.4);
-            color: #5A4D37;
-            border: 2px solid rgba(139, 119, 82, 0.3);
-        }
-        
-        .badge-verse {
-            background: rgba(139, 119, 82, 0.2);
-            color: #3A2F1F;
-            border: 2px solid rgba(139, 119, 82, 0.4);
-        }
-        
-        .badge-speaker {
-            background: rgba(196, 30, 58, 0.1);
-            color: #8b0000;
-            border: 2px solid rgba(196, 30, 58, 0.3);
-        }
-        
-        .lecture-tabs {
-            display: flex;
-            background: rgba(232, 212, 162, 0.3);
-            border-radius: 12px 12px 0 0;
-            overflow-x: auto;
-            border: 3px solid rgba(139, 119, 82, 0.2);
-            border-bottom: none;
-        }
-        
-        .tab-btn {
-            flex: 1;
-            padding: 18px 24px;
-            border: none;
-            background: transparent;
-            color: #5A4D37;
-            font-family: 'Montserrat', sans-serif;
-            font-size: clamp(0.85em, 2vw, 1em);
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            white-space: nowrap;
-            border-right: 1px solid rgba(139, 119, 82, 0.2);
-        }
-        
-        .tab-btn:last-child { border-right: none; }
-        
-        .tab-btn:hover {
-            background: rgba(232, 212, 162, 0.5);
-            color: #3A2F1F;
-        }
-        
-        .tab-btn.active {
-            background: white;
-            color: #3A2F1F;
-            font-weight: 700;
-        }
-        
-        .tab-content {
-            display: none;
-            background: white;
-            padding: 40px;
-            border-radius: 0 0 12px 12px;
-            border: 3px solid rgba(139, 119, 82, 0.2);
-            border-top: none;
-            min-height: 400px;
-        }
-        
-        .tab-content.active { display: block; }
-        
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }
-        
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .section-heading {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8em;
-            color: #3A2F1F;
-            margin: 30px 0 20px;
-            font-weight: 700;
-            padding-bottom: 10px;
-            border-bottom: 2px solid rgba(139, 119, 82, 0.2);
-        }
-        
-        .content-text {
-            font-size: 1.15em;
-            line-height: 1.8;
-            color: #5A4D37;
-            margin-bottom: 20px;
-        }
-        
-        .theme-card {
-            background: rgba(232, 212, 162, 0.2);
-            border: 2px solid rgba(139, 119, 82, 0.3);
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 20px;
-        }
-        
-        .theme-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4em;
-            color: #3A2F1F;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-        
-        .flashcard-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        
-        .flashcard {
-            perspective: 1000px;
-            height: 250px;
-            cursor: pointer;
-        }
-        
-        .flashcard-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transition: transform 0.6s;
-            transform-style: preserve-3d;
-        }
-        
-        .flashcard.flipped .flashcard-inner {
-            transform: rotateY(180deg);
-        }
-        
-        .flashcard-front, .flashcard-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            border-radius: 12px;
-            padding: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2em;
-            border: 3px solid rgba(139, 119, 82, 0.3);
-        }
-        
-        .flashcard-front {
-            background: linear-gradient(135deg, #8B7752 0%, #6B5D42 100%);
-            color: #E8D4A2;
-            font-weight: 700;
-        }
-        
-        .flashcard-back {
-            background: white;
-            color: #3A2F1F;
-            transform: rotateY(180deg);
-            line-height: 1.6;
-        }
-        
-        .quiz-question {
-            background: rgba(232, 212, 162, 0.2);
-            border: 2px solid rgba(139, 119, 82, 0.3);
-            border-radius: 8px;
-            padding: 30px;
-            margin-bottom: 25px;
-        }
-        
-        .quiz-options {
-            display: grid;
-            gap: 12px;
-            margin-top: 20px;
-        }
-        
-        .quiz-option {
-            padding: 15px 20px;
-            border: 2px solid rgba(139, 119, 82, 0.3);
-            border-radius: 8px;
-            background: white;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-size: 1.1em;
-        }
-        
-        .quiz-option:hover {
-            background: rgba(232, 212, 162, 0.3);
-            border-color: #8B7752;
-        }
-        
-        .quiz-option.selected {
-            background: #8B7752;
-            color: #E8D4A2;
-            border-color: #3A2F1F;
-        }
-        
-        .transcript-text {
-            font-size: 1.15em;
-            line-height: 1.9;
-            color: #5A4D37;
-            white-space: pre-wrap;
-        }
-        
-        @media (max-width: 768px) {
-            .lecture-header { padding: 25px; }
-            .tab-content { padding: 25px; }
-            .tab-btn { padding: 14px 16px; font-size: 0.85em; }
-            .flashcard-container { grid-template-columns: 1fr; }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1><a href="../index.html">🕉️ Auburn Hills Bhakti Vriksha</a></h1>
-    </header>
-    <div class="breadcrumbs">
-        <a href="../index.html">Home</a>
-        <span>›</span>
-        <a href="../bg-lectures.html">Bhagavad Gita Lectures</a>
-        <span>›</span>
-        <span>Divine Speech: The Path to Inner Peace (BG 17.15)</span>
-    </div>
-    
-    <div class="container">
-        <div class="lecture-header">
-            <h1 class="lecture-title">Divine Speech: The Path to Inner Peace (BG 17.15)</h1>
-            <div class="lecture-meta">
-                <span class="badge badge-date">📅 October 10, 2025</span>
-                <span class="badge badge-verse">📖 BG 17.15</span>
-                <span class="badge badge-speaker">🎤 Jai Sacinandana Kṛṣṇa Dāsa</span>
-            </div>
-        </div>
-        
-        <div class="lecture-tabs">
-            <button class="tab-btn active" data-tab="overview">Overview</button>
-            <button class="tab-btn" data-tab="notes">Study Notes</button>
-            <button class="tab-btn" data-tab="flashcards">Flashcards</button>
-            <button class="tab-btn" data-tab="quiz">Quiz</button>
-            <button class="tab-btn" data-tab="transcript">Transcript</button>
-        </div>
-        
-        <div class="tab-content active" id="overview">
-            
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/sv1MVfKmGtQ" frameborder="0" allowfullscreen></iframe>
-        </div>
-        
-        
-        <h2 class="section-heading">Key Takeaway</h2>
-        <p class="content-text">Krishna reveals that the austerity of speech (vāṅ-mayaṁ tapa) involves speaking words that are truthful, pleasing, beneficial, and non-agitating, coupled with regular study of Vedic texts, which is crucial for spiritual advancement and inner peace.</p>
-        
-        
-        
-        <h2 class="section-heading">Main Theme</h2>
-        <p class="content-text">The Spiritual Discipline and Power of Regulated Speech</p>
-        
-        
-        
-        <h2 class="section-heading">Summary</h2>
-        <p class="content-text">Jai Sacinandana Kṛṣṇa Dāsa elucidates Bhagavad Gita 17.15, focusing on the penance of speech. He explains how disciplined communication—truthful, pleasing, beneficial, and non-agitating words—combined with scriptural study, is a profound spiritual practice. The lecture also touches on accepting suffering as Krishna's mercy and the transformative power of the Hare Krishna mantra.</p>
-        
-    
-        </div>
-        
-        <div class="tab-content" id="notes">
-            <h2 class="section-heading">Key Concepts</h2>
-            <div class="theme-card">
-                <h3 class="theme-title">The Austerity of Speech (Vāṅ-mayaṁ Tapa)</h3>
-                <p class="content-text">The lecture elaborates on Bhagavad Gita 17.15, explaining that penance of speech involves four key qualities: speaking words that are truthful (satyam), pleasing (priyam), beneficial (hitam), and non-agitating (anudvega-karam). This goes beyond mere honesty, requiring careful consideration of impact and purpose. The speaker emphasizes that this disciplined speech, along with regular study of Vedic literature (svādhyāyābhyasanaṁ), is a powerful spiritual practice. It helps control the mind, purifies the consciousness, and prevents us from causing harm or anxiety to others, leading to inner peace.</p>
-                
-                <p><strong>Examples:</strong></p>
-                <ul><li class="content-text">Hanumanji's speech in Ramayana, which was so pleasing and beneficial that it transformed the minds of many rakshasas.</li><li class="content-text">The contrast between speaking carelessly (like a frog croaking to invite a snake) and speaking about Krishna or shastra.</li><li class="content-text">The idea that we should only speak what we hear from Shastra and repeat it.</li></ul>
-                
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Krishna's Mercy in Suffering and Karma</h3>
-                <p class="content-text">The speaker explains that suffering, though painful, is often Krishna's mercy. Our karma is the primary cause of our problems, but Krishna, being infinitely kind, regulates and reduces the impact, giving us only a fraction of what we deserve. This limited suffering serves to purify us, humble us, and ultimately redirect us towards Him. Understanding the purpose of pain makes it bearable and can lead to profound spiritual realizations. Krishna uses both pleasant and unpleasant circumstances to bring a devotee closer, acting like a caring mother or father who wants their child to return home.</p>
-                
-                <p><strong>Examples:</strong></p>
-                <ul><li class="content-text">Krishna taking away one's job or money to reduce unnecessary attachments and focus on spiritual life.</li><li class="content-text">Health problems making one realize dependence and humility.</li><li class="content-text">The story of the man who lost everything but then became very advanced in Krishna consciousness and is now building a temple.</li></ul>
-                
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">The Importance of Spiritual Master and Krishna's Plan</h3>
-                <p class="content-text">The lecture highlights the pivotal role of the spiritual master as Krishna's 'hand,' guiding us out of our self-created suffering. By accepting the spiritual master's instructions, which are aligned with the Bhagavad Gita, we are essentially accepting Krishna's instructions. This guidance helps us understand Krishna's grand plan for our happiness, which contrasts with our own constantly changing and often misguided plans. Realizing this divine plan brings excitement and joy, allowing us to envision a new, spiritual start and rewrite our past mistakes.</p>
-                
-                <p><strong>Examples:</strong></p>
-                <ul><li class="content-text">The spiritual master repeating exactly what the Bhagavad Gita says.</li><li class="content-text">The analogy of a father searching desperately for his lost son, representing Krishna's eagerness for our return.</li></ul>
-                
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">The Transformative Power of Hare Krishna Mantra</h3>
-                <p class="content-text">The Hare Krishna mantra is presented as an 'end-to-end product' that facilitates the entire spiritual journey. It helps one realize bad choices, enlightens the consciousness, and ultimately transports one to the spiritual world. The mantra is described as non-different from Krishna Himself, a person, just as the deity and prasadam are. Chanting the mantra is considered the primary duty of life, enabling self-realization ('Know who you are: spirit soul, Be who you are: devotional service'). Its continuous practice purifies and engages one's entire being in divine connection.</p>
-                
-                <p><strong>Examples:</strong></p>
-                <ul><li class="content-text">Chanting allows one to 'discover our choice' and not just obey senses.</li><li class="content-text">The mantra helps 'decouple' deep-seated biases and false beliefs about happiness.</li><li class="content-text">Describing the mantra as the 'means' and the 'end' of spiritual life.</li></ul>
-                
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Forced vs. Voluntary Austerity and the Story of Nalakuvera and Manigriva</h3>
-                <p class="content-text">The concept of austerity is discussed, emphasizing that one must choose either voluntary austerity or be subjected to forced austerity by material nature. The vivid example of Nalakuvera and Manigriva, sons of Kuvera, illustrates this point. Despite their elevated status, their indulgence led to a curse from Narada Muni, transforming them into trees. This forced austerity provided them with the necessary time and circumstances for reflection and purification, demonstrating Krishna's mercy even in seemingly harsh situations, especially for those in positions of responsibility who fail to set proper examples.</p>
-                
-                <p><strong>Examples:</strong></p>
-                <ul><li class="content-text">Eating too much sugar in youth leading to diabetes later in life (forced austerity).</li><li class="content-text">Trump's desire for glory leading to humiliation, contrasting with voluntary humility.</li><li class="content-text">Nalakuvera and Manigriva's curse to become trees, giving them time to meditate and be delivered by Krishna.</li></ul>
-                
-            </div><h2 class="section-heading">📚 Sanskrit Terms</h2>
-            <div class="theme-card">
-                <h3 class="theme-title">Manoratha (मनोरथ)</h3>
-                <p class="content-text">Chariot of the mind; referring to the mind's erratic and constantly changing desires/plans.</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Dhavati (धावति)</h3>
-                <p class="content-text">To jump, to run quickly and erratically.</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Yoga (योग)</h3>
-                <p class="content-text">Connection, specifically with Krishna and the spiritual master.</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Vaak (वाक्)</h3>
-                <p class="content-text">Speech, words, vocal power.</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Tapasya (तपस्या)</h3>
-                <p class="content-text">Penance, austerity; being observant and disciplined.</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Udvega (उद्वेग)</h3>
-                <p class="content-text">Agitation, anxiety, disturbance.</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Anukampa (अनुकम्पा)</h3>
-                <p class="content-text">Affection, causeless mercy, shivering (of the heart from affection).</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Atmakrtam Vipakam (आत्मकृतं विपाकम्)</h3>
-                <p class="content-text">Reactions (suffering) created by oneself.</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Hridhvaak Vapubihi (हृद्वाग्वपुभिः)</h3>
-                <p class="content-text">With heart, words, and body.</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Muktipade (मुक्तिपदे)</h3>
-                <p class="content-text">To the platform of liberation.</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Karthik Masam (कार्तिकमास)</h3>
-                <p class="content-text">The auspicious month of Kartik.</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Harati iti Hari (हरति इति हरि)</h3>
-                <p class="content-text">He who takes away (sins, bad habits).</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Svadhyayabhyasanam (स्वाध्यायाभ्यसनम्)</h3>
-                <p class="content-text">Regular study of Vedic literature.</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Satyam, Priyam, Hitam (सत्यम्, प्रियम्, हितम्)</h3>
-                <p class="content-text">Truthful, pleasing, beneficial.</p>
-            </div><h2 class="section-heading">Practical Applications</h2><ul><li class="content-text">Embrace Krishna's plan for happiness</li><li class="content-text">Practice austerity of speech (Vāṅ-mayaṁ Tapa)</li><li class="content-text">Accept suffering as Krishna's purifying mercy</li><li class="content-text">Control your 'Vak Shakti' (power of speech)</li><li class="content-text">Make your home a spiritual sanctuary</li></ul><h2 class="section-heading">Notable Quotes</h2><blockquote class="content-text">"The beginning of success is to understand the definition of success."</blockquote><blockquote class="content-text">"The only duty of life is to realize who you are. That's all. There is no other duty. Every other duty is manufactured duty."</blockquote><blockquote class="content-text">"Know who you are, be who you are. Know who you are is I am spirit soul. Be who you are is devotional service. That's all. Two things."</blockquote><blockquote class="content-text">"Anyone who is not doing voluntary austerity must be going through forced austerity."</blockquote><blockquote class="content-text">"Life means either natural accepted austerity or forced austerity."</blockquote><blockquote class="content-text">"People think carelessness is enjoyment."</blockquote><blockquote class="content-text">"But an intelligent person is very careful in his speech, is very careful in his actions, careful in what he is thinking by being observant, by being careful, that is his hobby."</blockquote><blockquote class="content-text">"If I am disappointed by the mistakes of others, definitely I am disappointing Krishna 100%."</blockquote><blockquote class="content-text">"My lack of intelligence is the reason for every problem I have had."</blockquote><blockquote class="content-text">"Krishna is so concerned about me that he is actually cleaning me and sometimes it might be painful."</blockquote><blockquote class="content-text">"When you understand the purpose of pain, pain becomes bearable."</blockquote><blockquote class="content-text">"If I act in a bad way, someone near and dear one does not [love] me... But there is one person, whatever you do, His affection for you will not change, will not come down even one percent. That is Krishna."</blockquote><blockquote class="content-text">"So harsh hearted, so hard hearted I am."</blockquote><blockquote class="content-text">"An affair with you is eternal."</blockquote><blockquote class="content-text">"When we are connected to Krishna... then when someone insults me, I can think back, 'I also did that to Krishna.'"</blockquote><blockquote class="content-text">"Krishna has to purify me in this time frame. How will he purify me? He has to give me little bit suffering, little association, little bit knowledge."</blockquote><blockquote class="content-text">"Krishna has strange ways to bring us to his lotus feet."</blockquote><blockquote class="content-text">"Krishna is saying, 'Give me your bad habits, I'll give you gold.'"</blockquote><blockquote class="content-text">"Using my speech I have done a lot of bad karma, Krishna took away my speech."</blockquote><blockquote class="content-text">"Speech is very intimate. It's got a lot of intimacy."</blockquote><blockquote class="content-text">"If you say that loud, I will start believing it very seriously. Because I spoke it."</blockquote><blockquote class="content-text">"You hear only about Krishna, you speak about reality. And then you will remember naturally the beautiful lotus feet of Hari. Constantly."</blockquote>
-        </div>
-        
-        <div class="tab-content" id="flashcards">
-            
-        <p class="content-text">Click on a card to flip it!</p>
-        <div class="flashcard-container">
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Manoratha (मनोरथ)</div>
-                    <div class="flashcard-back">Chariot of the mind; referring to the mind's erratic and constantly changing desires/plans.</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Dhavati (धावति)</div>
-                    <div class="flashcard-back">To jump, to run quickly and erratically.</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Yoga (योग)</div>
-                    <div class="flashcard-back">Connection, specifically with Krishna and the spiritual master.</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Vaak (वाक्)</div>
-                    <div class="flashcard-back">Speech, words, vocal power.</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Tapasya (तपस्या)</div>
-                    <div class="flashcard-back">Penance, austerity; being observant and disciplined.</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Udvega (उद्वेग)</div>
-                    <div class="flashcard-back">Agitation, anxiety, disturbance.</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Anukampa (अनुकम्पा)</div>
-                    <div class="flashcard-back">Affection, causeless mercy, shivering (of the heart from affection).</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Atmakrtam Vipakam (आत्मकृतं विपाकम्)</div>
-                    <div class="flashcard-back">Reactions (suffering) created by oneself.</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Hridhvaak Vapubihi (हृद्वाग्वपुभिः)</div>
-                    <div class="flashcard-back">With heart, words, and body.</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Muktipade (मुक्तिपदे)</div>
-                    <div class="flashcard-back">To the platform of liberation.</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Karthik Masam (कार्तिकमास)</div>
-                    <div class="flashcard-back">The auspicious month of Kartik.</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Harati iti Hari (हरति इति हरि)</div>
-                    <div class="flashcard-back">He who takes away (sins, bad habits).</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Svadhyayabhyasanam (स्वाध्यायाभ्यसनम्)</div>
-                    <div class="flashcard-back">Regular study of Vedic literature.</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Satyam, Priyam, Hitam (सत्यम्, प्रियम्, हितम्)</div>
-                    <div class="flashcard-back">Truthful, pleasing, beneficial.</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Regarding Nalakuvera and Manigriva, why were they specifically cursed, and why was their punishment so severe?</div>
-                    <div class="flashcard-back">The speaker explains that Nalakuvera and Manigriva were sons of Kuvera and held responsible positions as devas, meant to be exemplary figures. Their offense was not just their indulgence in intoxication and sporting with women, but also their complete lack of respect and awareness when Narada Muni, a great sage, passed by. While the women with them covered themselves, Nalakuvera and Manigriva remained naked and drunk. The principle is that 'when someone is more responsible in doing a problem, the punishment is more.' Since they were superior beings who failed to set a proper example and disrespect a sadhu, their punishment was proportionally severe, acting as a forced austerity.</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Does Narada Muni give other curses, and are they always benevolent?</div>
-                    <div class="flashcard-back">The speaker recollects that Narada Muni's curses, like the one given to Nalakuvera and Manigriva, always have a benevolent purpose. They are disguised blessings, serving as 'benedictions in the form of teaching someone.' In this specific case, being cursed to become trees provided Nalakuvera and Manigriva with the necessary time for reflection and spiritual upliftment, which they otherwise would not have taken on voluntarily.</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">The Austerity of Speech (Vāṅ-mayaṁ Tapa)</div>
-                    <div class="flashcard-back">The lecture elaborates on Bhagavad Gita 17.15, explaining that penance of speech involves four key qualities: speaking words that are truthful (satyam), pleasing (priyam), beneficial (hitam), and non-...</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Krishna's Mercy in Suffering and Karma</div>
-                    <div class="flashcard-back">The speaker explains that suffering, though painful, is often Krishna's mercy. Our karma is the primary cause of our problems, but Krishna, being infinitely kind, regulates and reduces the impact, giv...</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">The Importance of Spiritual Master and Krishna's Plan</div>
-                    <div class="flashcard-back">The lecture highlights the pivotal role of the spiritual master as Krishna's 'hand,' guiding us out of our self-created suffering. By accepting the spiritual master's instructions, which are aligned w...</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">The Transformative Power of Hare Krishna Mantra</div>
-                    <div class="flashcard-back">The Hare Krishna mantra is presented as an 'end-to-end product' that facilitates the entire spiritual journey. It helps one realize bad choices, enlightens the consciousness, and ultimately transports...</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Forced vs. Voluntary Austerity and the Story of Nalakuvera and Manigriva</div>
-                    <div class="flashcard-back">The concept of austerity is discussed, emphasizing that one must choose either voluntary austerity or be subjected to forced austerity by material nature. The vivid example of Nalakuvera and Manigriva...</div>
-                </div>
-            </div>
-            
-        </div>
-    
-        </div>
-        
-        <div class="tab-content" id="quiz">
-            
-        <div id="quizContainer">
-            <p class="content-text">Test your knowledge! Results will be saved locally.</p>
-            
-            <div class="quiz-question">
-                <p class="content-text"><strong>Question 1:</strong> According to the lecture, what is the 'Manoratha' (chariot of the mind) primarily characterized by?</p>
-                <div class="quiz-options">
-                    
-                    <div class="quiz-option" onclick="selectOption(0, 0, 1)">Steady and focused travel towards a goal</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(0, 1, 1)">Constantly jumping from one idea or desire to another</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(0, 2, 1)">A peaceful and unmoving state</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(0, 3, 1)">A swift and efficient means of transportation</div>
-                    
-                </div>
-                <div id="explanation-0" style="display:none; margin-top:15px;">
-                    <p class="content-text"><strong>Explanation:</strong> The speaker explains that the Manoratha, or chariot of the mind, does not coast but 'jumps' (dhavati), constantly switching lanes, signifying its restless and undirected nature in material pursuits.</p>
-                </div>
-            </div>
-            
-            <div class="quiz-question">
-                <p class="content-text"><strong>Question 2:</strong> What is the primary message of Bhagavad Gita 17.15 concerning speech?</p>
-                <div class="quiz-options">
-                    
-                    <div class="quiz-option" onclick="selectOption(1, 0, 2)">One should always speak their mind freely, regardless of consequence.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(1, 1, 2)">Speech should be truthful, but harshness is sometimes necessary.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(1, 2, 2)">Austerity of speech means speaking words that are truthful, pleasing, beneficial, and non-agitating, combined with scripture study.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(1, 3, 2)">Silence is always the highest form of speech austerity.</div>
-                    
-                </div>
-                <div id="explanation-1" style="display:none; margin-top:15px;">
-                    <p class="content-text"><strong>Explanation:</strong> BG 17.15 describes vāṅ-mayaṁ tapa (austerity of speech) as speaking words that are satyam (truthful), priyam (pleasing), hitam (beneficial), and anudvega-karam (non-agitating), along with svādhyāyābhyasanaṁ (regular study of Vedic literature).</p>
-                </div>
-            </div>
-            
-            <div class="quiz-question">
-                <p class="content-text"><strong>Question 3:</strong> Why does the speaker say that suffering can be seen as Krishna's mercy?</p>
-                <div class="quiz-options">
-                    
-                    <div class="quiz-option" onclick="selectOption(2, 0, 2)">Krishna directly causes all suffering to test our faith.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(2, 1, 2)">Suffering is always a punishment for past sins without any benefit.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(2, 2, 2)">Krishna reduces and regulates our self-created karmic reactions, using them to purify us, humble us, and draw us closer to Him.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(2, 3, 2)">Suffering is an illusion and has no real purpose.</div>
-                    
-                </div>
-                <div id="explanation-2" style="display:none; margin-top:15px;">
-                    <p class="content-text"><strong>Explanation:</strong> The lecture explains that while karma is the cause of suffering (ātma-kṛtaṁ vipākam), Krishna's anukampā (mercy) reduces its impact and uses it as a means to purify, humble, and redirect the devotee towards His lotus feet.</p>
-                </div>
-            </div>
-            
-            <div class="quiz-question">
-                <p class="content-text"><strong>Question 4:</strong> According to the lecture, what happens if one continuously speaks about negative things or gossips?</p>
-                <div class="quiz-options">
-                    
-                    <div class="quiz-option" onclick="selectOption(3, 0, 2)">It helps to clear the mind and release stress.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(3, 1, 2)">It has no significant impact on one's beliefs.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(3, 2, 2)">It reinforces those negative beliefs and identifies them as part of oneself, making it harder to unlearn them.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(3, 3, 2)">It makes one a more effective communicator.</div>
-                    
-                </div>
-                <div id="explanation-3" style="display:none; margin-top:15px;">
-                    <p class="content-text"><strong>Explanation:</strong> The speaker emphasizes the intimate power of speech, stating that 'if I say that loud, I will start believing it very seriously. Because I spoke it.' Speaking about negative things reinforces them and makes them integral to one's self-perception.</p>
-                </div>
-            </div>
-            
-            <div class="quiz-question">
-                <p class="content-text"><strong>Question 5:</strong> What is the 'only duty of life' as described by the speaker?</p>
-                <div class="quiz-options">
-                    
-                    <div class="quiz-option" onclick="selectOption(4, 0, 2)">To accumulate wealth and material possessions.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(4, 1, 2)">To serve one's family and community.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(4, 2, 2)">To realize who you are (spirit soul) and be who you are (devotional service).</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(4, 3, 2)">To achieve worldly success and recognition.</div>
-                    
-                </div>
-                <div id="explanation-4" style="display:none; margin-top:15px;">
-                    <p class="content-text"><strong>Explanation:</strong> The speaker explicitly states: 'The only duty of life is to realize who you are. That's all. Realize who you are and be who you are. Know who you are is I am spirit soul. Be who you are is devotional service.'</p>
-                </div>
-            </div>
-            
-        </div>
-    
-        </div>
-        
-        <div class="tab-content" id="transcript">
-            <p class="content-text">No transcript available for this lecture.</p>
-        </div>
-    </div>
-    
-    <script>
-        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
-        
-        // Tab switching
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const tab = btn.dataset.tab;
-                
-                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-                
-                btn.classList.add('active');
-                document.getElementById(tab).classList.add('active');
-            });
-        });
-        
-        // Quiz functionality
-        let quizScore = 0;
-        let quizTotal = 5;
-        
-        function selectOption(questionIndex, optionIndex, correctIndex) {
-            const options = document.querySelectorAll(`.quiz-question:nth-child(${questionIndex + 2}) .quiz-option`);
-            options.forEach(opt => opt.classList.remove('selected'));
-            options[optionIndex].classList.add('selected');
-            
-            document.getElementById(`explanation-${questionIndex}`).style.display = 'block';
-            
-            if (optionIndex === correctIndex) {
-                quizScore++;
-                options[optionIndex].style.background = '#4CAF50';
-                options[optionIndex].style.color = 'white';
-            } else {
-                options[optionIndex].style.background = '#f44336';
-                options[optionIndex].style.color = 'white';
-                options[correctIndex].style.background = '#4CAF50';
-                options[correctIndex].style.color = 'white';
-            }
-            
-            // Save to localStorage
-            saveQuizResult('2025-10-11-bg-17-15', quizScore, quizTotal);
-        }
-        
-        function saveQuizResult(lectureId, score, total) {
-            const results = JSON.parse(localStorage.getItem('quizResults') || '[]');
-            results.push({
-                lectureId,
-                score,
-                total,
-                date: new Date().toISOString()
-            });
-            localStorage.setItem('quizResults', JSON.stringify(results));
-        }
-    </script>
-</body>
-</html>
+<html><head><meta charset="UTF-8"><title>Divine Speech: The Path to Inner Peace (BG 17.15)</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;700&family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Cormorant Garamond',serif;background:linear-gradient(135deg,#E8D4A2,#C4B598);min-height:100vh}header{background:linear-gradient(135deg,#8B7752,#6B5D42);padding:30px 20px;text-align:center;color:#E8D4A2;border-bottom:4px solid #3A2F1F}header h1{font-family:'Playfair Display',serif;font-size:2em;font-weight:900}header a{color:#E8D4A2;text-decoration:none}.breadcrumbs{background:rgba(232,212,162,0.3);padding:15px 20px}.breadcrumbs a{color:#5A4D37;text-decoration:none;font-weight:600}.container{max-width:1200px;margin:0 auto;padding:20px}.lecture-header{background:white;padding:40px;border-radius:12px;margin-bottom:20px;border:3px solid rgba(139,119,82,0.2)}.lecture-title{font-family:'Playfair Display',serif;font-size:2.5em;color:#3A2F1F;margin-bottom:20px}.badge{padding:8px 16px;border-radius:8px;font-size:0.9em;font-weight:600;margin-right:10px}.badge-date{background:rgba(232,212,162,0.4);color:#5A4D37;border:2px solid rgba(139,119,82,0.3)}.badge-verse{background:rgba(139,119,82,0.2);color:#3A2F1F;border:2px solid rgba(139,119,82,0.4)}.badge-speaker{background:rgba(196,30,58,0.1);color:#8b0000;border:2px solid rgba(196,30,58,0.3)}.lecture-tabs{display:flex;background:rgba(232,212,162,0.3);border-radius:12px 12px 0 0;overflow-x:auto;border:3px solid rgba(139,119,82,0.2);border-bottom:none}.tab-btn{flex:1;padding:18px 24px;border:none;background:transparent;color:#5A4D37;font-weight:600;cursor:pointer;text-transform:uppercase;white-space:nowrap}.tab-btn:hover{background:rgba(232,212,162,0.5)}.tab-btn.active{background:white;color:#3A2F1F;font-weight:700}.tab-content{display:none;background:white;padding:40px;border-radius:0 0 12px 12px;border:3px solid rgba(139,119,82,0.2);border-top:none;min-height:400px}.tab-content.active{display:block}.video-container{position:relative;padding-bottom:56.25%;height:0;margin-bottom:30px}.video-container iframe{position:absolute;width:100%;height:100%}.mermaid-container{background:rgba(232,212,162,0.1);padding:30px;border-radius:12px;overflow-x:auto}.content-text{font-size:1.15em;line-height:1.8;margin-bottom:20px}.section-heading{font-family:'Playfair Display',serif;font-size:1.8em;color:#3A2F1F;margin:30px 0 20px;font-weight:700;border-bottom:2px solid rgba(139,119,82,0.2);padding-bottom:10px}.theme-card{background:rgba(232,212,162,0.2);border:2px solid rgba(139,119,82,0.3);border-radius:8px;padding:25px;margin-bottom:20px}.flashcard-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}.flashcard{perspective:1000px;height:250px;cursor:pointer}.flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d}.flashcard.flipped .flashcard-inner{transform:rotateY(180deg)}.flashcard-front,.flashcard-back{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:12px;padding:30px;display:flex;align-items:center;justify-content:center;font-size:1.2em;border:3px solid rgba(139,119,82,0.3)}.flashcard-front{background:linear-gradient(135deg,#8B7752,#6B5D42);color:#E8D4A2;font-weight:700}.flashcard-back{background:white;color:#3A2F1F;transform:rotateY(180deg)}</style>
+</head><body>
+<header><h1><a href="../index.html">🕉️ Auburn Hills Bhakti Vriksha</a></h1></header>
+<div class="breadcrumbs"><a href="../index.html">Home</a> › <a href="../bg-lectures.html">Bhagavad Gita Lectures</a> › Divine Speech: The Path to Inner Peace (BG 17.15)</div>
+<div class="container">
+<div class="lecture-header"><h1 class="lecture-title">Divine Speech: The Path to Inner Peace (BG 17.15)</h1>
+<div><span class="badge badge-date">📅 October 10, 2025</span><span class="badge badge-verse">📖 BG 17.15</span><span class="badge badge-speaker">🎤 Jai Sacinandana Kṛṣṇa Dāsa</span></div></div>
+<div class="lecture-tabs">
+<button class="tab-btn active" data-tab="overview">Overview</button>
+
+<button class="tab-btn" data-tab="notes">Notes</button>
+<button class="tab-btn" data-tab="flashcards">Flashcards</button>
+<button class="tab-btn" data-tab="transcript">Transcript</button>
+</div>
+<div class="tab-content active" id="overview">
+<div class="video-container"><iframe src="https://www.youtube.com/embed/sv1MVfKmGtQ" allowfullscreen></iframe></div>
+<h2 class="section-heading">Key Takeaway</h2><p class="content-text">Krishna reveals that the austerity of speech (vāṅ-mayaṁ tapa) involves speaking words that are truthful, pleasing, beneficial, and non-agitating, coupled with regular study of Vedic texts, which is crucial for spiritual advancement and inner peace.</p>
+<h2 class="section-heading">Summary</h2><p class="content-text">Jai Sacinandana Kṛṣṇa Dāsa elucidates Bhagavad Gita 17.15, focusing on the penance of speech. He explains how disciplined communication—truthful, pleasing, beneficial, and non-agitating words—combined with scriptural study, is a profound spiritual practice. The lecture also touches on accepting suffering as Krishna's mercy and the transformative power of the Hare Krishna mantra.</p>
+</div>
+
+<div class="tab-content" id="notes"><h2 class="section-heading">Key Concepts</h2><div class="theme-card"><h3>The Austerity of Speech (Vāṅ-mayaṁ Tapa)</h3><p>The lecture elaborates on Bhagavad Gita 17.15, explaining that penance of speech involves four key qualities: speaking words that are truthful (satyam), pleasing (priyam), beneficial (hitam), and non-agitating (anudvega-karam). This goes beyond mere honesty, requiring careful consideration of impact and purpose. The speaker emphasizes that this disciplined speech, along with regular study of Vedic literature (svādhyāyābhyasanaṁ), is a powerful spiritual practice. It helps control the mind, purifies the consciousness, and prevents us from causing harm or anxiety to others, leading to inner peace.</p></div><div class="theme-card"><h3>Krishna's Mercy in Suffering and Karma</h3><p>The speaker explains that suffering, though painful, is often Krishna's mercy. Our karma is the primary cause of our problems, but Krishna, being infinitely kind, regulates and reduces the impact, giving us only a fraction of what we deserve. This limited suffering serves to purify us, humble us, and ultimately redirect us towards Him. Understanding the purpose of pain makes it bearable and can lead to profound spiritual realizations. Krishna uses both pleasant and unpleasant circumstances to bring a devotee closer, acting like a caring mother or father who wants their child to return home.</p></div><div class="theme-card"><h3>The Importance of Spiritual Master and Krishna's Plan</h3><p>The lecture highlights the pivotal role of the spiritual master as Krishna's 'hand,' guiding us out of our self-created suffering. By accepting the spiritual master's instructions, which are aligned with the Bhagavad Gita, we are essentially accepting Krishna's instructions. This guidance helps us understand Krishna's grand plan for our happiness, which contrasts with our own constantly changing and often misguided plans. Realizing this divine plan brings excitement and joy, allowing us to envision a new, spiritual start and rewrite our past mistakes.</p></div><div class="theme-card"><h3>The Transformative Power of Hare Krishna Mantra</h3><p>The Hare Krishna mantra is presented as an 'end-to-end product' that facilitates the entire spiritual journey. It helps one realize bad choices, enlightens the consciousness, and ultimately transports one to the spiritual world. The mantra is described as non-different from Krishna Himself, a person, just as the deity and prasadam are. Chanting the mantra is considered the primary duty of life, enabling self-realization ('Know who you are: spirit soul, Be who you are: devotional service'). Its continuous practice purifies and engages one's entire being in divine connection.</p></div><div class="theme-card"><h3>Forced vs. Voluntary Austerity and the Story of Nalakuvera and Manigriva</h3><p>The concept of austerity is discussed, emphasizing that one must choose either voluntary austerity or be subjected to forced austerity by material nature. The vivid example of Nalakuvera and Manigriva, sons of Kuvera, illustrates this point. Despite their elevated status, their indulgence led to a curse from Narada Muni, transforming them into trees. This forced austerity provided them with the necessary time and circumstances for reflection and purification, demonstrating Krishna's mercy even in seemingly harsh situations, especially for those in positions of responsibility who fail to set proper examples.</p></div><h2 class="section-heading">Sanskrit Terms</h2><div class="theme-card"><h3>Manoratha</h3><p>Chariot of the mind; referring to the mind's erratic and constantly changing desires/plans.</p></div><div class="theme-card"><h3>Dhavati</h3><p>To jump, to run quickly and erratically.</p></div><div class="theme-card"><h3>Yoga</h3><p>Connection, specifically with Krishna and the spiritual master.</p></div><div class="theme-card"><h3>Vaak</h3><p>Speech, words, vocal power.</p></div><div class="theme-card"><h3>Tapasya</h3><p>Penance, austerity; being observant and disciplined.</p></div><div class="theme-card"><h3>Udvega</h3><p>Agitation, anxiety, disturbance.</p></div><div class="theme-card"><h3>Anukampa</h3><p>Affection, causeless mercy, shivering (of the heart from affection).</p></div><div class="theme-card"><h3>Atmakrtam Vipakam</h3><p>Reactions (suffering) created by oneself.</p></div><div class="theme-card"><h3>Hridhvaak Vapubihi</h3><p>With heart, words, and body.</p></div><div class="theme-card"><h3>Muktipade</h3><p>To the platform of liberation.</p></div><div class="theme-card"><h3>Karthik Masam</h3><p>The auspicious month of Kartik.</p></div><div class="theme-card"><h3>Harati iti Hari</h3><p>He who takes away (sins, bad habits).</p></div><div class="theme-card"><h3>Svadhyayabhyasanam</h3><p>Regular study of Vedic literature.</p></div><div class="theme-card"><h3>Satyam, Priyam, Hitam</h3><p>Truthful, pleasing, beneficial.</p></div></div>
+<div class="tab-content" id="flashcards"><p class="content-text">Click to flip!</p><div class="flashcard-container">
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Manoratha</div>
+<div class="flashcard-back">Chariot of the mind; referring to the mind's erratic and constantly changing desires/plans.</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Dhavati</div>
+<div class="flashcard-back">To jump, to run quickly and erratically.</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Yoga</div>
+<div class="flashcard-back">Connection, specifically with Krishna and the spiritual master.</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Vaak</div>
+<div class="flashcard-back">Speech, words, vocal power.</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Tapasya</div>
+<div class="flashcard-back">Penance, austerity; being observant and disciplined.</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Udvega</div>
+<div class="flashcard-back">Agitation, anxiety, disturbance.</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Anukampa</div>
+<div class="flashcard-back">Affection, causeless mercy, shivering (of the heart from affection).</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Atmakrtam Vipakam</div>
+<div class="flashcard-back">Reactions (suffering) created by oneself.</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Hridhvaak Vapubihi</div>
+<div class="flashcard-back">With heart, words, and body.</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Muktipade</div>
+<div class="flashcard-back">To the platform of liberation.</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Karthik Masam</div>
+<div class="flashcard-back">The auspicious month of Kartik.</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Harati iti Hari</div>
+<div class="flashcard-back">He who takes away (sins, bad habits).</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Svadhyayabhyasanam</div>
+<div class="flashcard-back">Regular study of Vedic literature.</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Satyam, Priyam, Hitam</div>
+<div class="flashcard-back">Truthful, pleasing, beneficial.</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Regarding Nalakuvera and Manigriva, why were they specifically cursed, and why was their punishment so severe?</div>
+<div class="flashcard-back">The speaker explains that Nalakuvera and Manigriva were sons of Kuvera and held responsible positions as devas, meant to be exemplary figures. Their offense was not just their indulgence in intoxication and sporting with women, but also their complete lack of respect and awareness when Narada Muni, a great sage, passed by. While the women with them covered themselves, Nalakuvera and Manigriva remained naked and drunk. The principle is that 'when someone is more responsible in doing a problem, the punishment is more.' Since they were superior beings who failed to set a proper example and disrespect a sadhu, their punishment was proportionally severe, acting as a forced austerity.</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Does Narada Muni give other curses, and are they always benevolent?</div>
+<div class="flashcard-back">The speaker recollects that Narada Muni's curses, like the one given to Nalakuvera and Manigriva, always have a benevolent purpose. They are disguised blessings, serving as 'benedictions in the form of teaching someone.' In this specific case, being cursed to become trees provided Nalakuvera and Manigriva with the necessary time for reflection and spiritual upliftment, which they otherwise would not have taken on voluntarily.</div>
+</div></div></div></div>
+<div class="tab-content" id="transcript"><div class="content-text" style="white-space:pre-wrap">No transcript available</div></div>
+</div>
+<script>
+mermaid.initialize({startOnLoad:true,theme:'neutral'});
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+btn.addEventListener('click',()=>{
+const tab=btn.dataset.tab;
+document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
+btn.classList.add('active');
+document.getElementById(tab).classList.add('active');
+});
+});
+</script>
+</body></html>

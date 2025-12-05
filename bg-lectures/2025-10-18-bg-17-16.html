@@ -1,748 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Make Your Diwali Krishna-Conscious: The Art of True Celebration | Auburn Hills Bhakti Vriksha</title>
-    <meta name="description" content="True spiritual progress involves purifying our consciousness by consistently placing Krishna at the center of our lives, embracing devotion in all act">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: 'Cormorant Garamond', serif;
-            background: linear-gradient(135deg, #E8D4A2 0%, #D4C5A0 50%, #C4B598 100%);
-            min-height: 100vh;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #8B7752 0%, #6B5D42 100%);
-            padding: 30px 20px;
-            text-align: center;
-            color: #E8D4A2;
-            border-bottom: 4px solid #3A2F1F;
-        }
-        
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(1.8em, 4vw, 2.5em);
-            font-weight: 900;
-            margin-bottom: 5px;
-        }
-        
-        header a {
-            color: #E8D4A2;
-            text-decoration: none;
-            transition: opacity 0.3s;
-        }
-        
-        header a:hover { opacity: 0.8; }
-        
-        .breadcrumbs {
-            background: rgba(232, 212, 162, 0.3);
-            padding: 15px 20px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9em;
-        }
-        
-        .breadcrumbs a {
-            color: #5A4D37;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        
-        .breadcrumbs a:hover { color: #3A2F1F; }
-        
-        .breadcrumbs span { margin: 0 8px; color: #8B7752; }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        .lecture-header {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            border: 3px solid rgba(139, 119, 82, 0.2);
-            box-shadow: 0 4px 12px rgba(58, 47, 31, 0.1);
-        }
-        
-        .lecture-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(1.8em, 4vw, 2.8em);
-            color: #3A2F1F;
-            margin-bottom: 20px;
-            font-weight: 700;
-            line-height: 1.3;
-        }
-        
-        .lecture-meta {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-        
-        .badge {
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9em;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .badge-date {
-            background: rgba(232, 212, 162, 0.4);
-            color: #5A4D37;
-            border: 2px solid rgba(139, 119, 82, 0.3);
-        }
-        
-        .badge-verse {
-            background: rgba(139, 119, 82, 0.2);
-            color: #3A2F1F;
-            border: 2px solid rgba(139, 119, 82, 0.4);
-        }
-        
-        .badge-speaker {
-            background: rgba(196, 30, 58, 0.1);
-            color: #8b0000;
-            border: 2px solid rgba(196, 30, 58, 0.3);
-        }
-        
-        .lecture-tabs {
-            display: flex;
-            background: rgba(232, 212, 162, 0.3);
-            border-radius: 12px 12px 0 0;
-            overflow-x: auto;
-            border: 3px solid rgba(139, 119, 82, 0.2);
-            border-bottom: none;
-        }
-        
-        .tab-btn {
-            flex: 1;
-            padding: 18px 24px;
-            border: none;
-            background: transparent;
-            color: #5A4D37;
-            font-family: 'Montserrat', sans-serif;
-            font-size: clamp(0.85em, 2vw, 1em);
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            white-space: nowrap;
-            border-right: 1px solid rgba(139, 119, 82, 0.2);
-        }
-        
-        .tab-btn:last-child { border-right: none; }
-        
-        .tab-btn:hover {
-            background: rgba(232, 212, 162, 0.5);
-            color: #3A2F1F;
-        }
-        
-        .tab-btn.active {
-            background: white;
-            color: #3A2F1F;
-            font-weight: 700;
-        }
-        
-        .tab-content {
-            display: none;
-            background: white;
-            padding: 40px;
-            border-radius: 0 0 12px 12px;
-            border: 3px solid rgba(139, 119, 82, 0.2);
-            border-top: none;
-            min-height: 400px;
-        }
-        
-        .tab-content.active { display: block; }
-        
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }
-        
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .section-heading {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8em;
-            color: #3A2F1F;
-            margin: 30px 0 20px;
-            font-weight: 700;
-            padding-bottom: 10px;
-            border-bottom: 2px solid rgba(139, 119, 82, 0.2);
-        }
-        
-        .content-text {
-            font-size: 1.15em;
-            line-height: 1.8;
-            color: #5A4D37;
-            margin-bottom: 20px;
-        }
-        
-        .theme-card {
-            background: rgba(232, 212, 162, 0.2);
-            border: 2px solid rgba(139, 119, 82, 0.3);
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 20px;
-        }
-        
-        .theme-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4em;
-            color: #3A2F1F;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-        
-        .flashcard-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        
-        .flashcard {
-            perspective: 1000px;
-            height: 250px;
-            cursor: pointer;
-        }
-        
-        .flashcard-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transition: transform 0.6s;
-            transform-style: preserve-3d;
-        }
-        
-        .flashcard.flipped .flashcard-inner {
-            transform: rotateY(180deg);
-        }
-        
-        .flashcard-front, .flashcard-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            border-radius: 12px;
-            padding: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2em;
-            border: 3px solid rgba(139, 119, 82, 0.3);
-        }
-        
-        .flashcard-front {
-            background: linear-gradient(135deg, #8B7752 0%, #6B5D42 100%);
-            color: #E8D4A2;
-            font-weight: 700;
-        }
-        
-        .flashcard-back {
-            background: white;
-            color: #3A2F1F;
-            transform: rotateY(180deg);
-            line-height: 1.6;
-        }
-        
-        .quiz-question {
-            background: rgba(232, 212, 162, 0.2);
-            border: 2px solid rgba(139, 119, 82, 0.3);
-            border-radius: 8px;
-            padding: 30px;
-            margin-bottom: 25px;
-        }
-        
-        .quiz-options {
-            display: grid;
-            gap: 12px;
-            margin-top: 20px;
-        }
-        
-        .quiz-option {
-            padding: 15px 20px;
-            border: 2px solid rgba(139, 119, 82, 0.3);
-            border-radius: 8px;
-            background: white;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-size: 1.1em;
-        }
-        
-        .quiz-option:hover {
-            background: rgba(232, 212, 162, 0.3);
-            border-color: #8B7752;
-        }
-        
-        .quiz-option.selected {
-            background: #8B7752;
-            color: #E8D4A2;
-            border-color: #3A2F1F;
-        }
-        
-        .transcript-text {
-            font-size: 1.15em;
-            line-height: 1.9;
-            color: #5A4D37;
-            white-space: pre-wrap;
-        }
-        
-        @media (max-width: 768px) {
-            .lecture-header { padding: 25px; }
-            .tab-content { padding: 25px; }
-            .tab-btn { padding: 14px 16px; font-size: 0.85em; }
-            .flashcard-container { grid-template-columns: 1fr; }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1><a href="../index.html">🕉️ Auburn Hills Bhakti Vriksha</a></h1>
-    </header>
-    <div class="breadcrumbs">
-        <a href="../index.html">Home</a>
-        <span>›</span>
-        <a href="../bg-lectures.html">Bhagavad Gita Lectures</a>
-        <span>›</span>
-        <span>Make Your Diwali Krishna-Conscious: The Art of True Celebration</span>
-    </div>
-    
-    <div class="container">
-        <div class="lecture-header">
-            <h1 class="lecture-title">Make Your Diwali Krishna-Conscious: The Art of True Celebration</h1>
-            <div class="lecture-meta">
-                <span class="badge badge-date">📅 October 17, 2025</span>
-                <span class="badge badge-verse">📖 BG 17.16</span>
-                <span class="badge badge-speaker">🎤 Jai Sacinandana Kṛṣṇa Dāsa</span>
-            </div>
-        </div>
-        
-        <div class="lecture-tabs">
-            <button class="tab-btn active" data-tab="overview">Overview</button>
-            <button class="tab-btn" data-tab="notes">Study Notes</button>
-            <button class="tab-btn" data-tab="flashcards">Flashcards</button>
-            <button class="tab-btn" data-tab="quiz">Quiz</button>
-            <button class="tab-btn" data-tab="transcript">Transcript</button>
-        </div>
-        
-        <div class="tab-content active" id="overview">
-            
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/x0xeJB2f1Co" frameborder="0" allowfullscreen></iframe>
-        </div>
-        
-        
-        <h2 class="section-heading">Key Takeaway</h2>
-        <p class="content-text">True spiritual progress involves purifying our consciousness by consistently placing Krishna at the center of our lives, embracing devotion in all activities, and understanding that genuine love means serving and being conquered by the Lord's mercy.</p>
-        
-        
-        
-        <h2 class="section-heading">Main Theme</h2>
-        <p class="content-text">Centering Krishna in Festivals and Consciousness</p>
-        
-        
-        
-        <h2 class="section-heading">Summary</h2>
-        <p class="content-text">This lecture explores the deeper meaning of spiritual festivals like Diwali, urging devotees to move beyond materialistic celebrations and make Krishna the central focus. It discusses controlling the mind and senses through devotion, contrasting material and spiritual love, and illustrating Krishna's desire to be bound by the love of His devotees through the Damodara-lila.</p>
-        
-    
-        </div>
-        
-        <div class="tab-content" id="notes">
-            <h2 class="section-heading">Key Concepts</h2>
-            <div class="theme-card">
-                <h3 class="theme-title">Modern Festivals vs. Krishna Consciousness</h3>
-                <p class="content-text">The speaker critiques the modern celebration of festivals like Deepavali, noting how they have become disconnected from their original spiritual purpose, often focusing on sense gratification, personal boasting, or abstract concepts like 'light over darkness' without mentioning Krishna or Rama. He emphasizes that the true essence of any Vedic festival is to place the Lord at the center, transforming mundane activities into spiritual ones by offering them to Krishna.</p>
-                
-                <p><strong>Examples:</strong></p>
-                <ul><li class="content-text">Deepavali becoming about fireworks, new clothes, or food rather than Narakasura's defeat or Rama's return.</li><li class="content-text">Parents using festivals to 'flaunt' their children's appearance.</li></ul>
-                
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">The Power of Purified Consciousness</h3>
-                <p class="content-text">The lecture highlights that our consciousness is the 'seed' of all our activities. A 'genetically modified consciousness' (Avidya Modified Consciousness) — one that lacks connection and satisfaction with the Lord — leads to distorted and polluted experiences in all aspects of life (festivals, relationships, work, environment). Prabhupada's movement aims to directly purify this consciousness, making Krishna the center instead of oneself.</p>
-                
-                <p><strong>Examples:</strong></p>
-                <ul><li class="content-text">GMO seed analogy for 'Avidya Modified Consciousness' (AMC).</li><li class="content-text">Pollution in society as a manifestation of collective consciousness.</li></ul>
-                
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Austerities of Speech (Vak) and Mind (Manas)</h3>
-                <p class="content-text">Building on Bhagavad Gita 17.16, the speaker discusses the practical application of austerities in daily life. Controlling speech involves using devotional greetings, resolving conflicts in person rather than through impersonal texts, and practicing transparency and commitment. The austerity of the mind involves withdrawing it from sense gratification and engaging it in devotional service, fostering satisfaction and reducing agitation.</p>
-                
-                <p><strong>Examples:</strong></p>
-                <ul><li class="content-text">Using 'Hare Krishna Prabhu' or 'Mataji' to regulate anger and speech.</li><li class="content-text">Resolving conflicts face-to-face instead of via WhatsApp ('WhatsApp Dharma').</li><li class="content-text">Finding satisfaction in helping others rather than pursuing self-centered sense enjoyment.</li></ul>
-                
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Social Media's Impact on Consciousness</h3>
-                <p class="content-text">A significant portion of the lecture addresses how various social media platforms cater to and exacerbate different material vices like lust (Tinder), gluttony (Yelp, Uber Eats), envy (LinkedIn, Facebook), sloth (Netflix), and wrath (Twitter), and pride (Instagram). The speaker warns that 'whatever comes on your feed goes on your mind' and encourages diverting the mind to Vedic literature as an antidote to this 'asatthira vilas'.</p>
-                
-                <p><strong>Examples:</strong></p>
-                <ul><li class="content-text">Tinder associated with lust, Yelp with gluttony, LinkedIn with envy, Netflix with sloth, Twitter with wrath, Instagram/Facebook with pride and content creation.</li></ul>
-                
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Krishna's Love: The Ultimate Proposal</h3>
-                <p class="content-text">The speaker portrays Bhagavad Gita as Krishna's 'love letter' or 'love proposal' to humanity, offering the ultimate connection. He contrasts material love, which 'falls' and leads to suffering when lost, with Krishna's love, which 'uplifts.' The hard-heartedness of conditioned souls in rejecting Krishna's advances is highlighted, despite Krishna's eagerness to reciprocate love.</p>
-                
-                <p><strong>Examples:</strong></p>
-                <ul><li class="content-text">Analogy of a boy traveling far to impress a girl, who then dies, showing the futility of material attachment.</li><li class="content-text">Krishna, the Jagat Karta, depends on a devotee's love for milk, demonstrating His desire for loving exchange.</li></ul>
-                
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">The Damodara-lila: Conquered by Devotion</h3>
-                <p class="content-text">The Damodara-lila beautifully illustrates Krishna's desire to be conquered by the love of His devotees. Krishna, the Absolute Truth, runs in fear from Mother Yashoda, demonstrating that He allows Himself to be defeated by pure love. The 'two fingers short' analogy for tying Krishna signifies that capturing the Lord requires both the devotee's sincere effort and Krishna's divine mercy. This transcendental exchange contrasts with the material world's competitive drive to 'win,' showing that in the spiritual world, everyone competes to 'lose' (serve) out of love.</p>
-                
-                <p><strong>Examples:</strong></p>
-                <ul><li class="content-text">Mother Yashoda tying Krishna to a mortar for breaking a butter pot.</li><li class="content-text">The two fingers short in the rope representing human effort and divine mercy.</li></ul>
-                
-            </div><h2 class="section-heading">📚 Sanskrit Terms</h2>
-            <div class="theme-card">
-                <h3 class="theme-title">Sanatana Dharma (सनातन धर्म)</h3>
-                <p class="content-text">The eternal occupation or duty of the living entity</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Avidya Modified Consciousness (AMC) </h3>
-                <p class="content-text">Consciousness distorted by ignorance</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Dharma (धर्म)</h3>
-                <p class="content-text">Righteous conduct, duty, religious principle</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Tapasya (तपस्या)</h3>
-                <p class="content-text">Austerity, penance</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Vacho Vekam (वाचो वेगं)</h3>
-                <p class="content-text">Control of the urge to speak</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Manah-prasādah (मनः-प्रसादः)</h3>
-                <p class="content-text">Serenity of the mind</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Lokahitam (लोकहितं)</h3>
-                <p class="content-text">Welfare of the people</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Mukti (मुक्ति)</h3>
-                <p class="content-text">Liberation</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Damodara (दामोदर)</h3>
-                <p class="content-text">One who is bound by a rope around His waist</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Bhakti baddham (भक्ति बद्धम्)</h3>
-                <p class="content-text">Bound by devotion</p>
-            </div>
-            <div class="theme-card">
-                <h3 class="theme-title">Kripa potency (कृपा)</h3>
-                <p class="content-text">Mercy of the Lord</p>
-            </div><h2 class="section-heading">Practical Applications</h2><ul><li class="content-text">Make festivals Krishna-centric</li><li class="content-text">Purify consciousness through chanting</li><li class="content-text">Control speech and actions with devotion</li><li class="content-text">Practice transparency and commitment</li><li class="content-text">Engage the mind with Vedic wisdom</li><li class="content-text">Embrace the spirit of selfless service</li><li class="content-text">Cultivate Krishna's love through effort and mercy</li></ul><h2 class="section-heading">Notable Quotes</h2><blockquote class="content-text">"When the seed of all activity in our life, what is it? Our consciousness. That is the seed. When the seed is lacking that connection and satisfaction with the Lord, every activity will naturally manifest that disconnection in multifarious forms."</blockquote><blockquote class="content-text">"Mind to control the mind is not yoga. it is yoga, but it is not full yoga. It is taking Tylenol for flu. Again the fever will come back."</blockquote><blockquote class="content-text">"This Krishna Consciousness movement is so merciful, is so great, is so potent that we are directly attacking the Consciousness."</blockquote><blockquote class="content-text">"If you achieve your me time during the morning program by chanting Hare Krishna mantra, you will get the satisfaction of having me time."</blockquote><blockquote class="content-text">"What is Krishna consciousness? Krishna is the Lord of my life. Krishna is the master of my life. Krishna is my ruler. Krishna is the center. Krishna will be the center of my Deepavali festival."</blockquote><blockquote class="content-text">"What is Krishna consciousness? Very simple. Put Krishna in the center. Krishna in the center of your house. Literally. Put Krishna in the center of your kitchen. Put Krishna in the center of your day."</blockquote><blockquote class="content-text">"This is what has become because of our perverted consciousness. So we should again bring back Krishna to the center."</blockquote><blockquote class="content-text">"Make our consciousness great again."</blockquote><blockquote class="content-text">"Transparency increases the strength of the soul. The less we are transparent in our dealings, then the more weak we become in our consciousness."</blockquote><blockquote class="content-text">"Satisfaction of the mind can be obtained only by taking the mind away from thoughts of sense enjoyment."</blockquote><blockquote class="content-text">"The more one thinks of sense enjoyment, the more one becomes agitated."</blockquote><blockquote class="content-text">"Learning means to question our learning. What is called learning? To question our learning so far. Whether what we have learned so far is worthy or not."</blockquote><blockquote class="content-text">"If you want to do something, be consistent about it. The best way to do it is to do the same thing at the same time at the same place."</blockquote><blockquote class="content-text">"Whatever comes on your feed goes on your mind."</blockquote><blockquote class="content-text">"Mukti means you understand, I have nothing to do with anything of this nonsense."</blockquote><blockquote class="content-text">"The main thing is to keep the main thing the main thing."</blockquote><blockquote class="content-text">"Bhagavad Gita is a love letter. Bhagavad Gita is a love letter. Love letter from Krishna to me. It's a love letter, it's a love proposal that Krishna is offering to me."</blockquote><blockquote class="content-text">"Why take so much difficulty for a love that will go away?"</blockquote><blockquote class="content-text">"In this material world, everyone wants to win... In the spiritual world, everyone wants to lose."</blockquote><blockquote class="content-text">"Everyone in this world is afraid of Krishna. But Krishna is afraid of Yashoda Mahi."</blockquote><blockquote class="content-text">"How can the absolute truth be afraid? Which means he doesn't have control. So the understanding is he has control, but he wants to lose control."</blockquote><blockquote class="content-text">"Bhakti baddham – how was Damodara bound? Bhakti baddham."</blockquote><blockquote class="content-text">"Our effort must be there to tie down Krishna into our heart. Our effort must be there. If your effort is there, then you can capture Krishna, but not that alone is sufficient. The second rope signifies and his mercy is also necessary."</blockquote>
-        </div>
-        
-        <div class="tab-content" id="flashcards">
-            
-        <p class="content-text">Click on a card to flip it!</p>
-        <div class="flashcard-container">
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Sanatana Dharma (सनातन धर्म)</div>
-                    <div class="flashcard-back">The eternal occupation or duty of the living entity</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Avidya Modified Consciousness (AMC)</div>
-                    <div class="flashcard-back">Consciousness distorted by ignorance</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Dharma (धर्म)</div>
-                    <div class="flashcard-back">Righteous conduct, duty, religious principle</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Tapasya (तपस्या)</div>
-                    <div class="flashcard-back">Austerity, penance</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Vacho Vekam (वाचो वेगं)</div>
-                    <div class="flashcard-back">Control of the urge to speak</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Manah-prasādah (मनः-प्रसादः)</div>
-                    <div class="flashcard-back">Serenity of the mind</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Lokahitam (लोकहितं)</div>
-                    <div class="flashcard-back">Welfare of the people</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Mukti (मुक्ति)</div>
-                    <div class="flashcard-back">Liberation</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Damodara (दामोदर)</div>
-                    <div class="flashcard-back">One who is bound by a rope around His waist</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Bhakti baddham (भक्ति बद्धम्)</div>
-                    <div class="flashcard-back">Bound by devotion</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Kripa potency (कृपा)</div>
-                    <div class="flashcard-back">Mercy of the Lord</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Modern Festivals vs. Krishna Consciousness</div>
-                    <div class="flashcard-back">The speaker critiques the modern celebration of festivals like Deepavali, noting how they have become disconnected from their original spiritual purpose, often focusing on sense gratification, persona...</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">The Power of Purified Consciousness</div>
-                    <div class="flashcard-back">The lecture highlights that our consciousness is the 'seed' of all our activities. A 'genetically modified consciousness' (Avidya Modified Consciousness) — one that lacks connection and satisfaction w...</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Austerities of Speech (Vak) and Mind (Manas)</div>
-                    <div class="flashcard-back">Building on Bhagavad Gita 17.16, the speaker discusses the practical application of austerities in daily life. Controlling speech involves using devotional greetings, resolving conflicts in person rat...</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Social Media's Impact on Consciousness</div>
-                    <div class="flashcard-back">A significant portion of the lecture addresses how various social media platforms cater to and exacerbate different material vices like lust (Tinder), gluttony (Yelp, Uber Eats), envy (LinkedIn, Faceb...</div>
-                </div>
-            </div>
-            
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">Krishna's Love: The Ultimate Proposal</div>
-                    <div class="flashcard-back">The speaker portrays Bhagavad Gita as Krishna's 'love letter' or 'love proposal' to humanity, offering the ultimate connection. He contrasts material love, which 'falls' and leads to suffering when lo...</div>
-                </div>
-            </div>
-            
-        </div>
-    
-        </div>
-        
-        <div class="tab-content" id="quiz">
-            
-        <div id="quizContainer">
-            <p class="content-text">Test your knowledge! Results will be saved locally.</p>
-            
-            <div class="quiz-question">
-                <p class="content-text"><strong>Question 1:</strong> According to the lecture, what is the primary reason why modern Deepavali celebrations have become distorted?</p>
-                <div class="quiz-options">
-                    
-                    <div class="quiz-option" onclick="selectOption(0, 0, 1)">Lack of colorful fireworks.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(0, 1, 1)">Focus on personal sense gratification and self-boasting instead of the Lord.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(0, 2, 1)">Insufficient variety of traditional sweets.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(0, 3, 1)">Absence of community gatherings.</div>
-                    
-                </div>
-                <div id="explanation-0" style="display:none; margin-top:15px;">
-                    <p class="content-text"><strong>Explanation:</strong> The speaker explicitly states that modern Deepavali often puts food, new clothes, or personal achievements at the center, rather than Krishna, thus becoming about sense gratification and boasting.</p>
-                </div>
-            </div>
-            
-            <div class="quiz-question">
-                <p class="content-text"><strong>Question 2:</strong> What analogy does the speaker use to describe consciousness disconnected from Krishna, and what is the term he coins for it?</p>
-                <div class="quiz-options">
-                    
-                    <div class="quiz-option" onclick="selectOption(1, 0, 2)">A broken pot; Empty Consciousness (EC).</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(1, 1, 2)">A wilting flower; Fading Consciousness (FC).</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(1, 2, 2)">A GMO seed; Avidya Modified Consciousness (AMC).</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(1, 3, 2)">A polluted river; Toxic Consciousness (TC).</div>
-                    
-                </div>
-                <div id="explanation-1" style="display:none; margin-top:15px;">
-                    <p class="content-text"><strong>Explanation:</strong> The speaker uses the analogy of a 'GMO seed' to explain how a distorted root (consciousness) leads to distorted fruits (activities), coining the term 'Avidya Modified Consciousness' (AMC).</p>
-                </div>
-            </div>
-            
-            <div class="quiz-question">
-                <p class="content-text"><strong>Question 3:</strong> Which of the following is NOT given as a practical method to control speech (Vaka) in daily life?</p>
-                <div class="quiz-options">
-                    
-                    <div class="quiz-option" onclick="selectOption(2, 0, 2)">Addressing others with devotional greetings like 'Hare Krishna Prabhu/Mataji'.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(2, 1, 2)">Refraining from expressing negative feelings aloud to prevent reinforcement.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(2, 2, 2)">Resolving conflicts through immediate text messages or voice notes.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(2, 3, 2)">Addressing one's spouse with respectful titles like 'Devi' or 'Swami'.</div>
-                    
-                </div>
-                <div id="explanation-2" style="display:none; margin-top:15px;">
-                    <p class="content-text"><strong>Explanation:</strong> The speaker advocates for 'WhatsApp Dharma,' which means resolving conflicts in person rather than through impersonal messages, as texting can lead to misinterpretation and reinforce negative feelings.</p>
-                </div>
-            </div>
-            
-            <div class="quiz-question">
-                <p class="content-text"><strong>Question 4:</strong> What is the speaker's definition of 'Mukti' (liberation) in the context of avoiding social media and unnecessary data?</p>
-                <div class="quiz-options">
-                    
-                    <div class="quiz-option" onclick="selectOption(3, 0, 1)">Becoming a social media influencer.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(3, 1, 1)">Understanding that 'I have nothing to do with anything of this nonsense.'</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(3, 2, 1)">Subscribing to all available content channels.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(3, 3, 1)">Actively engaging in political debates online.</div>
-                    
-                </div>
-                <div id="explanation-3" style="display:none; margin-top:15px;">
-                    <p class="content-text"><strong>Explanation:</strong> The speaker states, 'Mukti means you understand, I have nothing to do with anything of this nonsense' when discussing freedom from the overload of unspiritual content.</p>
-                </div>
-            </div>
-            
-            <div class="quiz-question">
-                <p class="content-text"><strong>Question 5:</strong> In the Damodara-lila, what do the 'two fingers short' in the rope used by Mother Yashoda represent, according to the Acharyas?</p>
-                <div class="quiz-options">
-                    
-                    <div class="quiz-option" onclick="selectOption(4, 0, 2)">Mother Yashoda's lack of strength and Krishna's unwillingness to be tied.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(4, 1, 2)">The inability to fully grasp the Absolute Truth.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(4, 2, 2)">The devotee's sincere effort and Krishna's divine mercy.</div>
-                    
-                    <div class="quiz-option" onclick="selectOption(4, 3, 2)">The limitations of human endeavor alone.</div>
-                    
-                </div>
-                <div id="explanation-4" style="display:none; margin-top:15px;">
-                    <p class="content-text"><strong>Explanation:</strong> The speaker explains that the two fingers represent the devotee's 'effort' (Parishram Drishtva) and Krishna's 'mercy' (Kripa potency), both of which are necessary to capture Krishna.</p>
-                </div>
-            </div>
-            
-        </div>
-    
-        </div>
-        
-        <div class="tab-content" id="transcript">
-            <p class="content-text">No transcript available for this lecture.</p>
-        </div>
-    </div>
-    
-    <script>
-        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
-        
-        // Tab switching
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const tab = btn.dataset.tab;
-                
-                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-                
-                btn.classList.add('active');
-                document.getElementById(tab).classList.add('active');
-            });
-        });
-        
-        // Quiz functionality
-        let quizScore = 0;
-        let quizTotal = 5;
-        
-        function selectOption(questionIndex, optionIndex, correctIndex) {
-            const options = document.querySelectorAll(`.quiz-question:nth-child(${questionIndex + 2}) .quiz-option`);
-            options.forEach(opt => opt.classList.remove('selected'));
-            options[optionIndex].classList.add('selected');
-            
-            document.getElementById(`explanation-${questionIndex}`).style.display = 'block';
-            
-            if (optionIndex === correctIndex) {
-                quizScore++;
-                options[optionIndex].style.background = '#4CAF50';
-                options[optionIndex].style.color = 'white';
-            } else {
-                options[optionIndex].style.background = '#f44336';
-                options[optionIndex].style.color = 'white';
-                options[correctIndex].style.background = '#4CAF50';
-                options[correctIndex].style.color = 'white';
-            }
-            
-            // Save to localStorage
-            saveQuizResult('2025-10-18-bg-17-16', quizScore, quizTotal);
-        }
-        
-        function saveQuizResult(lectureId, score, total) {
-            const results = JSON.parse(localStorage.getItem('quizResults') || '[]');
-            results.push({
-                lectureId,
-                score,
-                total,
-                date: new Date().toISOString()
-            });
-            localStorage.setItem('quizResults', JSON.stringify(results));
-        }
-    </script>
-</body>
-</html>
+<html><head><meta charset="UTF-8"><title>Make Your Diwali Krishna-Conscious: The Art of True Celebration</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;700&family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Cormorant Garamond',serif;background:linear-gradient(135deg,#E8D4A2,#C4B598);min-height:100vh}header{background:linear-gradient(135deg,#8B7752,#6B5D42);padding:30px 20px;text-align:center;color:#E8D4A2;border-bottom:4px solid #3A2F1F}header h1{font-family:'Playfair Display',serif;font-size:2em;font-weight:900}header a{color:#E8D4A2;text-decoration:none}.breadcrumbs{background:rgba(232,212,162,0.3);padding:15px 20px}.breadcrumbs a{color:#5A4D37;text-decoration:none;font-weight:600}.container{max-width:1200px;margin:0 auto;padding:20px}.lecture-header{background:white;padding:40px;border-radius:12px;margin-bottom:20px;border:3px solid rgba(139,119,82,0.2)}.lecture-title{font-family:'Playfair Display',serif;font-size:2.5em;color:#3A2F1F;margin-bottom:20px}.badge{padding:8px 16px;border-radius:8px;font-size:0.9em;font-weight:600;margin-right:10px}.badge-date{background:rgba(232,212,162,0.4);color:#5A4D37;border:2px solid rgba(139,119,82,0.3)}.badge-verse{background:rgba(139,119,82,0.2);color:#3A2F1F;border:2px solid rgba(139,119,82,0.4)}.badge-speaker{background:rgba(196,30,58,0.1);color:#8b0000;border:2px solid rgba(196,30,58,0.3)}.lecture-tabs{display:flex;background:rgba(232,212,162,0.3);border-radius:12px 12px 0 0;overflow-x:auto;border:3px solid rgba(139,119,82,0.2);border-bottom:none}.tab-btn{flex:1;padding:18px 24px;border:none;background:transparent;color:#5A4D37;font-weight:600;cursor:pointer;text-transform:uppercase;white-space:nowrap}.tab-btn:hover{background:rgba(232,212,162,0.5)}.tab-btn.active{background:white;color:#3A2F1F;font-weight:700}.tab-content{display:none;background:white;padding:40px;border-radius:0 0 12px 12px;border:3px solid rgba(139,119,82,0.2);border-top:none;min-height:400px}.tab-content.active{display:block}.video-container{position:relative;padding-bottom:56.25%;height:0;margin-bottom:30px}.video-container iframe{position:absolute;width:100%;height:100%}.mermaid-container{background:rgba(232,212,162,0.1);padding:30px;border-radius:12px;overflow-x:auto}.content-text{font-size:1.15em;line-height:1.8;margin-bottom:20px}.section-heading{font-family:'Playfair Display',serif;font-size:1.8em;color:#3A2F1F;margin:30px 0 20px;font-weight:700;border-bottom:2px solid rgba(139,119,82,0.2);padding-bottom:10px}.theme-card{background:rgba(232,212,162,0.2);border:2px solid rgba(139,119,82,0.3);border-radius:8px;padding:25px;margin-bottom:20px}.flashcard-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}.flashcard{perspective:1000px;height:250px;cursor:pointer}.flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d}.flashcard.flipped .flashcard-inner{transform:rotateY(180deg)}.flashcard-front,.flashcard-back{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:12px;padding:30px;display:flex;align-items:center;justify-content:center;font-size:1.2em;border:3px solid rgba(139,119,82,0.3)}.flashcard-front{background:linear-gradient(135deg,#8B7752,#6B5D42);color:#E8D4A2;font-weight:700}.flashcard-back{background:white;color:#3A2F1F;transform:rotateY(180deg)}</style>
+</head><body>
+<header><h1><a href="../index.html">🕉️ Auburn Hills Bhakti Vriksha</a></h1></header>
+<div class="breadcrumbs"><a href="../index.html">Home</a> › <a href="../bg-lectures.html">Bhagavad Gita Lectures</a> › Make Your Diwali Krishna-Conscious: The Art of True Celebration</div>
+<div class="container">
+<div class="lecture-header"><h1 class="lecture-title">Make Your Diwali Krishna-Conscious: The Art of True Celebration</h1>
+<div><span class="badge badge-date">📅 October 17, 2025</span><span class="badge badge-verse">📖 BG 17.16</span><span class="badge badge-speaker">🎤 Jai Sacinandana Kṛṣṇa Dāsa</span></div></div>
+<div class="lecture-tabs">
+<button class="tab-btn active" data-tab="overview">Overview</button>
+
+<button class="tab-btn" data-tab="notes">Notes</button>
+<button class="tab-btn" data-tab="flashcards">Flashcards</button>
+<button class="tab-btn" data-tab="transcript">Transcript</button>
+</div>
+<div class="tab-content active" id="overview">
+<div class="video-container"><iframe src="https://www.youtube.com/embed/x0xeJB2f1Co" allowfullscreen></iframe></div>
+<h2 class="section-heading">Key Takeaway</h2><p class="content-text">True spiritual progress involves purifying our consciousness by consistently placing Krishna at the center of our lives, embracing devotion in all activities, and understanding that genuine love means serving and being conquered by the Lord's mercy.</p>
+<h2 class="section-heading">Summary</h2><p class="content-text">This lecture explores the deeper meaning of spiritual festivals like Diwali, urging devotees to move beyond materialistic celebrations and make Krishna the central focus. It discusses controlling the mind and senses through devotion, contrasting material and spiritual love, and illustrating Krishna's desire to be bound by the love of His devotees through the Damodara-lila.</p>
+</div>
+
+<div class="tab-content" id="notes"><h2 class="section-heading">Key Concepts</h2><div class="theme-card"><h3>Modern Festivals vs. Krishna Consciousness</h3><p>The speaker critiques the modern celebration of festivals like Deepavali, noting how they have become disconnected from their original spiritual purpose, often focusing on sense gratification, personal boasting, or abstract concepts like 'light over darkness' without mentioning Krishna or Rama. He emphasizes that the true essence of any Vedic festival is to place the Lord at the center, transforming mundane activities into spiritual ones by offering them to Krishna.</p></div><div class="theme-card"><h3>The Power of Purified Consciousness</h3><p>The lecture highlights that our consciousness is the 'seed' of all our activities. A 'genetically modified consciousness' (Avidya Modified Consciousness) — one that lacks connection and satisfaction with the Lord — leads to distorted and polluted experiences in all aspects of life (festivals, relationships, work, environment). Prabhupada's movement aims to directly purify this consciousness, making Krishna the center instead of oneself.</p></div><div class="theme-card"><h3>Austerities of Speech (Vak) and Mind (Manas)</h3><p>Building on Bhagavad Gita 17.16, the speaker discusses the practical application of austerities in daily life. Controlling speech involves using devotional greetings, resolving conflicts in person rather than through impersonal texts, and practicing transparency and commitment. The austerity of the mind involves withdrawing it from sense gratification and engaging it in devotional service, fostering satisfaction and reducing agitation.</p></div><div class="theme-card"><h3>Social Media's Impact on Consciousness</h3><p>A significant portion of the lecture addresses how various social media platforms cater to and exacerbate different material vices like lust (Tinder), gluttony (Yelp, Uber Eats), envy (LinkedIn, Facebook), sloth (Netflix), and wrath (Twitter), and pride (Instagram). The speaker warns that 'whatever comes on your feed goes on your mind' and encourages diverting the mind to Vedic literature as an antidote to this 'asatthira vilas'.</p></div><div class="theme-card"><h3>Krishna's Love: The Ultimate Proposal</h3><p>The speaker portrays Bhagavad Gita as Krishna's 'love letter' or 'love proposal' to humanity, offering the ultimate connection. He contrasts material love, which 'falls' and leads to suffering when lost, with Krishna's love, which 'uplifts.' The hard-heartedness of conditioned souls in rejecting Krishna's advances is highlighted, despite Krishna's eagerness to reciprocate love.</p></div><div class="theme-card"><h3>The Damodara-lila: Conquered by Devotion</h3><p>The Damodara-lila beautifully illustrates Krishna's desire to be conquered by the love of His devotees. Krishna, the Absolute Truth, runs in fear from Mother Yashoda, demonstrating that He allows Himself to be defeated by pure love. The 'two fingers short' analogy for tying Krishna signifies that capturing the Lord requires both the devotee's sincere effort and Krishna's divine mercy. This transcendental exchange contrasts with the material world's competitive drive to 'win,' showing that in the spiritual world, everyone competes to 'lose' (serve) out of love.</p></div><h2 class="section-heading">Sanskrit Terms</h2><div class="theme-card"><h3>Sanatana Dharma</h3><p>The eternal occupation or duty of the living entity</p></div><div class="theme-card"><h3>Avidya Modified Consciousness (AMC)</h3><p>Consciousness distorted by ignorance</p></div><div class="theme-card"><h3>Dharma</h3><p>Righteous conduct, duty, religious principle</p></div><div class="theme-card"><h3>Tapasya</h3><p>Austerity, penance</p></div><div class="theme-card"><h3>Vacho Vekam</h3><p>Control of the urge to speak</p></div><div class="theme-card"><h3>Manah-prasādah</h3><p>Serenity of the mind</p></div><div class="theme-card"><h3>Lokahitam</h3><p>Welfare of the people</p></div><div class="theme-card"><h3>Mukti</h3><p>Liberation</p></div><div class="theme-card"><h3>Damodara</h3><p>One who is bound by a rope around His waist</p></div><div class="theme-card"><h3>Bhakti baddham</h3><p>Bound by devotion</p></div><div class="theme-card"><h3>Kripa potency</h3><p>Mercy of the Lord</p></div></div>
+<div class="tab-content" id="flashcards"><p class="content-text">Click to flip!</p><div class="flashcard-container">
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Sanatana Dharma</div>
+<div class="flashcard-back">The eternal occupation or duty of the living entity</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Avidya Modified Consciousness (AMC)</div>
+<div class="flashcard-back">Consciousness distorted by ignorance</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Dharma</div>
+<div class="flashcard-back">Righteous conduct, duty, religious principle</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Tapasya</div>
+<div class="flashcard-back">Austerity, penance</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Vacho Vekam</div>
+<div class="flashcard-back">Control of the urge to speak</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Manah-prasādah</div>
+<div class="flashcard-back">Serenity of the mind</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Lokahitam</div>
+<div class="flashcard-back">Welfare of the people</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Mukti</div>
+<div class="flashcard-back">Liberation</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Damodara</div>
+<div class="flashcard-back">One who is bound by a rope around His waist</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Bhakti baddham</div>
+<div class="flashcard-back">Bound by devotion</div>
+</div></div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Kripa potency</div>
+<div class="flashcard-back">Mercy of the Lord</div>
+</div></div></div></div>
+<div class="tab-content" id="transcript"><div class="content-text" style="white-space:pre-wrap">No transcript available</div></div>
+</div>
+<script>
+mermaid.initialize({startOnLoad:true,theme:'neutral'});
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+btn.addEventListener('click',()=>{
+const tab=btn.dataset.tab;
+document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
+btn.classList.add('active');
+document.getElementById(tab).classList.add('active');
+});
+});
+</script>
+</body></html>
