@@ -1,0 +1,10 @@
+{
+  "_comment": "List HTML files that should exist in multiple sections",
+  "duplicates": [
+    {
+      "id": "2025-07-09-cc-adi-1-1",
+      "section": "sankirtan",
+      "note": "This CC lecture is also relevant to sankirtan"
+    }
+  ]
+}

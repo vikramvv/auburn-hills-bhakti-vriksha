@@ -26,6 +26,9 @@ const SECTION_TITLES = {
     'tulasi-care': 'Tulasi Care'
 };
 
+// DEBUG MODE: Set to true to delete all HTML files before regenerating
+const DEBUG_CLEAN_ALL_HTML = true; // Change to true to enable
+
 // ============================================================================
 // MAIN BUILD FUNCTION
 // ============================================================================
@@ -50,6 +53,11 @@ async function build() {
     if (allLectures.length === 0) {
         console.log('⚠️  No lectures found. Exiting...\n');
         return;
+    }
+    
+    // DEBUG: Clean all HTML files if enabled
+    if (DEBUG_CLEAN_ALL_HTML) {
+        await cleanAllHTMLFiles();
     }
     
     // Clean up orphaned HTML files
@@ -141,6 +149,9 @@ async function loadAllLectures() {
                     data.media.video.youtube_id = data.stream_metadata.video_id;
                 }
                 
+                // Detect if lecture should be in multiple sections based on ID
+                data.additionalSections = detectAdditionalSections(data.id, section);
+                
                 lectures.push(data);
             } catch (error) {
                 console.error(`❌ Error loading ${file}:`, error.message);
@@ -152,12 +163,100 @@ async function loadAllLectures() {
 }
 
 // ============================================================================
+// DETECT ADDITIONAL SECTIONS
+// ============================================================================
+function detectAdditionalSections(id, primarySection) {
+    const additional = [];
+    const idLower = id.toLowerCase();
+    
+    // Check if ID contains 'sb' - move to sb-lectures (not bg-lectures)
+    if ((idLower.includes('-sb-') || idLower.startsWith('sb-')) && primarySection !== 'sb-lectures') {
+        additional.push('sb-lectures');
+    }
+    
+    // Check if ID contains 'cc' - move to cc-lectures (not bg-lectures)
+    if ((idLower.includes('-cc-') || idLower.startsWith('cc-')) && primarySection !== 'cc-lectures') {
+        additional.push('cc-lectures');
+    }
+    
+    return additional;
+}
+
+// ============================================================================
+// SHOULD SKIP PRIMARY SECTION
+// ============================================================================
+function shouldSkipPrimarySection(lecture) {
+    // If lecture is detected to belong to sb or cc, skip generating in primary section
+    // unless primary section IS sb or cc
+    const idLower = lecture.id.toLowerCase();
+    
+    if (lecture.section === 'bg-lectures') {
+        // If it's SB or CC content, don't generate in bg-lectures
+        if (idLower.includes('-sb-') || idLower.startsWith('sb-')) return true;
+        if (idLower.includes('-cc-') || idLower.startsWith('cc-')) return true;
+    }
+    
+    return false;
+}
+
+// ============================================================================
+// DEBUG: CLEAN ALL HTML FILES
+// ============================================================================
+async function cleanAllHTMLFiles() {
+    console.log('\n🗑️  DEBUG MODE: Cleaning all HTML files...');
+    let deleted = 0;
+    
+    for (const section of SECTIONS) {
+        const sectionFolder = path.join(section);
+        
+        if (!fs.existsSync(sectionFolder)) continue;
+        
+        const htmlFiles = fs.readdirSync(sectionFolder)
+            .filter(f => f.endsWith('.html'));
+        
+        for (const htmlFile of htmlFiles) {
+            const htmlPath = path.join(sectionFolder, htmlFile);
+            fs.unlinkSync(htmlPath);
+            deleted++;
+        }
+    }
+    
+    console.log(`  🗑️  Deleted ${deleted} HTML files\n`);
+}
+
+// ============================================================================
 // CLEANUP ORPHANED FILES
 // ============================================================================
 async function cleanupOrphanedFiles(allLectures) {
     console.log('\n🧹 Cleaning up orphaned files...');
     let removed = 0;
     
+    // Load manual duplicates file if it exists
+    const manualDuplicates = loadManualDuplicates();
+    
+    // Build a global set of all valid HTML IDs across all sections
+    const validHTMLIds = new Set();
+    
+    allLectures.forEach(lecture => {
+        // Add primary section (unless should skip)
+        if (!shouldSkipPrimarySection(lecture)) {
+            validHTMLIds.add(`${lecture.section}/${lecture.id}`);
+        }
+        
+        // Add additional sections
+        if (lecture.additionalSections?.length) {
+            lecture.additionalSections.forEach(section => {
+                validHTMLIds.add(`${section}/${lecture.id}`);
+            });
+        }
+    });
+    
+    // Add manual duplicates to valid set
+    manualDuplicates.forEach(duplicate => {
+        validHTMLIds.add(`${duplicate.section}/${duplicate.id}`);
+    });
+    
+    // Now check all HTML files globally
     for (const section of SECTIONS) {
         const sectionFolder = path.join(section);
         
@@ -168,20 +267,51 @@ async function cleanupOrphanedFiles(allLectures) {
         
         for (const htmlFile of htmlFiles) {
             const htmlId = htmlFile.replace('.html', '');
-            const hasJson = allLectures.some(l => 
-                l.section === section && l.id === htmlId
-            );
+            const fullPath = `${section}/${htmlId}`;
             
-            if (!hasJson) {
+            // Check if this HTML should exist
+            if (!validHTMLIds.has(fullPath)) {
                 const htmlPath = path.join(sectionFolder, htmlFile);
                 fs.unlinkSync(htmlPath);
-                console.log(`  🗑️  Removed orphaned: ${section}/${htmlFile}`);
+                console.log(`  🗑️  Removed orphaned: ${fullPath}.html`);
                 removed++;
             }
         }
     }
     
     console.log(`  Removed ${removed} orphaned file(s)`);
+}
+
+// ============================================================================
+// LOAD MANUAL DUPLICATES
+// ============================================================================
+function loadManualDuplicates() {
+    const duplicatesFile = 'manual-duplicates.json';
+    
+    if (!fs.existsSync(duplicatesFile)) {
+        // Create example file if it doesn't exist
+        const example = {
+            "_comment": "List HTML files that should exist in multiple sections",
+            "duplicates": [
+                {
+                    "id": "2025-07-09-cc-adi-1-1",
+                    "section": "sankirtan",
+                    "note": "This CC lecture is also relevant to sankirtan"
+                }
+            ]
+        };
+        fs.writeFileSync(duplicatesFile, JSON.stringify(example, null, 2));
+        console.log(`  📄 Created ${duplicatesFile} template`);
+        return [];
+    }
+    
+    try {
+        const data = JSON.parse(fs.readFileSync(duplicatesFile, 'utf8'));
+        return data.duplicates || [];
+    } catch (error) {
+        console.error(`  ⚠️  Error reading ${duplicatesFile}:`, error.message);
+        return [];
+    }
 }
 
 // ============================================================================
@@ -292,17 +422,49 @@ async function generateLecturePage(lecture) {
     // Use template from templates.js
     const html = templates.getLecturePageTemplate(lecture, sectionTitle);
     
-    const sectionFolder = path.join(lecture.section);
-    if (!fs.existsSync(sectionFolder)) {
-        fs.mkdirSync(sectionFolder, { recursive: true });
+    // Check if we should skip generating in primary section
+    const skipPrimary = shouldSkipPrimarySection(lecture);
+    
+    if (!skipPrimary) {
+        // Write to primary section
+        const sectionFolder = path.join(lecture.section);
+        if (!fs.existsSync(sectionFolder)) {
+            fs.mkdirSync(sectionFolder, { recursive: true });
+        }
+        
+        fs.writeFileSync(
+            path.join(sectionFolder, `${lecture.id}.html`),
+            html
+        );
+        
+        console.log(`✏️  Generated ${lecture.section}/${lecture.id}.html`);
+    } else {
+        console.log(`⏭️  Skipped ${lecture.section}/${lecture.id}.html (moved to correct section)`);
     }
     
-    fs.writeFileSync(
-        path.join(sectionFolder, `${lecture.id}.html`),
-        html
-    );
-    
-    console.log(`✏️  Generated ${lecture.section}/${lecture.id}.html`);
+    // Also write to additional sections if detected
+    if (lecture.additionalSections?.length) {
+        for (const additionalSection of lecture.additionalSections) {
+            const additionalFolder = path.join(additionalSection);
+            if (!fs.existsSync(additionalFolder)) {
+                fs.mkdirSync(additionalFolder, { recursive: true });
+            }
+            
+            // Update lecture section temporarily for breadcrumb
+            const lectureForAdditional = { ...lecture, section: additionalSection };
+            const additionalHtml = templates.getLecturePageTemplate(
+                lectureForAdditional, 
+                SECTION_TITLES[additionalSection]
+            );
+            
+            fs.writeFileSync(
+                path.join(additionalFolder, `${lecture.id}.html`),
+                additionalHtml
+            );
+            
+            console.log(`  ✏️  Generated in ${additionalSection}/${lecture.id}.html`);
+        }
+    }
 }
 
 // ============================================================================
