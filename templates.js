@@ -609,15 +609,16 @@ function getMindMapTabHTML(lecture) {
     return `
         <h2 class="section-heading">Lecture Structure & Flow</h2>
         <div class="mermaid-container">
-            <pre class="mermaid">
+            <div class="mermaid">
 ${lecture.mermaid_chart}
-            </pre>
+            </div>
         </div>
         <p class="content-text" style="margin-top: 20px; font-style: italic;">
             This visual diagram shows the key concepts and their relationships discussed in this lecture.
         </p>
     `;
 }
+
 
 function getNotesTabHTML(lecture) {
     let html = '';
