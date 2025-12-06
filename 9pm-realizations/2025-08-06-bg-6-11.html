@@ -1,27 +1,310 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8"><title>Ashtanga Yoga's Challenges & Harinam's Simple Solution</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;700&family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Cormorant Garamond',serif;background:linear-gradient(135deg,#E8D4A2,#C4B598);min-height:100vh}header{background:linear-gradient(135deg,#8B7752,#6B5D42);padding:30px 20px;text-align:center;color:#E8D4A2;border-bottom:4px solid #3A2F1F}header h1{font-family:'Playfair Display',serif;font-size:2em;font-weight:900}header a{color:#E8D4A2;text-decoration:none}.breadcrumbs{background:rgba(232,212,162,0.3);padding:15px 20px}.breadcrumbs a{color:#5A4D37;text-decoration:none;font-weight:600}.container{max-width:1200px;margin:0 auto;padding:20px}.lecture-header{background:white;padding:40px;border-radius:12px;margin-bottom:20px;border:3px solid rgba(139,119,82,0.2)}.lecture-title{font-family:'Playfair Display',serif;font-size:2.5em;color:#3A2F1F;margin-bottom:20px}.badge{padding:8px 16px;border-radius:8px;font-size:0.9em;font-weight:600;margin-right:10px}.badge-date{background:rgba(232,212,162,0.4);color:#5A4D37;border:2px solid rgba(139,119,82,0.3)}.badge-verse{background:rgba(139,119,82,0.2);color:#3A2F1F;border:2px solid rgba(139,119,82,0.4)}.badge-speaker{background:rgba(196,30,58,0.1);color:#8b0000;border:2px solid rgba(196,30,58,0.3)}.lecture-tabs{display:flex;background:rgba(232,212,162,0.3);border-radius:12px 12px 0 0;overflow-x:auto;border:3px solid rgba(139,119,82,0.2);border-bottom:none}.tab-btn{flex:1;padding:18px 24px;border:none;background:transparent;color:#5A4D37;font-weight:600;cursor:pointer;text-transform:uppercase;white-space:nowrap}.tab-btn:hover{background:rgba(232,212,162,0.5)}.tab-btn.active{background:white;color:#3A2F1F;font-weight:700}.tab-content{display:none;background:white;padding:40px;border-radius:0 0 12px 12px;border:3px solid rgba(139,119,82,0.2);border-top:none;min-height:400px}.tab-content.active{display:block}.video-container{position:relative;padding-bottom:56.25%;height:0;margin-bottom:30px}.video-container iframe{position:absolute;width:100%;height:100%}.mermaid-container{background:rgba(232,212,162,0.1);padding:30px;border-radius:12px;overflow-x:auto}.content-text{font-size:1.15em;line-height:1.8;margin-bottom:20px}.section-heading{font-family:'Playfair Display',serif;font-size:1.8em;color:#3A2F1F;margin:30px 0 20px;font-weight:700;border-bottom:2px solid rgba(139,119,82,0.2);padding-bottom:10px}.theme-card{background:rgba(232,212,162,0.2);border:2px solid rgba(139,119,82,0.3);border-radius:8px;padding:25px;margin-bottom:20px}.flashcard-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}.flashcard{perspective:1000px;height:250px;cursor:pointer}.flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d}.flashcard.flipped .flashcard-inner{transform:rotateY(180deg)}.flashcard-front,.flashcard-back{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:12px;padding:30px;display:flex;align-items:center;justify-content:center;font-size:1.2em;border:3px solid rgba(139,119,82,0.3)}.flashcard-front{background:linear-gradient(135deg,#8B7752,#6B5D42);color:#E8D4A2;font-weight:700}.flashcard-back{background:white;color:#3A2F1F;transform:rotateY(180deg)}</style>
-</head><body>
-<header><h1><a href="../index.html">🕉️ Auburn Hills Bhakti Vriksha</a></h1></header>
-<div class="breadcrumbs"><a href="../index.html">Home</a> › <a href="../9pm-realizations.html">9pm Realizations</a> › Ashtanga Yoga's Challenges & Harinam's Simple Solution</div>
-<div class="container">
-<div class="lecture-header"><h1 class="lecture-title">Ashtanga Yoga's Challenges & Harinam's Simple Solution</h1>
-<div><span class="badge badge-date">📅 August 5, 2025</span><span class="badge badge-verse">📖 BG 6.11</span><span class="badge badge-speaker">🎤 Jai Sacinandana Kṛṣṇa Dāsa</span></div></div>
-<div class="lecture-tabs">
-<button class="tab-btn active" data-tab="overview">Overview</button>
-<button class="tab-btn" data-tab="mindmap">Mind Map</button>
-<button class="tab-btn" data-tab="notes">Notes</button>
-<button class="tab-btn" data-tab="flashcards">Flashcards</button>
-<button class="tab-btn" data-tab="transcript">Transcript</button>
-</div>
-<div class="tab-content active" id="overview">
-
-<h2 class="section-heading">Key Takeaway</h2><p class="content-text">In Kali Yuga, the stringent prerequisites for Ashtanga Yoga make it practically impossible to execute perfectly, whereas chanting the holy name with humility and dependence on Krishna is the only feasible and guaranteed path to spiritual success.</p>
-<h2 class="section-heading">Summary</h2><p class="content-text">Exploring the stringent prerequisites for Ashtanga Yoga outlined in Bhagavad Gita, this lecture highlights their impracticality in Kali Yuga. It emphasizes that chanting the holy name with humility is the only universally accessible and guaranteed path to spiritual success, offering a practical solution beyond yoga's historical demands.</p>
-</div>
-<div class="tab-content" id="mindmap"><h2 class="section-heading">Lecture Structure</h2><div class="mermaid-container"><pre class="mermaid">graph TD
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashtanga Yoga's Challenges & Harinam's Simple Solution | Auburn Hills Bhakti Vriksha</title>
+    <meta name="description" content="In Kali Yuga, the stringent prerequisites for Ashtanga Yoga make it practically impossible to execute perfectly, whereas chanting the holy name with h">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #E8D4A2 0%, #D4C5A0 50%, #C4B598 100%);
+            min-height: 100vh;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #8B7752 0%, #6B5D42 100%);
+            padding: 30px 20px;
+            text-align: center;
+            color: #E8D4A2;
+            border-bottom: 4px solid #3A2F1F;
+        }
+        
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8em, 4vw, 2.5em);
+            font-weight: 900;
+        }
+        
+        header a { color: #E8D4A2; text-decoration: none; transition: opacity 0.3s; }
+        header a:hover { opacity: 0.8; }
+        
+        .breadcrumbs {
+            background: rgba(232, 212, 162, 0.3);
+            padding: 15px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+        }
+        
+        .breadcrumbs a { color: #5A4D37; text-decoration: none; font-weight: 600; }
+        .breadcrumbs a:hover { color: #3A2F1F; }
+        .breadcrumbs span { margin: 0 8px; color: #8B7752; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        
+        .lecture-header {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 3px solid rgba(139, 119, 82, 0.2);
+            box-shadow: 0 4px 12px rgba(58, 47, 31, 0.1);
+        }
+        
+        .lecture-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8em, 4vw, 2.8em);
+            color: #3A2F1F;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        .lecture-meta { display: flex; gap: 12px; flex-wrap: wrap; }
+        
+        .badge {
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .badge-date {
+            background: rgba(232, 212, 162, 0.4);
+            color: #5A4D37;
+            border: 2px solid rgba(139, 119, 82, 0.3);
+        }
+        
+        .badge-verse {
+            background: rgba(139, 119, 82, 0.2);
+            color: #3A2F1F;
+            border: 2px solid rgba(139, 119, 82, 0.4);
+        }
+        
+        .badge-speaker {
+            background: rgba(196, 30, 58, 0.1);
+            color: #8b0000;
+            border: 2px solid rgba(196, 30, 58, 0.3);
+        }
+        
+        .lecture-tabs {
+            display: flex;
+            background: rgba(232, 212, 162, 0.3);
+            border-radius: 12px 12px 0 0;
+            overflow-x: auto;
+            border: 3px solid rgba(139, 119, 82, 0.2);
+            border-bottom: none;
+        }
+        
+        .tab-btn {
+            flex: 1;
+            padding: 18px 24px;
+            border: none;
+            background: transparent;
+            color: #5A4D37;
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(0.85em, 2vw, 1em);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            border-right: 1px solid rgba(139, 119, 82, 0.2);
+        }
+        
+        .tab-btn:last-child { border-right: none; }
+        .tab-btn:hover { background: rgba(232, 212, 162, 0.5); color: #3A2F1F; }
+        .tab-btn.active { background: white; color: #3A2F1F; font-weight: 700; }
+        
+        .tab-content {
+            display: none;
+            background: white;
+            padding: 40px;
+            border-radius: 0 0 12px 12px;
+            border: 3px solid rgba(139, 119, 82, 0.2);
+            border-top: none;
+            min-height: 400px;
+        }
+        
+        .tab-content.active { display: block; }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .mermaid-container {
+            background: rgba(232, 212, 162, 0.1);
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid rgba(139, 119, 82, 0.2);
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        .mermaid {
+            display: flex;
+            justify-content: center;
+            min-height: 400px;
+        }
+        
+        .section-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            color: #3A2F1F;
+            margin: 30px 0 20px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(139, 119, 82, 0.2);
+        }
+        
+        .content-text {
+            font-size: 1.15em;
+            line-height: 1.8;
+            color: #5A4D37;
+            margin-bottom: 20px;
+        }
+        
+        .theme-card {
+            background: rgba(232, 212, 162, 0.2);
+            border: 2px solid rgba(139, 119, 82, 0.3);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .theme-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4em;
+            color: #3A2F1F;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .flashcard-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .flashcard {
+            perspective: 1000px;
+            height: 250px;
+            cursor: pointer;
+        }
+        
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flashcard-front, .flashcard-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            border: 3px solid rgba(139, 119, 82, 0.3);
+        }
+        
+        .flashcard-front {
+            background: linear-gradient(135deg, #8B7752 0%, #6B5D42 100%);
+            color: #E8D4A2;
+            font-weight: 700;
+        }
+        
+        .flashcard-back {
+            background: white;
+            color: #3A2F1F;
+            transform: rotateY(180deg);
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .lecture-header { padding: 25px; }
+            .tab-content { padding: 25px; }
+            .tab-btn { padding: 14px 16px; font-size: 0.85em; }
+            .flashcard-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="../index.html">🕉️ Auburn Hills Bhakti Vriksha</a></h1>
+    </header>
+    
+    <div class="breadcrumbs">
+        <a href="../index.html">Home</a>
+        <span>›</span>
+        <a href="../9pm-realizations.html">9pm Realizations</a>
+        <span>›</span>
+        <span>Ashtanga Yoga's Challenges & Harinam's Simple Solution</span>
+    </div>
+    
+    <div class="container">
+        <div class="lecture-header">
+            <h1 class="lecture-title">Ashtanga Yoga's Challenges & Harinam's Simple Solution</h1>
+            <div class="lecture-meta">
+                <span class="badge badge-date">📅 August 5, 2025</span>
+                <span class="badge badge-verse">📖 BG 6.11</span>
+                <span class="badge badge-speaker">🎤 Jai Sacinandana Kṛṣṇa Dāsa</span>
+            </div>
+        </div>
+        
+        <div class="lecture-tabs">
+            <button class="tab-btn active" data-tab="overview">Overview</button>
+            <button class="tab-btn" data-tab="mindmap">Mind Map</button>
+            <button class="tab-btn" data-tab="notes">Study Notes</button>
+            <button class="tab-btn" data-tab="flashcards">Flashcards</button>
+            <button class="tab-btn" data-tab="transcript">Transcript</button>
+        </div>
+        
+        <div class="tab-content active" id="overview">
+            <h2 class="section-heading">Key Takeaway</h2>
+        <p class="content-text">In Kali Yuga, the stringent prerequisites for Ashtanga Yoga make it practically impossible to execute perfectly, whereas chanting the holy name with humility and dependence on Krishna is the only feasible and guaranteed path to spiritual success.</p><h2 class="section-heading">Main Theme</h2>
+        <p class="content-text">The Challenges of Ashtanga Yoga and the Efficacy of Harinam in Kali Yuga</p><h2 class="section-heading">Summary</h2>
+        <p class="content-text">Exploring the stringent prerequisites for Ashtanga Yoga outlined in Bhagavad Gita, this lecture highlights their impracticality in Kali Yuga. It emphasizes that chanting the holy name with humility is the only universally accessible and guaranteed path to spiritual success, offering a practical solution beyond yoga's historical demands.</p>
+        </div>
+        
+        <div class="tab-content" id="mindmap">
+            
+        <h2 class="section-heading">Lecture Structure & Flow</h2>
+        <div class="mermaid-container">
+            <pre class="mermaid">
+graph TD
     A[Ashtanga Yoga] --> B{Prerequisites<br/>(BG 6.11-13)}
     B --> P1[Shuchavu Deshe<br/>(Pious Place)]
     B --> P2[Specific Asanam<br/>(Deer Skin, Kusha Grass)]
@@ -38,86 +321,262 @@
     F --> Q1[Na Niyamah:<br/>No Hard & Fast Rules]
     F --> Q2[Humility<br/>& Dependence]
     F --> Q3[Accessible to All<br/>(No Adhikari Visheshanam)]
-    E --"Guaranteed Outcome"--> G[Easy Spiritual Success<br/>(Freedom from Embarrassment)]</pre></div></div>
-<div class="tab-content" id="notes"><h2 class="section-heading">Key Concepts</h2><div class="theme-card"><h3>Strict Prerequisites for Ashtanga Yoga</h3><p>The lecture begins by outlining the demanding conditions for Ashtanga Yoga as described in Bhagavad Gita Chapter 6. These include selecting an auspicious (Shuchavu Deshe) and secluded place, preparing a specific seat with Kusha grass and deerskin, ensuring it's neither too high nor too low, and rigorously controlling the mind, senses, and actions (Ekagram Manakritva, Chitta Indriya Kriyaha). The speaker emphasizes that every aspect, from the location to the sitting paraphernalia, is crucial for success, highlighting the detailed and precise nature of this yogic path.</p></div><div class="theme-card"><h3>Ashtanga Yoga's Impracticality in Kali Yuga</h3><p>The speaker argues that properly practicing Ashtanga Yoga in the current age of Kali is exceedingly difficult, if not impossible. The conditions required—such as finding truly pious and secluded places, maintaining strict celibacy (Brahmachari Vrathestitaha), and achieving perfect control over the highly agitated senses and mind—are largely unattainable for the average person today. Modern yoga societies, though materially successful, are deemed unsuitable for genuine practice, as they often deviate from the scriptural prescriptions (Yathashrutam).</p></div><div class="theme-card"><h3>Harinam: Kali Yuga's Practical Spiritual Path</h3><p>In contrast to the challenges of Ashtanga Yoga, the lecture glorifies the chanting of the holy name of the Lord (Harinam Sankirtan) as the only practically viable and guaranteed spiritual process for Kali Yuga. The Shastras repeatedly recommend this path, emphasizing that it requires only humility and sincere dependence on Krishna, without the numerous external prerequisites of other yogic systems. It is presented as a universally accessible method that guarantees spiritual success, even for those with limited qualifications or unfavorable external conditions.</p></div><div class="theme-card"><h3>Senses & Mind: The Source of Spiritual Embarrassment</h3><p>The speaker poignantly describes how the uncontrolled senses and mind constantly 'embarrass' an individual, hindering spiritual progress and forcing one to take up spiritual practices. However, even traditional yogic processes can become a source of embarrassment if one cannot meet their strict demands. Harinam Sankirtan offers a unique solution: by humbly appealing to Krishna with the admission of one's incapacities ('Krishna, please help me. I depend on you.'), one transcends the need for self-effort in controlling the senses and directly receives divine grace, making spiritual success easy.</p></div><div class="theme-card"><h3>The Imperative of Following Yathashrutam</h3><p>The lecture stresses that any yogic or spiritual process must be performed exactly 'as heard' (Yathashrutam) from authoritative sources and previous acharyas to bear fruit. Modifying or adapting the process based on one's convenience or current circumstances negates the guarantee of the intended result. This principle underscores why Ashtanga Yoga, when modified for modern living, loses its efficacy, further reinforcing the need for a universally applicable and unmodified process like Harinam Sankirtan.</p></div><h2 class="section-heading">Sanskrit Terms</h2><div class="theme-card"><h3>Shuchavu Deshe</h3><p>In a sacred or pure place</p></div><div class="theme-card"><h3>Punya Teertham</h3><p>Sacred pilgrimage place</p></div><div class="theme-card"><h3>Dravyam</h3><p>Paraphernalia</p></div><div class="theme-card"><h3>Pavitram</h3><p>Purifying agent; sacred thread</p></div><div class="theme-card"><h3>Asanam</h3><p>Seat; bodily posture</p></div><div class="theme-card"><h3>Ekagram Manakritva</h3><p>Making the mind one-pointed</p></div><div class="theme-card"><h3>Chitta Indriya Kriyaha</h3><p>Activities of the consciousness and senses</p></div><div class="theme-card"><h3>Yathashrutam</h3><p>As heard; as prescribed by authorities</p></div><div class="theme-card"><h3>Adhikari Visheshanam</h3><p>Specific qualification of the person</p></div><div class="theme-card"><h3>Brahmachari Vrathestitaha</h3><p>Situated in the vow of celibacy</p></div><div class="theme-card"><h3>Upavitam</h3><p>Sacred thread</p></div><div class="theme-card"><h3>Japam</h3><p>Chanting; repetition of mantras</p></div></div>
-<div class="tab-content" id="flashcards"><p class="content-text">Click to flip!</p><div class="flashcard-container">
-<div class="flashcard" onclick="this.classList.toggle('flipped')">
-<div class="flashcard-inner">
-<div class="flashcard-front">Shuchavu Deshe</div>
-<div class="flashcard-back">In a sacred or pure place</div>
-</div></div>
-<div class="flashcard" onclick="this.classList.toggle('flipped')">
-<div class="flashcard-inner">
-<div class="flashcard-front">Punya Teertham</div>
-<div class="flashcard-back">Sacred pilgrimage place</div>
-</div></div>
-<div class="flashcard" onclick="this.classList.toggle('flipped')">
-<div class="flashcard-inner">
-<div class="flashcard-front">Dravyam</div>
-<div class="flashcard-back">Paraphernalia</div>
-</div></div>
-<div class="flashcard" onclick="this.classList.toggle('flipped')">
-<div class="flashcard-inner">
-<div class="flashcard-front">Pavitram</div>
-<div class="flashcard-back">Purifying agent; sacred thread</div>
-</div></div>
-<div class="flashcard" onclick="this.classList.toggle('flipped')">
-<div class="flashcard-inner">
-<div class="flashcard-front">Asanam</div>
-<div class="flashcard-back">Seat; bodily posture</div>
-</div></div>
-<div class="flashcard" onclick="this.classList.toggle('flipped')">
-<div class="flashcard-inner">
-<div class="flashcard-front">Ekagram Manakritva</div>
-<div class="flashcard-back">Making the mind one-pointed</div>
-</div></div>
-<div class="flashcard" onclick="this.classList.toggle('flipped')">
-<div class="flashcard-inner">
-<div class="flashcard-front">Chitta Indriya Kriyaha</div>
-<div class="flashcard-back">Activities of the consciousness and senses</div>
-</div></div>
-<div class="flashcard" onclick="this.classList.toggle('flipped')">
-<div class="flashcard-inner">
-<div class="flashcard-front">Yathashrutam</div>
-<div class="flashcard-back">As heard; as prescribed by authorities</div>
-</div></div>
-<div class="flashcard" onclick="this.classList.toggle('flipped')">
-<div class="flashcard-inner">
-<div class="flashcard-front">Adhikari Visheshanam</div>
-<div class="flashcard-back">Specific qualification of the person</div>
-</div></div>
-<div class="flashcard" onclick="this.classList.toggle('flipped')">
-<div class="flashcard-inner">
-<div class="flashcard-front">Brahmachari Vrathestitaha</div>
-<div class="flashcard-back">Situated in the vow of celibacy</div>
-</div></div>
-<div class="flashcard" onclick="this.classList.toggle('flipped')">
-<div class="flashcard-inner">
-<div class="flashcard-front">Upavitam</div>
-<div class="flashcard-back">Sacred thread</div>
-</div></div>
-<div class="flashcard" onclick="this.classList.toggle('flipped')">
-<div class="flashcard-inner">
-<div class="flashcard-front">Japam</div>
-<div class="flashcard-back">Chanting; repetition of mantras</div>
-</div></div>
-<div class="flashcard" onclick="this.classList.toggle('flipped')">
-<div class="flashcard-inner">
-<div class="flashcard-front">Why is deerskin specifically used as a seat for Ashtanga Yoga, as mentioned in the scriptures?</div>
-<div class="flashcard-back">Traditionally, deerskin is considered purifying, and Lord Shiva himself sets an example by meditating on it. Additionally, it possesses a peculiar characteristic that wards off reptiles and snakes, which is beneficial for yogis meditating in secluded, wild places. It's also part of many traditional Vedic rituals, signifying its sacredness and specific properties for spiritual practices, such as being attached to the sacred thread (Upavitam) during certain ceremonies like Upanayanam and used for Japam.</div>
-</div></div></div></div>
-<div class="tab-content" id="transcript"><div class="content-text" style="white-space:pre-wrap">No transcript available</div></div>
-</div>
-<script>
-mermaid.initialize({startOnLoad:true,theme:'neutral'});
-document.querySelectorAll('.tab-btn').forEach(btn=>{
-btn.addEventListener('click',()=>{
-const tab=btn.dataset.tab;
-document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
-btn.classList.add('active');
-document.getElementById(tab).classList.add('active');
-});
-});
-</script>
-</body></html>
+    E --"Guaranteed Outcome"--> G[Easy Spiritual Success<br/>(Freedom from Embarrassment)]
+            </pre>
+        </div>
+        <p class="content-text" style="margin-top: 20px; font-style: italic;">
+            This visual diagram shows the key concepts and their relationships discussed in this lecture.
+        </p>
+    
+        </div>
+        
+        <div class="tab-content" id="notes">
+            <h2 class="section-heading">Key Concepts</h2>
+            <div class="theme-card">
+                <h3 class="theme-title">Strict Prerequisites for Ashtanga Yoga</h3>
+                <p class="content-text">The lecture begins by outlining the demanding conditions for Ashtanga Yoga as described in Bhagavad Gita Chapter 6. These include selecting an auspicious (Shuchavu Deshe) and secluded place, preparing a specific seat with Kusha grass and deerskin, ensuring it's neither too high nor too low, and rigorously controlling the mind, senses, and actions (Ekagram Manakritva, Chitta Indriya Kriyaha). The speaker emphasizes that every aspect, from the location to the sitting paraphernalia, is crucial for success, highlighting the detailed and precise nature of this yogic path.</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">Pious places like Prayag, Mathura, Rishikesh, Haridwar, or along sacred rivers (Nadi).</li><li class="content-text">The use of Kusha grass and deerskin, which is considered purifying and protective (e.g., against snakes).</li><li class="content-text">Lord Shiva as an example of an Ashtanga Yogi who sits on deerskin.</li></ul>
+                
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Ashtanga Yoga's Impracticality in Kali Yuga</h3>
+                <p class="content-text">The speaker argues that properly practicing Ashtanga Yoga in the current age of Kali is exceedingly difficult, if not impossible. The conditions required—such as finding truly pious and secluded places, maintaining strict celibacy (Brahmachari Vrathestitaha), and achieving perfect control over the highly agitated senses and mind—are largely unattainable for the average person today. Modern yoga societies, though materially successful, are deemed unsuitable for genuine practice, as they often deviate from the scriptural prescriptions (Yathashrutam).</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">Difficulty finding 'Shuchavu Deshe' in big cities.</li><li class="content-text">Inability to maintain strict Brahmacharya or seclusion for long periods.</li><li class="content-text">Modern modifications to yoga processes that deviate from original shastric injunctions.</li></ul>
+                
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Harinam: Kali Yuga's Practical Spiritual Path</h3>
+                <p class="content-text">In contrast to the challenges of Ashtanga Yoga, the lecture glorifies the chanting of the holy name of the Lord (Harinam Sankirtan) as the only practically viable and guaranteed spiritual process for Kali Yuga. The Shastras repeatedly recommend this path, emphasizing that it requires only humility and sincere dependence on Krishna, without the numerous external prerequisites of other yogic systems. It is presented as a universally accessible method that guarantees spiritual success, even for those with limited qualifications or unfavorable external conditions.</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">Chanting the holy name 'in great humility' as prescribed by Shastras.</li><li class="content-text">The verse 'Naam, Naam, Akari, Bahuda, Nija, Sarva, Shakti...' from Caitanya Caritamrita (implicitly referenced).</li></ul>
+                
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Senses & Mind: The Source of Spiritual Embarrassment</h3>
+                <p class="content-text">The speaker poignantly describes how the uncontrolled senses and mind constantly 'embarrass' an individual, hindering spiritual progress and forcing one to take up spiritual practices. However, even traditional yogic processes can become a source of embarrassment if one cannot meet their strict demands. Harinam Sankirtan offers a unique solution: by humbly appealing to Krishna with the admission of one's incapacities ('Krishna, please help me. I depend on you.'), one transcends the need for self-effort in controlling the senses and directly receives divine grace, making spiritual success easy.</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">Analogy of a parent being embarrassed by a cranky child.</li><li class="content-text">Desire for spiritual practice stems from being 'embarrassed' by uncontrolled senses.</li><li class="content-text">Admitting 'I am embarrassed... even by spiritual things' in prayer during chanting.</li></ul>
+                
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">The Imperative of Following Yathashrutam</h3>
+                <p class="content-text">The lecture stresses that any yogic or spiritual process must be performed exactly 'as heard' (Yathashrutam) from authoritative sources and previous acharyas to bear fruit. Modifying or adapting the process based on one's convenience or current circumstances negates the guarantee of the intended result. This principle underscores why Ashtanga Yoga, when modified for modern living, loses its efficacy, further reinforcing the need for a universally applicable and unmodified process like Harinam Sankirtan.</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">Comparing traditional Ashtanga Yoga with modern, modified versions.</li><li class="content-text">The risk of 'not guaranteeing the result' when modifications are made to a spiritual process.</li></ul>
+                
+            </div><h2 class="section-heading">📚 Sanskrit Terms</h2>
+            <div class="theme-card">
+                <h3 class="theme-title">Shuchavu Deshe (शुचौ देशे)</h3>
+                <p class="content-text">In a sacred or pure place</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Punya Teertham (पुण्य तीर्थम्)</h3>
+                <p class="content-text">Sacred pilgrimage place</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Dravyam (द्रव्यम्)</h3>
+                <p class="content-text">Paraphernalia</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Pavitram (पवित्रम्)</h3>
+                <p class="content-text">Purifying agent; sacred thread</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Asanam (आसनम्)</h3>
+                <p class="content-text">Seat; bodily posture</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Ekagram Manakritva (एकाग्रं मनः कृत्वा)</h3>
+                <p class="content-text">Making the mind one-pointed</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Chitta Indriya Kriyaha (चित्तेन्द्रिय क्रियाः)</h3>
+                <p class="content-text">Activities of the consciousness and senses</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Yathashrutam (यथाश्रुतम्)</h3>
+                <p class="content-text">As heard; as prescribed by authorities</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Adhikari Visheshanam (अधिकारी विशेषणम्)</h3>
+                <p class="content-text">Specific qualification of the person</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Brahmachari Vrathestitaha (ब्रह्मचारी व्रते स्थितः)</h3>
+                <p class="content-text">Situated in the vow of celibacy</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Upavitam (उपवीतम्)</h3>
+                <p class="content-text">Sacred thread</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Japam (जपम्)</h3>
+                <p class="content-text">Chanting; repetition of mantras</p>
+            </div><h2 class="section-heading">Practical Applications</h2><ul><li class="content-text">Recognize the specific challenges of Ashtanga Yoga in Kali Yuga</li><li class="content-text">Embrace Harinam Sankirtan as the primary spiritual practice for Kali Yuga</li><li class="content-text">Cultivate humility and dependence on Krishna</li><li class="content-text">Uphold the principle of Yathashrutam (following scriptural injunctions without modification)</li></ul><h2 class="section-heading">Notable Quotes</h2><blockquote class="content-text">"The so-called Yoga societies in big cities may be very successful in earning material benefit, but they are not at all suitable for the actual practice of Yoga."</blockquote><blockquote class="content-text">"Everything has its Swabhava."</blockquote><blockquote class="content-text">"If they are not controlled, then the mind cannot be actually Ekagram Manakritva. It's not possible."</blockquote><blockquote class="content-text">"Ashtanga Yoga has many prerequisites being alone, going to a solitary place, choosing a pious place."</blockquote><blockquote class="content-text">"It is very difficult in the modern Kali Yoga to practice Ashtanga Yoga as prescribed in the Shastra."</blockquote><blockquote class="content-text">"But this is not how a yoga must be, any yogic process must be performed. A yogic process must be done as Yathashrutam."</blockquote><blockquote class="content-text">"If you make modifications, then we can't guarantee the result."</blockquote><blockquote class="content-text">"All the Shastras are prescribing again and again that one must engage in chanting of the holy name of the Lord in great humility."</blockquote><blockquote class="content-text">"This is the process that is practically possible in Kali Yuga."</blockquote><blockquote class="content-text">"Why do most people want to practice Yoga? Because we are actually being embarrassed by the material senses."</blockquote><blockquote class="content-text">"I am taking my senses and mind, and they are always embarrassing me."</blockquote><blockquote class="content-text">"Even the process of yoga also embarrasses me."</blockquote><blockquote class="content-text">"Krishna, I am embarrassed. Not just by material things. Even by spiritual things, I am being embarrassed. I am not able to do anything properly. Krishna, please help me. I depend on you. I depend on your lotus feet. Please."</blockquote><blockquote class="content-text">"In that mood, we chant the holy name, giving up all material processes, giving up all spiritual processes, depending on the holy name only."</blockquote><blockquote class="content-text">"If you do that, then spiritual success becomes very easy."</blockquote><blockquote class="content-text">"Lord Shiva also sitting on a dear skin, setting the example. So he is the guru for all Ashtanga Yogis, setting the prime example."</blockquote><blockquote class="content-text">"The dear skin has a peculiar characteristic that it wards away any reptiles or any snakes around it... So that is a medicinal characteristic that the dear skin has."</blockquote>
+        </div>
+        
+        <div class="tab-content" id="flashcards">
+            
+        <p class="content-text">Click on a card to flip it!</p>
+        <div class="flashcard-container">
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Shuchavu Deshe (शुचौ देशे)</div>
+                    <div class="flashcard-back">In a sacred or pure place</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Punya Teertham (पुण्य तीर्थम्)</div>
+                    <div class="flashcard-back">Sacred pilgrimage place</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Dravyam (द्रव्यम्)</div>
+                    <div class="flashcard-back">Paraphernalia</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Pavitram (पवित्रम्)</div>
+                    <div class="flashcard-back">Purifying agent; sacred thread</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Asanam (आसनम्)</div>
+                    <div class="flashcard-back">Seat; bodily posture</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Ekagram Manakritva (एकाग्रं मनः कृत्वा)</div>
+                    <div class="flashcard-back">Making the mind one-pointed</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Chitta Indriya Kriyaha (चित्तेन्द्रिय क्रियाः)</div>
+                    <div class="flashcard-back">Activities of the consciousness and senses</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Yathashrutam (यथाश्रुतम्)</div>
+                    <div class="flashcard-back">As heard; as prescribed by authorities</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Adhikari Visheshanam (अधिकारी विशेषणम्)</div>
+                    <div class="flashcard-back">Specific qualification of the person</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Brahmachari Vrathestitaha (ब्रह्मचारी व्रते स्थितः)</div>
+                    <div class="flashcard-back">Situated in the vow of celibacy</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Upavitam (उपवीतम्)</div>
+                    <div class="flashcard-back">Sacred thread</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Japam (जपम्)</div>
+                    <div class="flashcard-back">Chanting; repetition of mantras</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Why is deerskin specifically used as a seat for Ashtanga Yoga, as mentioned in the scriptures?</div>
+                    <div class="flashcard-back">Traditionally, deerskin is considered purifying, and Lord Shiva himself sets an example by meditating on it. Additionally, it possesses a peculiar characteristic that wards off reptiles and snakes, which is beneficial for yogis meditating in secluded, wild places. It's also part of many traditional Vedic rituals, signifying its sacredness and specific properties for spiritual practices, such as being attached to the sacred thread (Upavitam) during certain ceremonies like Upanayanam and used for Japam.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Strict Prerequisites for Ashtanga Yoga</div>
+                    <div class="flashcard-back">The lecture begins by outlining the demanding conditions for Ashtanga Yoga as described in Bhagavad Gita Chapter 6. These include selecting an auspicious (Shuchavu Deshe) and secluded place, preparing...</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Ashtanga Yoga's Impracticality in Kali Yuga</div>
+                    <div class="flashcard-back">The speaker argues that properly practicing Ashtanga Yoga in the current age of Kali is exceedingly difficult, if not impossible. The conditions required—such as finding truly pious and secluded place...</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Harinam: Kali Yuga's Practical Spiritual Path</div>
+                    <div class="flashcard-back">In contrast to the challenges of Ashtanga Yoga, the lecture glorifies the chanting of the holy name of the Lord (Harinam Sankirtan) as the only practically viable and guaranteed spiritual process for ...</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Senses & Mind: The Source of Spiritual Embarrassment</div>
+                    <div class="flashcard-back">The speaker poignantly describes how the uncontrolled senses and mind constantly 'embarrass' an individual, hindering spiritual progress and forcing one to take up spiritual practices. However, even t...</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">The Imperative of Following Yathashrutam</div>
+                    <div class="flashcard-back">The lecture stresses that any yogic or spiritual process must be performed exactly 'as heard' (Yathashrutam) from authoritative sources and previous acharyas to bear fruit. Modifying or adapting the p...</div>
+                </div>
+            </div>
+            
+        </div>
+    
+        </div>
+        
+        <div class="tab-content" id="transcript">
+            <p class="content-text">No transcript available for this lecture.</p>
+        </div>
+    </div>
+    
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+        
+        // Tab switching
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tab = btn.dataset.tab;
+                
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                btn.classList.add('active');
+                document.getElementById(tab).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
