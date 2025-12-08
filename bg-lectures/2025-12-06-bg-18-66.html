@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlock Joy: Krishna's Supreme Secret of Surrender (BG 18.66) | Auburn Hills Bhakti Vriksha</title>
+    <meta name="description" content="Krishna reveals in BG 18.66 that by fully surrendering all forms of religion and completely relying on Him, one is liberated from all sinful reactions">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #E8D4A2 0%, #D4C5A0 50%, #C4B598 100%);
+            min-height: 100vh;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #8B7752 0%, #6B5D42 100%);
+            padding: 30px 20px;
+            text-align: center;
+            color: #E8D4A2;
+            border-bottom: 4px solid #3A2F1F;
+        }
+        
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8em, 4vw, 2.5em);
+            font-weight: 900;
+        }
+        
+        header a { color: #E8D4A2; text-decoration: none; transition: opacity 0.3s; }
+        header a:hover { opacity: 0.8; }
+        
+        .breadcrumbs {
+            background: rgba(232, 212, 162, 0.3);
+            padding: 15px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+        }
+        
+        .breadcrumbs a { color: #5A4D37; text-decoration: none; font-weight: 600; }
+        .breadcrumbs a:hover { color: #3A2F1F; }
+        .breadcrumbs span { margin: 0 8px; color: #8B7752; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        
+        .lecture-header {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 3px solid rgba(139, 119, 82, 0.2);
+            box-shadow: 0 4px 12px rgba(58, 47, 31, 0.1);
+        }
+        
+        .lecture-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8em, 4vw, 2.8em);
+            color: #3A2F1F;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        .lecture-meta { display: flex; gap: 12px; flex-wrap: wrap; }
+        
+        .badge {
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .badge-date {
+            background: rgba(232, 212, 162, 0.4);
+            color: #5A4D37;
+            border: 2px solid rgba(139, 119, 82, 0.3);
+        }
+        
+        .badge-verse {
+            background: rgba(139, 119, 82, 0.2);
+            color: #3A2F1F;
+            border: 2px solid rgba(139, 119, 82, 0.4);
+        }
+        
+        .badge-speaker {
+            background: rgba(196, 30, 58, 0.1);
+            color: #8b0000;
+            border: 2px solid rgba(196, 30, 58, 0.3);
+        }
+        
+        .lecture-tabs {
+            display: flex;
+            background: rgba(232, 212, 162, 0.3);
+            border-radius: 12px 12px 0 0;
+            overflow-x: auto;
+            border: 3px solid rgba(139, 119, 82, 0.2);
+            border-bottom: none;
+        }
+        
+        .tab-btn {
+            flex: 1;
+            padding: 18px 24px;
+            border: none;
+            background: transparent;
+            color: #5A4D37;
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(0.85em, 2vw, 1em);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            border-right: 1px solid rgba(139, 119, 82, 0.2);
+        }
+        
+        .tab-btn:last-child { border-right: none; }
+        .tab-btn:hover { background: rgba(232, 212, 162, 0.5); color: #3A2F1F; }
+        .tab-btn.active { background: white; color: #3A2F1F; font-weight: 700; }
+        
+        .tab-content {
+            display: none;
+            background: white;
+            padding: 40px;
+            border-radius: 0 0 12px 12px;
+            border: 3px solid rgba(139, 119, 82, 0.2);
+            border-top: none;
+            min-height: 400px;
+        }
+        
+        .tab-content.active { display: block; }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .mermaid-container {
+            background: rgba(232, 212, 162, 0.1);
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid rgba(139, 119, 82, 0.2);
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        .mermaid {
+            display: flex;
+            justify-content: center;
+            min-height: 400px;
+        }
+        
+        .section-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            color: #3A2F1F;
+            margin: 30px 0 20px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(139, 119, 82, 0.2);
+        }
+        
+        .content-text {
+            font-size: 1.15em;
+            line-height: 1.8;
+            color: #5A4D37;
+            margin-bottom: 20px;
+        }
+        
+        .theme-card {
+            background: rgba(232, 212, 162, 0.2);
+            border: 2px solid rgba(139, 119, 82, 0.3);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .theme-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4em;
+            color: #3A2F1F;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .flashcard-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .flashcard {
+            perspective: 1000px;
+            height: 250px;
+            cursor: pointer;
+        }
+        
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flashcard-front, .flashcard-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            border: 3px solid rgba(139, 119, 82, 0.3);
+        }
+        
+        .flashcard-front {
+            background: linear-gradient(135deg, #8B7752 0%, #6B5D42 100%);
+            color: #E8D4A2;
+            font-weight: 700;
+        }
+        
+        .flashcard-back {
+            background: white;
+            color: #3A2F1F;
+            transform: rotateY(180deg);
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .lecture-header { padding: 25px; }
+            .tab-content { padding: 25px; }
+            .tab-btn { padding: 14px 16px; font-size: 0.85em; }
+            .flashcard-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="../index.html">🕉️ Auburn Hills Bhakti Vriksha</a></h1>
+    </header>
+    
+    <div class="breadcrumbs">
+        <a href="../index.html">Home</a>
+        <span>›</span>
+        <a href="../bg-lectures.html">Bhagavad Gita Lectures</a>
+        <span>›</span>
+        <span>Unlock Joy: Krishna's Supreme Secret of Surrender (BG 18.66)</span>
+    </div>
+    
+    <div class="container">
+        <div class="lecture-header">
+            <h1 class="lecture-title">Unlock Joy: Krishna's Supreme Secret of Surrender (BG 18.66)</h1>
+            <div class="lecture-meta">
+                <span class="badge badge-date">📅 December 5, 2025</span>
+                <span class="badge badge-verse">📖 BG 18.66</span>
+                <span class="badge badge-speaker">🎤 Jai Sacinandana Kṛṣṇa Dāsa</span>
+            </div>
+        </div>
+        
+        <div class="lecture-tabs">
+            <button class="tab-btn active" data-tab="overview">Overview</button>
+            <button class="tab-btn" data-tab="mindmap">Mind Map</button>
+            <button class="tab-btn" data-tab="notes">Study Notes</button>
+            <button class="tab-btn" data-tab="flashcards">Flashcards</button>
+            <button class="tab-btn" data-tab="transcript">Transcript</button>
+        </div>
+        
+        <div class="tab-content active" id="overview">
+            <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/ybDaNoVChH0" frameborder="0" allowfullscreen></iframe>
+        </div><h2 class="section-heading">Key Takeaway</h2>
+        <p class="content-text">Krishna reveals in BG 18.66 that by fully surrendering all forms of religion and completely relying on Him, one is liberated from all sinful reactions, ensuring a return to the spiritual world.</p><h2 class="section-heading">Main Theme</h2>
+        <p class="content-text">The Importance of Absolute Surrender and Pure Devotion to Krishna</p><h2 class="section-heading">Summary</h2>
+        <p class="content-text">Jai Sacinandana Kṛṣṇa Dāsa explains Krishna's ultimate instruction in Bhagavad Gita 18.66: surrender to Him alone. He delves into the nature of Ishvara, Jeeva, Prakriti, Kaala, and Karma, emphasizing how pure devotion transcends material gunas and leads to true liberation and joy by giving up false ego.</p>
+        </div>
+        
+        <div class="tab-content" id="mindmap">
+            
+        <h2 class="section-heading">Lecture Structure & Flow</h2>
+        <div class="mermaid-container">
+            <div class="mermaid">
+graph TD
+    A(Sincere Chanting
+& Honesty)
+    B[Revelation of Truth]
+    C["Realize Mind Control
+(Self vs. Mind)"]
+    D["Understand BG's 5 Topics
+(Ishvara, Jeeva, Prakriti, Kaala, Karma)"]
+    E["Jnana (Knowledge):
+Recognize Janma, Mrityu, Jara, Vyadhi
+as Real Problems"]
+    F("Cultivate Humility
+(Amanitvam)")
+    G(("Spiritual Master's Blessings"))
+    H["Avyabhicharani Bhakti
+(Unalloyed Devotion)"]
+    I{Transcend 3 Gunas}
+    J(["Full Surrender to Krishna
+(BG 18.66)"])
+    K([Liberation from Sins
+& Return to Spiritual World])
+    A -->|Leads to| B
+    B -->|Enables| C
+    C -->|Motivates Study| D
+    D -->|Grants| E
+    E -->|Results in| F
+    F -->|Attracts| G
+    E -->|Highest Form of Jnana| H
+    H -->|Enables| I
+    I -->|Leads to| J
+    G -->|Facilitates| J
+    J -->|Guarantees| K
+            </div>
+        </div>
+        <p class="content-text" style="margin-top: 20px; font-style: italic;">
+            This visual diagram shows the key concepts and their relationships discussed in this lecture.
+        </p>
+    
+        </div>
+        
+        <div class="tab-content" id="notes">
+            <h2 class="section-heading">Key Concepts</h2>
+            <div class="theme-card">
+                <h3 class="theme-title">Revelation Through Sincere Chanting</h3>
+                <p class="content-text">The lecture begins by emphasizing that sincere chanting of the Hare Krishna mantra is a process of revelation. Integrity and honest service to the mantra bring deeper understanding. Initially, one realizes the mind's distraction, which is a step towards recognizing oneself as distinct from the mind. This process of purification can lead to direct revelation of knowledge by Krishna within the heart, similar to how Brahmaji received knowledge.</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">Realizing mind's distraction during chanting as a sign of progress.</li><li class="content-text">Brahmaji's heart being revealed knowledge by Krishna.</li></ul>
+                
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Five Topics of Bhagavad Gita: Ishvara, Jeeva, Prakriti, Kaala, Karma</h3>
+                <p class="content-text">The Bhagavad Gita fundamentally discusses five topics: Ishvara (God), Jeeva (the living entity), Prakriti (material nature), Kaala (time), and Karma (activity). Ishvara, Jeeva, Prakriti, and Kaala are eternal, while Karma is not. Understanding these five topics constitutes 'sambandha jnana' (knowledge of relationships) and is crucial for burning karma. Ignorance of these topics leads to a materialistic, deterministic worldview, denying free will and moral responsibility.</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">Scientists' deterministic view: 'My electrical signal fired that, I did not do anything.'</li><li class="content-text">Karl Marx, Richard Dawkins representing materialistic philosophy.</li></ul>
+                
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Kshetra and Kshetrajna: The Field and the Knower</h3>
+                <p class="content-text">Krishna explains the distinction between 'Kshetra' (the field, which includes the body, mind, and environment) and 'Kshetrajna' (the knower, the soul). Anything one refers to as 'this' (idam) is material and part of the Kshetra. The soul, as the knower, cannot be proven as an object, because anything proven becomes an object. The Kshetra is constantly changing, while the Kshetrajna remains constant. This is illustrated by the 'two birds on a tree' analogy, where one bird (Jeevatma) is entangled in eating fruits (material activities) and becoming weak, while the other (Paramatma) is a detached observer.</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">A house being 'this house' or a body being 'this body'.</li><li class="content-text">The analogy of two birds on a tree, one eating fruits and the other watching.</li></ul>
+                
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">The Nature of True Knowledge (Jnana)</h3>
+                <p class="content-text">True knowledge (jnana) is described as a set of qualities, starting with humility (amanitvam). It means not being anxious for honor from others and understanding that all good qualities come from Krishna. A key aspect of jnana is recognizing the 'dosha' (faults) of repeated birth, death, old age, and disease (janma, mrityu, jara, vyadhi, dukkha, dosha, anudarshanam). Krishna asserts that material solutions only address false problems, but jnana identifies these four unavoidable miseries as the actual problem. It also includes 'bhakti rabhivacharini' (unprostituted devotion) as topmost jnana, demonstrating that devotion is not sentimental but the highest form of knowledge.</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">Recognizing that buying a new car or starting a business does not solve birth, death, old age, and disease.</li><li class="content-text">Humility as understanding 'whatever I consider as me, it is nothing but Krishna's humility'.</li></ul>
+                
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Transcending the Three Gunas through Avyabhicharani Bhakti</h3>
+                <p class="content-text">The Jeeva, entangled in Prakriti, experiences the influence of the three gunas: Sattva (goodness), Rajas (passion), and Tamas (ignorance). Krishna describes the 'lakshanam' (symptoms) of each guna. Sattva guna leads to clarity and peacefulness (Prakashakam, Nirmalatvaadhu), Rajas to incessant desire (Trishna), and Tamas to ignorance and ignoring reality. These gunas bind the Jeeva. The only way to transcend them is 'avyabhicharani bhakti' – exclusive, unprostituted devotion to Krishna, desiring nothing else but Him and depending solely on His lotus feet. This continuous bhakti is essential, as any deviation leads to entanglement with Maya.</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">A peaceful mind in Sattva Guna like a still lake reflecting the moon.</li><li class="content-text">Rajoguna characterized by constant desire and 'I want it now'.</li></ul>
+                
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">The Material World as a Reflection of the Spiritual</h3>
+                <p class="content-text">The speaker explains the concept of the 'upside-down tree' (urdhamuolam adashakam) from BG Chapter 15, where the material world is a perverted reflection of the spiritual world. While reflections appear similar, they are ultimately unreal and offer no substance (e.g., touching a reflected mango yields only water). This analogy highlights that all material pursuits, desires, and enjoyments are ultimately dull matter and illusory. To return to the real spiritual world, one must cut off attachment to this material world with the axe of 'asanga shastrena' (detachment) and embrace the principle of 'namaha' (not mine, it is Yours, Krishna).</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">Touching a reflected mango in water, one gets only water, not the fruit.</li><li class="content-text">Flesh from a boy/girl, matter from food, all are dull matter in the material world.</li></ul>
+                
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Krishna as Purushottama: The Supreme Secret (BG 18.66)</h3>
+                <p class="content-text">Krishna repeatedly emphasizes His position as 'Purushottama' (the Supreme Person), distinguishing Himself from both conditioned and liberated living entities. Understanding Krishna as Purushottama 'without a doubt' (asam mudho jaanati purushottamaam) makes one 'sarva viddha' (knower of everything). This is the 'guhyatamam shastram' (most confidential knowledge). The lecture culminates in Krishna's ultimate instruction in BG 18.66: 'sarva-dharmān parityajya mām ekaṁ śaraṇaṁ vraja' – abandon all varieties of religion and surrender to Him alone. This surrender guarantees liberation from sinful reactions and a return to the spiritual world, fulfilling the goal of life.</p>
+                
+                <p><strong>Examples:</strong></p>
+                <ul><li class="content-text">Krishna explicitly stating 'I am the Supreme Personality of Godhead' even though it may seem egotistical to mundane thinkers.</li><li class="content-text">The insult to Prabhupada if one reads his Bhagavad Gita and returns to the material world.</li></ul>
+                
+            </div><h2 class="section-heading">📚 Sanskrit Terms</h2>
+            <div class="theme-card">
+                <h3 class="theme-title">Kapata (कपट)</h3>
+                <p class="content-text">Deceitfulness, insincerity</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Sevanmukhe hijikvada svayam eva sphuratyata (सेवन्मुखे हिजिह्वदा स्वयमेव स्फुरत्यतः)</h3>
+                <p class="content-text">Truth revealed by service to the mantra</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Mudhoyam nabhijanati yogamaya samavrata (मूढोऽयं नाभिजानाति मामेभ्यः परमव्ययम्)</h3>
+                <p class="content-text">Foolish cannot understand Krishna</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Budha (बुध)</h3>
+                <p class="content-text">One with intelligence</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Bhava samanvitaha (भाव समन्वितः)</h3>
+                <p class="content-text">Endowed with love/devotion</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Aham sarvasya prabhavo matta sarvam pravartate (अहं सर्वस्य प्रभवो मत्तः सर्वं प्रवर्तते)</h3>
+                <p class="content-text">Krishna is the origin of everything</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Ishwaro aham aham bhogi, siddho aham balaban suki (ईश्वरोऽहम् अहं भोगी सिद्धोऽहं बलवान् सुखी)</h3>
+                <p class="content-text">Demoniac thought: 'I am God, enjoyer, perfect'</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Parasmi prakasham (परस्मि प्रकाशम्)</h3>
+                <p class="content-text">Validated by others</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Swayam Prakasham (स्वयम् प्रकाशम्)</h3>
+                <p class="content-text">Self-illuminating, self-evident</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Ishvara, Jeeva, Prakriti, Kaala, Karma (ईश्वर, जीव, प्रकृति, काल, कर्म)</h3>
+                <p class="content-text">Five topics of Bhagavad Gita</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Jnana agni daddha karmaana (ज्ञानाग्नि दग्ध कर्माणं)</h3>
+                <p class="content-text">Karma burnt by the fire of knowledge</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Kshetra (क्षेत्र)</h3>
+                <p class="content-text">The field (body, mind, environment)</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Kshetrajna (क्षेत्रज्ञ)</h3>
+                <p class="content-text">The knower of the field (the soul)</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Dwaa suparna sayujaa shakhaaya (द्वा सुपर्णा सयुजा सखाया)</h3>
+                <p class="content-text">Two birds on a tree (Jeevatma & Paramatma)</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Janma, mrityu, zara, yadhi, dukkha, dosha, anudarshanam (जन्म मृत्यु जरा व्याधि दुःख दोषानुदर्शनम्)</h3>
+                <p class="content-text">Seeing fault in birth, death, old age, disease</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Avyabhicharani Bhakti (अव्यभिचारिणी भक्ति)</h3>
+                <p class="content-text">Unprostituted/exclusive devotion</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Urdhamuolam adashakam asvatam prahuravyev (ऊर्ध्वमूलमधःशाखमश्वत्थं प्राहुरव्ययम्)</h3>
+                <p class="content-text">Upside-down tree (material world)</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Asanga Shastrena, Dhridhena Chitva (असङ्गशस्त्रेण दृढेन छित्त्वा)</h3>
+                <p class="content-text">Cut with the weapon of detachment</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Namaha (नमः)</h3>
+                <p class="content-text">Not mine, I offer obeisances</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Purushottama (पुरुषोत्तम)</h3>
+                <p class="content-text">Supreme Person</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Asam mudho jaanati purushottamaam (असम्मूढो जानाति पुरुषोत्तमम्)</h3>
+                <p class="content-text">One who knows Krishna as Purushottama without doubt</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Guhyatamam Shastram (गुह्यतमं शास्त्रं)</h3>
+                <p class="content-text">Most confidential scripture/knowledge</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Daivi Sampat (दैवी सम्पत्)</h3>
+                <p class="content-text">Divine qualities/nature</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Asuri Sampad (आसुरी सम्पद्)</h3>
+                <p class="content-text">Demoniac qualities/nature</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Kama, Krodha, Lobha (काम, क्रोध, लोभ)</h3>
+                <p class="content-text">Lust, anger, greed</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Sarva dharman parityajya mam ekam sharanam vraja (सर्वधर्मान् परित्यज्य मामेकं शरणं व्रज)</h3>
+                <p class="content-text">Abandon all varieties of religion and just surrender unto Me</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Pranipatena pariprashtenateya Sevaya (प्रणिपातेन परिप्रश्नेन सेवया)</h3>
+                <p class="content-text">Approach with submission, inquiry, and service</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Aparabhakti (अपराभक्ति)</h3>
+                <p class="content-text">Preliminary/material devotion</p>
+            </div>
+            <div class="theme-card">
+                <h3 class="theme-title">Parabhakti (पराभक्ति)</h3>
+                <p class="content-text">Perfected/transcendental devotion</p>
+            </div><h2 class="section-heading">Practical Applications</h2><ul><li class="content-text">Cultivate Sincerity and Honesty in Spiritual Practice</li><li class="content-text">Understand the Five Fundamental Topics of Bhagavad Gita</li><li class="content-text">Recognize the Real Problems of Existence</li><li class="content-text">Practice Avyabhicharani Bhakti (Unalloyed Devotion)</li><li class="content-text">Embrace Surrender to Krishna's Ultimate Instruction</li><li class="content-text">Seek Blessings and Guidance from a Pure Spiritual Master</li></ul><h2 class="section-heading">Notable Quotes</h2><blockquote class="content-text">"The process of revelation. If you are sincerely serving the mantra, if you have integrity and serve the mantra, many many things will be revealed to us more and more and more and more."</blockquote><blockquote class="content-text">"All I have to do to progress in Krishna consciousness is just be honest and depend on Krishna."</blockquote><blockquote class="content-text">"Now when you are trying to chant Hare Krishna mantra, we realize our mind is getting distracted. That means what? We are seeing the mind. That means we have realized to some extent that we are different from the mind."</blockquote><blockquote class="content-text">"Krishna says, for such a person who loves me so dearly, Krishna says, I will give you knowledge... there is a romance between the devotee and Krishna."</blockquote><blockquote class="content-text">"How can you love someone without knowing about that person?"</blockquote><blockquote class="content-text">"Krishna Himself will teach you. Krishna will say, do this, don't do that. Krishna will remind you. Krishna will remind you to de-prioritize something."</blockquote><blockquote class="content-text">"It's not possible to control the mind without realization. It's not possible. When the realization comes, automatically the mind becomes chukcha."</blockquote><blockquote class="content-text">"If you have conquered your mind, you are seeing the Paramatma."</blockquote><blockquote class="content-text">"Whatever solutions you are going for, you buy a Tesla, you do this startup... Krishna is saying all this is agnanam. Because all these startups are only solving a false problem, they are not solving the real problem."</blockquote><blockquote class="content-text">"You have Jnanam when you understand whatever you want to do, you do. You do whatever you want to do, but you won't be happy. Go. Go. What you want to do, this material world, go. Go do it. But these four things will always be there."</blockquote><blockquote class="content-text">"The goal of life is to not be born again because as soon as you are born with this material body, a troublesome condition begins."</blockquote><blockquote class="content-text">"One should not think bhakti is sentimental. Why? Because Krishna is classifying Bhakti Rabhivacharini as topmost Jnana."</blockquote><blockquote class="content-text">"Unless we do continuous bhakti, you cannot understand what is bhakti."</blockquote><blockquote class="content-text">"If I ignore that continuum [of life], what happens? It is tamoguna."</blockquote><blockquote class="content-text">"The material world is a reflection of the spiritual world. So, we should not, we cannot negate our feelings. You should understand, if I feel something, it must have a spiritual parallel."</blockquote><blockquote class="content-text">"Whatever you want to touch, it is all different manifestations of same useless illusion. Same matter, dull matter."</blockquote><blockquote class="content-text">"That is why to give up this maanam, Krishna again and again brings as the first principle."</blockquote><blockquote class="content-text">"Our whole, all the process of bhakti is merely namashabdha. No, this is not mine, it is yours, Krishna."</blockquote><blockquote class="content-text">"Anyone who is trying to present Bhagavad Gita without this understanding that Krishna is the purushottama, he is buddhi vihinam, he is maya apakritat jnanam."</blockquote><blockquote class="content-text">"If you cultivate divine qualities, you will become lighter and lighter and lighter. Your mind will become less and less a burden."</blockquote><blockquote class="content-text">"If you don't obey the Shastram, you'll obey your mind. And if you obey the mind, you'll obey the three gunas."</blockquote><blockquote class="content-text">"The people are constantly trying to fit Bhagavad Gita to the public, not trying to fit the public to the Bhagavad Gita."</blockquote><blockquote class="content-text">"Bhakti begins after Self-realization."</blockquote><blockquote class="content-text">"How fortunate are these syllables to have come from the beautiful lips of Krishna."</blockquote><blockquote class="content-text">"Some people when they hear Bhagavad Gita they are bored. Why are they bored? They are having material motivations so they feel bored."</blockquote><blockquote class="content-text">"Humility comes from knowledge."</blockquote><blockquote class="content-text">"When a spiritual master is pleased with you, he likes you, then you will get knowledge."</blockquote>
+        </div>
+        
+        <div class="tab-content" id="flashcards">
+            
+        <p class="content-text">Click on a card to flip it!</p>
+        <div class="flashcard-container">
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Kapata (कपट)</div>
+                    <div class="flashcard-back">Deceitfulness, insincerity</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Sevanmukhe hijikvada svayam eva sphuratyata (सेवन्मुखे हिजिह्वदा स्वयमेव स्फुरत्यतः)</div>
+                    <div class="flashcard-back">Truth revealed by service to the mantra</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Mudhoyam nabhijanati yogamaya samavrata (मूढोऽयं नाभिजानाति मामेभ्यः परमव्ययम्)</div>
+                    <div class="flashcard-back">Foolish cannot understand Krishna</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Budha (बुध)</div>
+                    <div class="flashcard-back">One with intelligence</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Bhava samanvitaha (भाव समन्वितः)</div>
+                    <div class="flashcard-back">Endowed with love/devotion</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Aham sarvasya prabhavo matta sarvam pravartate (अहं सर्वस्य प्रभवो मत्तः सर्वं प्रवर्तते)</div>
+                    <div class="flashcard-back">Krishna is the origin of everything</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Ishwaro aham aham bhogi, siddho aham balaban suki (ईश्वरोऽहम् अहं भोगी सिद्धोऽहं बलवान् सुखी)</div>
+                    <div class="flashcard-back">Demoniac thought: 'I am God, enjoyer, perfect'</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Parasmi prakasham (परस्मि प्रकाशम्)</div>
+                    <div class="flashcard-back">Validated by others</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Swayam Prakasham (स्वयम् प्रकाशम्)</div>
+                    <div class="flashcard-back">Self-illuminating, self-evident</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Ishvara, Jeeva, Prakriti, Kaala, Karma (ईश्वर, जीव, प्रकृति, काल, कर्म)</div>
+                    <div class="flashcard-back">Five topics of Bhagavad Gita</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Jnana agni daddha karmaana (ज्ञानाग्नि दग्ध कर्माणं)</div>
+                    <div class="flashcard-back">Karma burnt by the fire of knowledge</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Kshetra (क्षेत्र)</div>
+                    <div class="flashcard-back">The field (body, mind, environment)</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Kshetrajna (क्षेत्रज्ञ)</div>
+                    <div class="flashcard-back">The knower of the field (the soul)</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Dwaa suparna sayujaa shakhaaya (द्वा सुपर्णा सयुजा सखाया)</div>
+                    <div class="flashcard-back">Two birds on a tree (Jeevatma & Paramatma)</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Janma, mrityu, zara, yadhi, dukkha, dosha, anudarshanam (जन्म मृत्यु जरा व्याधि दुःख दोषानुदर्शनम्)</div>
+                    <div class="flashcard-back">Seeing fault in birth, death, old age, disease</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Avyabhicharani Bhakti (अव्यभिचारिणी भक्ति)</div>
+                    <div class="flashcard-back">Unprostituted/exclusive devotion</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Urdhamuolam adashakam asvatam prahuravyev (ऊर्ध्वमूलमधःशाखमश्वत्थं प्राहुरव्ययम्)</div>
+                    <div class="flashcard-back">Upside-down tree (material world)</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Asanga Shastrena, Dhridhena Chitva (असङ्गशस्त्रेण दृढेन छित्त्वा)</div>
+                    <div class="flashcard-back">Cut with the weapon of detachment</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Namaha (नमः)</div>
+                    <div class="flashcard-back">Not mine, I offer obeisances</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Purushottama (पुरुषोत्तम)</div>
+                    <div class="flashcard-back">Supreme Person</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Asam mudho jaanati purushottamaam (असम्मूढो जानाति पुरुषोत्तमम्)</div>
+                    <div class="flashcard-back">One who knows Krishna as Purushottama without doubt</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Guhyatamam Shastram (गुह्यतमं शास्त्रं)</div>
+                    <div class="flashcard-back">Most confidential scripture/knowledge</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Daivi Sampat (दैवी सम्पत्)</div>
+                    <div class="flashcard-back">Divine qualities/nature</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Asuri Sampad (आसुरी सम्पद्)</div>
+                    <div class="flashcard-back">Demoniac qualities/nature</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Kama, Krodha, Lobha (काम, क्रोध, लोभ)</div>
+                    <div class="flashcard-back">Lust, anger, greed</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Sarva dharman parityajya mam ekam sharanam vraja (सर्वधर्मान् परित्यज्य मामेकं शरणं व्रज)</div>
+                    <div class="flashcard-back">Abandon all varieties of religion and just surrender unto Me</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Pranipatena pariprashtenateya Sevaya (प्रणिपातेन परिप्रश्नेन सेवया)</div>
+                    <div class="flashcard-back">Approach with submission, inquiry, and service</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Aparabhakti (अपराभक्ति)</div>
+                    <div class="flashcard-back">Preliminary/material devotion</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Parabhakti (पराभक्ति)</div>
+                    <div class="flashcard-back">Perfected/transcendental devotion</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">I lost. So with Vyana, with knowledge, we get humility or with humility we get knowledge. Which comes first?</div>
+                    <div class="flashcard-back">Humility comes from knowledge. So first knowledge comes, then we get humility. Yes. How do you get knowledge? By humble. I don't know. Is it a low? 4.34 Tad viddhi pranipatena pariprashtenateya Upadekshaan shite jnanu jnanu naa naa padhapadashnaa Go and serve, surrender, massage the devotees feet. We are not part of humility now. But humility alone cannot give you knowledge. You must have the association and blessings of a pure devotee. The devotee must bless you. Krishna is telling Sudama, Sudama, why I am able to remember everything? Because Sandipani Muni blessed me. That is why I am able to remember everything. Really? Krishna is Bhagawan. But what is Krishna saying? You know why I am able to remember everything, Sudama? Sandipani Muni blessed us, That is why I am able to remember everything. So my Krishna Guru says, when a spiritual master is pleased with you, he likes you, then you will get knowledge. He has to you. So you have to impress him with your antics. Something you have to do to impress him. When he is impressed by you, then you will get knowledge. How will you know? When you have knowledge, you will know you have knowledge. And you would have pleased. Just when you are in the sun, you don't doubt whether there is sun or not. It is too, it is too much to doubt. Too much sun is there to doubt the sun. Similarly, when there is dhyanam, prakāyatakaliratparam, ādityavat jñānam. Ādityavat jñānam. Like an āditya, sun. So you will know you have knowledge that there is knowledge. Yes, I have knowledge. Grace of the spiritual master.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Is there any scenario that a tapastha feels that he blessed a guru, so he is happy? I would not say he blessed, it was probably him. He was blessed by a guru, but somehow those blessings were taken back, because the bliss you are in at one point of time, that little things, there's when you don't continue to keep your spirits or improve yourself to get what I think you want to do. Have this happened ever? Or is it just a concussion?</div>
+                    <div class="flashcard-back">So, blessings of the spiritual master comes in faces. So to the extent we surrender, to that extent we receive reciprocation from the spiritual master. So initially when our surrender is even small, spiritual master being merciful, he showers a rain cloud, a fresh shower of realization, even though my surrender is very less. But that is to encourage me to surrender more. Encourage me to surrender more. And sometimes we will suspend it. So to tell me that I have to go further. And what that further something of course differs from person to person. But yeah so one should not think in a very causative manner as Mursi. One should continue to please his spiritual master and Krishna is very merciful and encourages like he encouraged Narada Muni in his previous life. And the small boy he gave darshan but he suspended that darshan. So Narada Muni had to like Go further and then be born as a son of Brahman that way, become more qualified. In this way Krishna also wants us to take a further step and gives us a reward sometimes to entice us to come closer. So this is Krishna's way of attracting us. But another way of saying it is, when we don't want to get any bliss, When I want to simply satisfy the spiritual master alone, even when I am not blissful, that is a greater proof that I have satisfied the spiritual master. When I am ready to satisfy the spiritual master even when I am not blissful, because when he is satisfied, why should I, satisfied or not satisfied, what does it matter? If I am blissful or not blissful, that is even, of course I understand what you are saying, you are saying if this is a. With the understanding of that I was in a different state for some time, and out of that state, realization happened. Only then you realize that you were at a different state somewhere and you came down. So it is not an intention to ask whether I am in this state back or not. But I really appreciate that whether in whichever state you are, you be serving whatever you are serving. Whatever comes, it comes. Do you just take it and you don't need to be the hacker, nor dissent, nor excite, feel anything? No, not necessarily. All of us, it's a personal process. We can become enthusiastic when there is reciprocation. Definitely that is. But we can become grateful. The gratefulness is also a feeling. That's good. So, yeah, your attitude is very nice. All I'm saying is, because it's a personal process, , one other way of saying it is, we don't have to be guessing whether we are pleasing the spiritual master or not. We can ask the spiritual master personally, We don't have to make up in the mind. Am I pleasing you or not? Very simply we can ask, That is why we have a physical spiritual master. If not, then we can all accept Krishna as a spiritual master also. He is Adi Guru. So we can ask, am I pleasing you or not? We can ask. Are my actions pleasing to you? May God bless you. But even this question itself is a nice question because in that question has the bhaab that I want to please. That is also nice.</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Revelation Through Sincere Chanting</div>
+                    <div class="flashcard-back">The lecture begins by emphasizing that sincere chanting of the Hare Krishna mantra is a process of revelation. Integrity and honest service to the mantra bring deeper understanding. Initially, one rea...</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Five Topics of Bhagavad Gita: Ishvara, Jeeva, Prakriti, Kaala, Karma</div>
+                    <div class="flashcard-back">The Bhagavad Gita fundamentally discusses five topics: Ishvara (God), Jeeva (the living entity), Prakriti (material nature), Kaala (time), and Karma (activity). Ishvara, Jeeva, Prakriti, and Kaala are...</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Kshetra and Kshetrajna: The Field and the Knower</div>
+                    <div class="flashcard-back">Krishna explains the distinction between 'Kshetra' (the field, which includes the body, mind, and environment) and 'Kshetrajna' (the knower, the soul). Anything one refers to as 'this' (idam) is mater...</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">The Nature of True Knowledge (Jnana)</div>
+                    <div class="flashcard-back">True knowledge (jnana) is described as a set of qualities, starting with humility (amanitvam). It means not being anxious for honor from others and understanding that all good qualities come from Kris...</div>
+                </div>
+            </div>
+            
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Transcending the Three Gunas through Avyabhicharani Bhakti</div>
+                    <div class="flashcard-back">The Jeeva, entangled in Prakriti, experiences the influence of the three gunas: Sattva (goodness), Rajas (passion), and Tamas (ignorance). Krishna describes the 'lakshanam' (symptoms) of each guna. Sa...</div>
+                </div>
+            </div>
+            
+        </div>
+    
+        </div>
+        
+        <div class="tab-content" id="transcript">
+            <p class="content-text">No transcript available for this lecture.</p>
+        </div>
+    </div>
+    
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+        
+        // Tab switching
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tab = btn.dataset.tab;
+                
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                btn.classList.add('active');
+                document.getElementById(tab).classList.add('active');
+            });
+        });
+    </script>
+    <script>
+    // Add this debugging code
+    const mermaidElement = document.querySelector('.mermaid');
+    if (mermaidElement) {
+        console.log('=== MERMAID CODE ===');
+        console.log(mermaidElement.textContent);
+        console.log('=== END MERMAID CODE ===');
+        
+        // Check for common issues
+        const code = mermaidElement.textContent;
+        console.log('Has proper newlines:', code.includes('\n'));
+        console.log('Number of lines:', code.split('\n').length);
+        console.log('First 100 chars:', code.substring(0, 100));
+    }
+    
+    mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+    
+    // Tab switching
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const tab = btn.dataset.tab;
+            
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            
+            btn.classList.add('active');
+            document.getElementById(tab).classList.add('active');
+        });
+    });
+</script>
+</body>
+</html>

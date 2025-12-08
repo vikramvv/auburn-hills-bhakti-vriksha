@@ -305,34 +305,30 @@
         <div class="mermaid-container">
             <div class="mermaid">
 graph TD
-    SUBGRAPH "Dharma: Path of Righteousness"
-        D1[Prescribed Duties]
-        D2[Regulated Activities]
-        D3[Accommodates Artha (resources)]
-        D4[Accommodates Kama (enjoyment)]
-        D5[Connects to the Lord (indirectly)]
-    END
-    
-    SUBGRAPH "Yoga: Path of Union"
-        Y1[Uniting with the Lord]
-        Y2[Freedom from Material Desire]
-        Y3[No Artha (resources)]
-        Y4[No Kama (enjoyment)]
-        Y5[Direct Connection to Krishna]
-    END
-    
-    D1 --> D2
-    D2 --> D3
-    D3 --> D4
-    D4 --> D5
-    
-    Y1 --> Y2
-    Y2 --> Y3
-    Y3 --> Y4
-    Y4 --> Y5
-    
-    D5 -- "Can lead to" --> Y5
-    Y5 -- "The Ultimate Goal" --> P[Purification & Liberation]
+SUBGRAPH "Dharma: Path of Righteousness"
+D1[Prescribed Duties]
+D2[Regulated Activities]
+D3[Accommodates Artha (resources)]
+D4[Accommodates Kama (enjoyment)]
+D5[Connects to the Lord (indirectly)]
+END
+SUBGRAPH "Yoga: Path of Union"
+Y1[Uniting with the Lord]
+Y2[Freedom from Material Desire]
+Y3[No Artha (resources)]
+Y4[No Kama (enjoyment)]
+Y5[Direct Connection to Krishna]
+END
+D1 --> D2
+D2 --> D3
+D3 --> D4
+D4 --> D5
+Y1 --> Y2
+Y2 --> Y3
+Y3 --> Y4
+Y4 --> Y5
+D5 -- "Can lead to" --> Y5
+Y5 -- "The Ultimate Goal" --> P[Purification & Liberation]
             </div>
         </div>
         <p class="content-text" style="margin-top: 20px; font-style: italic;">

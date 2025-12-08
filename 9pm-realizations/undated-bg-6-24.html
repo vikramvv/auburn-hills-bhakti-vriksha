@@ -278,7 +278,7 @@
         <div class="lecture-header">
             <h1 class="lecture-title">Firm Conviction: The Key to Progress in Bhakti Yoga (BG 6.24)</h1>
             <div class="lecture-meta">
-                <span class="badge badge-date">📅 August 27, 2020</span>
+                
                 <span class="badge badge-verse">📖 BG 6.24</span>
                 <span class="badge badge-speaker">🎤 Jai Sacinandana Kṛṣṇa Dāsa</span>
             </div>
@@ -305,28 +305,24 @@
         <div class="mermaid-container">
             <div class="mermaid">
 graph TD
-    A[Goal: Bhakti Progress] --> B(Nischayena Yoktavya<br/>Firm Conviction)
-
-    subgraph Cultivating Nischaya
-        B --> C[Utsaha (Enthusiasm)]
-        B --> D[Dhairya (Patience/Courage)]
-    end
-
-    subgraph Overcoming Obstacles
-        B -- Helps Overcome --> E[Material Desires<br/>(Sankalpa Prabhavan Kaman)]
-        B -- Helps Overcome --> F[Prakriti & Karma<br/>(Inherent Tendencies)]
-        F -- Without G --> H[Reversion to Old Habits]
-    end
-
-    subgraph Essential Supports
-        G[Devotee Association] -- Provides Strength & Clarity --> B
-        I[Chanting Holy Name] -- With Firm Conviction --> B
-        I --> J[Conviction: Name = Krishna]
-    end
-
-    G --> A
-    J --> A
-    H --&gt; F
+A["Goal: Bhakti Progress"] --> B(Nischayena Yoktavya<br/>Firm Conviction)
+subgraph sg_CultivatingNischaya["Cultivating Nischaya"]
+B --> C[Utsaha (Enthusiasm)]
+B --> D[Dhairya (Patience/Courage)]
+end
+subgraph sg_OvercomingObstacles["Overcoming Obstacles"]
+B -- Helps Overcome --> E[Material Desires<br/>(Sankalpa Prabhavan Kaman)]
+B -- Helps Overcome --> F[Prakriti & Karma<br/>(Inherent Tendencies)]
+F -- Without G --> H[Reversion to Old Habits]
+end
+subgraph sg_EssentialSupports["Essential Supports"]
+G[Devotee Association] -- Provides Strength & Clarity --> B
+I[Chanting Holy Name] -- With Firm Conviction --> B
+I --> J["Conviction: Name = Krishna"]
+end
+G --> A
+J --> A
+H --> F
             </div>
         </div>
         <p class="content-text" style="margin-top: 20px; font-style: italic;">

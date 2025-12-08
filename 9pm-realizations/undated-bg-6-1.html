@@ -278,7 +278,7 @@
         <div class="lecture-header">
             <h1 class="lecture-title">Beyond Attachment: The Yogi's Secret (BG 6.1)</h1>
             <div class="lecture-meta">
-                <span class="badge badge-date">📅 July 6, 2025</span>
+                
                 <span class="badge badge-verse">📖 BG 6.1</span>
                 <span class="badge badge-speaker">🎤 Jai Sacinandana Kṛṣṇa Dāsa</span>
             </div>
@@ -305,26 +305,24 @@
         <div class="mermaid-container">
             <div class="mermaid">
 graph TD
-    subgraph Material Path
-        A[Desire to 'Settle' & 'Adjust'] --> B(Ashritaha Karma Phalam<br/>Shelter in Fruitive Results);
-        B --> C{False Shelter: Asath Sainyam<br/>Non-existent Protection};
-        C --> D[Driven by Raga & Dvesh<br/>Attachment & Aversion];
-        D --> E[Result: Fear, Agitation, & Material Bondage];
-    end
-
-    subgraph Spiritual Path
-        F[Realize Material Impermanence] --> G{Cultivate Urgency<br/>to Go Back to Krishna};
-        G --> H[Develop 'Void for Krishna'<br/>in the Heart];
-        H --> I[True Sannyasi/Yogi (BG 6.1)];
-        I --> J[Performs Karyam Karma<br/>Duties without Attachment];
-        J --> K[Acts for Krishna's Satisfaction<br/>Not personal gain];
-        K --> L[Transcend Raga & Dvesh<br/>Freedom from Dualities];
-        L --> M[Sober Understanding<br/>of Spiritual World];
-        M --> N[Result: Desire to Serve Krishna<br/>& Spiritual Liberation];
-    end
-
-    A --- F;
-    I -.-> 'Redefines Success/Defeat' <-. G;
+subgraph sg_MaterialPath["Material Path"]
+A["Desire to 'Settle' & 'Adjust'"] --> B(Ashritaha Karma Phalam<br/>Shelter in Fruitive Results);
+B --> C{False Shelter: Asath Sainyam<br/>Non-existent Protection};
+C --> D[Driven by Raga & Dvesh<br/>Attachment & Aversion];
+D --> E["Result: Fear, Agitation, & Material Bondage"];
+end
+subgraph sg_SpiritualPath["Spiritual Path"]
+F[Realize Material Impermanence] --> G{Cultivate Urgency<br/>to Go Back to Krishna};
+G --> H["Develop 'Void for Krishna'<br/>in the Heart"];
+H --> I[True Sannyasi/Yogi (BG 6.1)];
+I --> J[Performs Karyam Karma<br/>Duties without Attachment];
+J --> K["Acts for Krishna's Satisfaction<br/>Not personal gain"];
+K --> L[Transcend Raga & Dvesh<br/>Freedom from Dualities];
+L --> M[Sober Understanding<br/>of Spiritual World];
+M --> N["Result: Desire to Serve Krishna<br/>& Spiritual Liberation"];
+end
+A --- F;
+I -.-> 'Redefines Success/Defeat' <-. G;
             </div>
         </div>
         <p class="content-text" style="margin-top: 20px; font-style: italic;">

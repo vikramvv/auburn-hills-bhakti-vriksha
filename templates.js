@@ -606,11 +606,127 @@ function getMindMapTabHTML(lecture) {
         return '<p class="content-text">No mind map available for this lecture.</p>';
     }
     
+    let mermaidContent;
+    
+    // Check if it's the new JSON structure or old string format
+    if (typeof lecture.mermaid_chart === 'object' && lecture.mermaid_chart.nodes) {
+        // NEW FORMAT: Convert JSON to Mermaid syntax
+        const chart = lecture.mermaid_chart;
+        const lines = [];
+        
+        // Start with graph type and direction
+        lines.push(`graph ${chart.direction || 'TD'}`);
+        
+        // Add all nodes
+        chart.nodes.forEach(node => {
+            let nodeStr = `    ${node.id}`;
+            
+            // Determine bracket style based on shape
+            const shapeMap = {
+                'rectangle': ['[', ']'],
+                'rounded': ['(', ')'],
+                'stadium': ['([', '])'],
+                'cylinder': ['[(', ')]'],
+                'circle': ['((', '))'],
+                'diamond': ['{', '}'],
+                'hexagon': ['{{', '}}']
+            };
+            
+            const [open, close] = shapeMap[node.shape] || ['[', ']'];
+            
+            // Handle label - escape quotes and wrap in quotes if needed
+            let label = node.label;
+            const needsQuotes = label.includes(':') || label.includes('"') || label.includes("'") || label.includes('(') || label.includes(')');
+            
+            if (needsQuotes) {
+                label = label.replace(/"/g, '&quot;');
+                nodeStr += `${open}"${label}"${close}`;
+            } else {
+                nodeStr += `${open}${label}${close}`;
+            }
+            
+            lines.push(nodeStr);
+        });
+        
+        // Add subgraphs if present
+        if (chart.subgraphs && chart.subgraphs.length > 0) {
+            chart.subgraphs.forEach(sg => {
+                lines.push(`    subgraph ${sg.id}["${sg.title}"]`);
+                if (sg.direction) {
+                    lines.push(`        direction ${sg.direction}`);
+                }
+                // Note: nodes are already defined above, subgraph just groups them visually
+                lines.push(`    end`);
+            });
+        }
+        
+        // Add all edges
+        chart.edges.forEach(edge => {
+            const styleMap = {
+                'arrow': '-->',
+                'line': '---',
+                'dotted': '-.->',
+                'thick': '==>'
+            };
+            
+            const connector = styleMap[edge.style] || '-->';
+            let edgeStr = `    ${edge.from} ${connector}`;
+            
+            if (edge.label) {
+                edgeStr += `|${edge.label}|`;
+            }
+            
+            edgeStr += ` ${edge.to}`;
+            lines.push(edgeStr);
+        });
+        
+        mermaidContent = lines.join('\n');
+        
+    } else {
+        // OLD FORMAT: String-based Mermaid syntax (with cleanup)
+        mermaidContent = lecture.mermaid_chart;
+        
+        // Apply cleanup fixes
+        mermaidContent = mermaidContent
+            .replace(/&gt;/g, '>')
+            .replace(/&lt;/g, '<')
+            .replace(/&amp;/g, '&')
+            .replace(/&quot;/g, '"')
+            .replace(/&#39;/g, "'");
+        
+        mermaidContent = mermaidContent.replace(/\(([^)]*:[^)]*)\)/g, '[$1]');
+        mermaidContent = mermaidContent.replace(/---[a-zA-Z]+---/g, '---');
+        mermaidContent = mermaidContent.replace(/---vs-->/g, '-->');
+        mermaidContent = mermaidContent.replace(/--[a-zA-Z]+-->/g, '-->');
+        
+        mermaidContent = mermaidContent.replace(/subgraph\s+(?!.*\[)(.+)/g, (match, title) => {
+            const safeId = "sg_" + title.trim().replace(/[^a-zA-Z0-9]/g, "");
+            return `subgraph ${safeId}["${title.trim()}"]`;
+        });
+        
+        mermaidContent = mermaidContent.replace(/\[([^\]]*)\]/g, (match, content) => {
+            if (content.trim().startsWith('"') && content.trim().endsWith('"')) {
+                return match;
+            }
+            if (content.includes(':') || content.includes('"') || content.includes("'")) {
+                const escaped = content.replace(/"/g, '&quot;');
+                return `["${escaped}"]`;
+            }
+            return match;
+        });
+        
+        mermaidContent = mermaidContent
+            .split('\n')
+            .map(line => line.trim())
+            .filter(line => line.length > 0)
+            .join('\n');
+    }
+    
     return `
         <h2 class="section-heading">Lecture Structure & Flow</h2>
         <div class="mermaid-container">
             <div class="mermaid">
-${lecture.mermaid_chart}
+${mermaidContent}
             </div>
         </div>
         <p class="content-text" style="margin-top: 20px; font-style: italic;">
@@ -618,7 +734,6 @@ ${lecture.mermaid_chart}
         </p>
     `;
 }
-
 
 function getNotesTabHTML(lecture) {
     let html = '';

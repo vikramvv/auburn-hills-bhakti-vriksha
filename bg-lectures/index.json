@@ -1,8 +1,31 @@
 {
   "section": "bg-lectures",
   "title": "Bhagavad Gita Lectures",
-  "count": 17,
+  "count": 18,
   "lectures": [
+    {
+      "id": "2025-12-06-bg-18-66",
+      "title": "Unlock Joy: Krishna's Supreme Secret of Surrender (BG 18.66)",
+      "date": "2025-12-06",
+      "primary_verse": "BG 18.66",
+      "takeaway": "Krishna reveals in BG 18.66 that by fully surrendering all forms of religion and completely relying on Him, one is liberated from all sinful reactions, ensuring a return to the spiritual world.",
+      "summary_short": "Jai Sacinandana Kṛṣṇa Dāsa explains Krishna's ultimate instruction in Bhagavad Gita 18.66: surrender to Him alone. He delves into the nature of Ishvara, Jeeva, Prakriti, Kaala, and Karma, emphasizing how pure devotion transcends material gunas and leads to true liberation and joy by giving up false ego.",
+      "featured": false,
+      "media": {
+        "video": {
+          "youtube_id": "ybDaNoVChH0"
+        }
+      },
+      "stream_metadata": {
+        "video_id": "ybDaNoVChH0",
+        "title": "Bhakti Yoga - Auburn Hills is live!",
+        "duration": "PT2H8M19S",
+        "published_date": "2025-12-06",
+        "view_count": 75,
+        "channel_title": "Bhakti Yoga - Auburn Hills"
+      },
+      "section": "bg-lectures"
+    },
     {
       "id": "2025-12-03-cc-adi-1-4",
       "title": "CC Adi 1.4 • Bhakti's Highest Mercy: The Art of Sankirtana",
@@ -303,29 +326,6 @@
       "section": "bg-lectures"
     },
     {
-      "id": "2025-10-12-the-holy-name-absolute-truth-made-access",
-      "title": "The Holy Name: Absolute Truth Made Accessible",
-      "date": "2025-10-12",
-      "primary_verse": null,
-      "takeaway": "The Holy Name of Krishna offers complete protection, bliss, and knowledge, being non-different from the Absolute Truth itself, and devotees should enthusiastically dive into its ocean.",
-      "summary_short": "This lecture emphasizes that the Absolute Truth, whom everyone seeks, is fully present in the Holy Name. Chanting Hare Krishna provides all experiences, bliss, and knowledge, urging devotees to dive deep into its power.",
-      "featured": false,
-      "media": {
-        "video": {
-          "youtube_id": "D3JYBmREuBs"
-        }
-      },
-      "stream_metadata": {
-        "video_id": "D3JYBmREuBs",
-        "title": "Bhakti Yoga - Auburn Hills is live!",
-        "duration": "PT39M24S",
-        "published_date": "2025-10-12",
-        "view_count": 18,
-        "channel_title": "Bhakti Yoga - Auburn Hills"
-      },
-      "section": "bg-lectures"
-    },
-    {
       "id": "2025-10-12-sb-1-2-3",
       "title": "Surrender to Krishna: The Ultimate Path to Freedom",
       "date": "2025-10-12",
@@ -344,6 +344,29 @@
         "duration": "PT1H18M55S",
         "published_date": "2025-10-12",
         "view_count": 48,
+        "channel_title": "Bhakti Yoga - Auburn Hills"
+      },
+      "section": "bg-lectures"
+    },
+    {
+      "id": "2025-10-12-the-holy-name-absolute-truth-made-access",
+      "title": "The Holy Name: Absolute Truth Made Accessible",
+      "date": "2025-10-12",
+      "primary_verse": null,
+      "takeaway": "The Holy Name of Krishna offers complete protection, bliss, and knowledge, being non-different from the Absolute Truth itself, and devotees should enthusiastically dive into its ocean.",
+      "summary_short": "This lecture emphasizes that the Absolute Truth, whom everyone seeks, is fully present in the Holy Name. Chanting Hare Krishna provides all experiences, bliss, and knowledge, urging devotees to dive deep into its power.",
+      "featured": false,
+      "media": {
+        "video": {
+          "youtube_id": "D3JYBmREuBs"
+        }
+      },
+      "stream_metadata": {
+        "video_id": "D3JYBmREuBs",
+        "title": "Bhakti Yoga - Auburn Hills is live!",
+        "duration": "PT39M24S",
+        "published_date": "2025-10-12",
+        "view_count": 18,
         "channel_title": "Bhakti Yoga - Auburn Hills"
       },
       "section": "bg-lectures"
